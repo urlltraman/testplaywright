@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testCase" : "npx playwright test"
+    "testCase": "npx playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.36.2"
-    "allure-commandline": "^2.23.1",
+    "@playwright/test": "^1.36.2",
     "allure-playwright": "^2.4.0"
   }
 }
