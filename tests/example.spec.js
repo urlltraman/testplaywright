@@ -90,7 +90,7 @@ test('TC07 No Password' ,async ({ page }) => {
 
 test('TC08 No Username Password' ,async ({ page }) => {
   
-  123await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+  await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await expect(page.getByText('The login details are incorrect')).toHaveText('The login details are incorrect');
   await page.screenshot({ path: 'Output/TS01-Login/TC08 No Username Password/01.No Username Password.png', fullPage: true });
