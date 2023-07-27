@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('TC01 Login Success ', async ({ page }) => {
-  test.slow();
+  
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
@@ -14,7 +14,7 @@ test('TC01 Login Success ', async ({ page }) => {
 });
 
 test('TC02 Invalid Username' ,async ({ page }) => {
-  test.slow();
+  
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
@@ -26,7 +26,7 @@ test('TC02 Invalid Username' ,async ({ page }) => {
 
 
 test('TC03 Invalid Username Switch Upper Down' ,async ({ page }) => {
-  test.slow();
+  
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('TEST.GAMEKITTISAK@GMAIL.COM');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
@@ -40,7 +40,7 @@ test('TC03 Invalid Username Switch Upper Down' ,async ({ page }) => {
 
 
 test('TC04 No Username' ,async ({ page }) => {
-  test.slow();
+  
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
@@ -51,7 +51,7 @@ test('TC04 No Username' ,async ({ page }) => {
 
 
 test('TC05 Invalid Password' ,async ({ page }) => {
-  test.slow();
+ 
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
   await page.locator('input[name="password"]').fill('qwerty123');
@@ -64,7 +64,7 @@ test('TC05 Invalid Password' ,async ({ page }) => {
 
 
 test('TC06 Invalid Password Switch Upper Down' ,async ({ page }) => {
-  test.slow();
+ 
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
   await page.locator('input[name="password"]').fill('p@SSW0RD');
@@ -78,7 +78,7 @@ test('TC06 Invalid Password Switch Upper Down' ,async ({ page }) => {
 
 
 test('TC07 No Password' ,async ({ page }) => {
-  test.slow();
+  
   await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
@@ -89,8 +89,8 @@ test('TC07 No Password' ,async ({ page }) => {
 
 
 test('TC08 No Username Password' ,async ({ page }) => {
-  test.slow();
-  await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+  
+  123await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await expect(page.getByText('The login details are incorrect')).toHaveText('The login details are incorrect');
   await page.screenshot({ path: 'Output/TS01-Login/TC08 No Username Password/01.No Username Password.png', fullPage: true });
