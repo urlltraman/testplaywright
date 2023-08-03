@@ -11,6 +11,10 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
+
+  // Each test is given 30 seconds.
+  timeout: 2 * 60 * 1000,
+
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -19,9 +23,9 @@ module.exports = defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter:[
+  reporter: [
     ['html'],
     ['allure-playwright'],
 
@@ -34,6 +38,7 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    // viewport: { width: 1920, height: 1080 },
   },
 
   /* Configure projects for major browsers */
@@ -69,9 +74,24 @@ module.exports = defineConfig({
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
     {
-      name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      name: 'setup',
+      testMatch: /global.setup\.js/,
     },
+
+
+
+
+    {
+      name: 'Google Chrome',
+      use: {
+        ...devices['Desktop Chrome'], channel: 'chrome',
+
+        launchOptions: {
+          args: ["--start-maximized"]
+        },
+
+      },
+    }
   ],
 
   /* Run your local dev server before starting the tests */

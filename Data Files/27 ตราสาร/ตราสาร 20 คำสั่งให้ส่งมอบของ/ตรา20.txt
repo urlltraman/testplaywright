@@ -1,0 +1,70 @@
+{
+        "documentDetail": {
+            "formType": "AS9",
+            "version": "01.01.0001",
+            "transAmount": 1,
+            "requestId": "test20_270766003",
+            "selectType": "0",
+            "typeCode": "20"
+        },
+        "summary": {
+            "payer": {
+                "specifiedTaxRegistration": {
+                    "id": "XXXXXXXXXXXXX"
+                }
+            },
+            "responsePaymentType": "4",
+            "committeeFlag": 0,
+            "totalDuty": 1,
+            "totalPayment": 1
+        },
+        "instInfo": [
+            {
+                "taxPayer": {
+                    "specifiedTaxRegistration": {
+                        "id": "XXXXXXXXXXXXX"
+                    },
+                    "branchNo": "",
+                    "branchType": "O",
+                    "relationship": "1"
+                },
+                "party": {
+                    "specifiedTaxRegistration": {
+                        "id": "XXXXXXXXXXXXX"
+                    },
+                    "name": "aa",
+                    "surname": "aa",
+                    "branchNo": "00000",
+                    "branchType": "O",
+                    "totalParty": 1,
+                    "foreignType": "0",
+                    "postalTradeAddress": {
+                        "countryId": "TH",
+                        "countrySubDivisionName": "กาฬสินธุ์",
+                        "cityName": "กิ่งอำเภอนาคู",
+                        "postCode": "46160",
+                        "citySubDivisionName": "ภูแล่นช้าง"
+                    }
+                },
+                "attachDetail": {
+                    "detail1": "รายละเอียดสินค้า ชื่อ ประเภท และปริมาณ"
+                },
+                "instAmount": 10000,
+                "payment": {
+                    "totalAmount": 1,
+                    "dutyAmount": 1,
+                    "totalTaxAmount": 1
+                },
+                "sendFormType": "1",
+                "filingNo": 0,
+                "id": "test20_270766001-id1",
+                "contractNo": "test20_270766001-con1",
+                "receiveDate": "",
+                "creationDate": "2023-07-20",
+                "effectiveDate": "2023-07-20",
+                "expireDate": "2024-12-30",
+                "expireDateText": null,
+                "overdueFlag": "0"
+            }
+        ]
+    }

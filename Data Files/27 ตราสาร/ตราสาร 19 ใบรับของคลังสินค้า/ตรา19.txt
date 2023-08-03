@@ -1,0 +1,63 @@
+{
+        "documentDetail": {
+            "requestId": "test19_260766-001",
+            "formType": "AS9",
+            "selectType": "1",
+            "typeCode": "19",
+            "version": "01.01.0001",
+            "transAmount": 1
+        },
+        "instInfo": [
+            {
+                "id": "test19_260766-id1",
+                "contractNo": "test19_260766-con2",
+                "creationDate": "2023-07-24",
+                "effectiveDate": "2023-07-24",
+                "expireDate": "2024-07-31",
+                "sendFormType": "1",
+                "filingNo": 0,
+                "instAmount": 10000,
+                "taxPayer": {
+                    "specifiedTaxRegistration": {
+                        "id": "XXXXXXXXXXXXX"
+                    },
+                    "branchNo": "00000",
+                    "branchType": "O",
+                    "relationship": "1"
+                },
+                "party": {
+                    "specifiedTaxRegistration": {
+                        "id": "XXXXXXXXXXXXX"
+                    },
+                    "name": "aa",
+                    "surname": "aa",
+                    "branchNo": "00000",
+                    "branchType": "O",
+                    "postalTradeAddress": {
+                        "cityName": "bkk",
+                        "countrySubDivisionName": "bkk",
+                        "countryId": "TH"
+                    },
+                    "totalParty": 1,
+                    "foreignType": "0"
+                },
+                "attachDetail": {
+                    "detail1": "รายละเอียดสินค้า ชื่อ ประเภท และปริมาณ"
+                },
+                "payment": {
+                    "dutyAmount": 1,
+                    "totalAmount": 1
+                }
+            }
+        ],
+        "summary": {
+            "totalDuty": 1,
+            "totalPayment": 1,
+            "payer": {
+                "specifiedTaxRegistration": {
+                    "id": "XXXXXXXXXXXXX"
+                }
+            },
+            "responsePaymentType": "4"
+        }
+    }
