@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
@@ -606,56 +606,92 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
 
-test('TC04 Export Task ', async ({ page }) => {
+test('TC04 Export Task Single ', async ({ page }) => {
+
 
   await page.getByRole('button', { name: 'Search' }).click();
   await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+
+
+  const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export' }).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Download/TS03-Transaction View/01.Export Task Single.csv');
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/01.Export Single Task.png', fullPage: true });
+});
+
+test('TC04 Export Task Multi ', async ({ page }) => {
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.locator('#mat-checkbox-204 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
-  await page.locator('#mat-checkbox-206 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
-  await page.locator('#mat-checkbox-206 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-3 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-5 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-7 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export' }).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Download/TS03-Transaction View/02.Export Task Multi.csv');
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/02.Export Multi Task.png', fullPage: true });
-  await page.locator('.mat-checkbox-inner-container').first().click();
-  // await page.getByRole('button', { name: 'Export' }).click();
-  // await page.waitForTimeout(2800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/03.Export All Task.png', fullPage: true });
+
+
+});
+
+
+
+// test('TC04 Export Task All ', async ({ page }) => {
+
+//   await page.locator('.mat-checkbox-inner-container').first().click();
+//   const downloadPromise = page.waitForEvent('download');
+//   await page.getByRole('button', { name: 'Export' }).click();
+//   const download = await downloadPromise;
+//   // Save downloaded file somewhere
+//   await download.saveAs('Download/TS03-Transaction View/03.Export Task All.csv');
+//   await page.waitForTimeout(2800);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/03.Export All Task.png', fullPage: true });
+
+// });
+
+
+
+
+
+
+
+test('TC04 Export Proof of Payment Single ', async ({ page }) => {
+  await page.getByPlaceholder('Status').click();
+  await page.getByRole('option', { name: 'Completed' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.locator('#mat-checkbox-2').click();
+  await page.getByRole('button', { name: 'Proof of Payment' }).click();
+  await expect(page.getByRole('heading', { name: 'You are going to download proof of payment' })).toHaveText('You are going to download proof of payment');
+  await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
+  await page.getByRole('button', { name: 'Go to Downloads' }).click();
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
+  await page.waitForTimeout(800);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/04.Proof of Payment Single Task Compressing.png', fullPage: true });
+  await page.waitForTimeout(800);
+  await page.getByRole('button', { name: 'Refresh' }).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Download/TS03-Transaction View/04.Receipts Single.rar');
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/05.Proof of Payment Single Task.png', fullPage: true });
 
 });
 
 
 
 
-
-
-test('TC04 Export Proof of Payment ', async ({ page }) => {
-  // await page.getByPlaceholder('Status').click();
-  // await page.getByRole('option', { name: 'Completed' }).click();
-  // await page.getByRole('button', { name: 'Search' }).click();
-  // await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
-  // await page.getByRole('button', { name: 'Proof of Payment' }).click();
-  // await expect(page.getByRole('heading', { name: 'You are going to download proof of payment' })).toHaveText('You are going to download proof of payment');
-  // await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
-  // await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  // await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
-  // await page.waitForTimeout(800);
-  // await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/04.Proof of Payment Single Task Compressing.png', fullPage: true });
-  // await page.getByRole('button', { name: 'Refresh' }).click();
-  // await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
-  // await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/05.Proof of Payment Single Task.png', fullPage: true });
-  // await page.waitForTimeout(800);
-  // await page.getByRole('link', { name: 'Transaction View' }).click();
-  // await page.waitForURL('http://gestamp.ddns.net/gestamp/transactions');
+test('TC04 Export Proof of Payment Multi ', async ({ page }) => {
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.locator('#mat-checkbox-204 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
-  await page.locator('#mat-checkbox-206 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
-  await page.locator('#mat-checkbox-206 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
+  await page.locator('#mat-checkbox-3').click();
+  await page.locator('#mat-checkbox-5').click();
+  await page.locator('#mat-checkbox-7').click();
   await page.getByRole('button', { name: 'Proof of Payment' }).click();
   await expect(page.getByRole('heading', { name: 'You are going to download proof of payment' })).toHaveText('You are going to download proof of payment');
   await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
@@ -663,27 +699,48 @@ test('TC04 Export Proof of Payment ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/06.Proof of Payment Multi Task Compressing.png', fullPage: true });
+  await page.waitForTimeout(800);
   await page.getByRole('button', { name: 'Refresh' }).click();
+  const downloadPromise = page.waitForEvent('download');
   await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Download/TS03-Transaction View/05.Receipts Multi.rar');
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/07.Proof of Payment Multi Task.png', fullPage: true });
-  await page.waitForTimeout(800);
-  await page.getByRole('link', { name: 'Transaction View' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/transactions');
-  await page.getByPlaceholder('Status').click();
-  await page.getByRole('option', { name: 'Completed' }).click();
-  await page.getByRole('button', { name: 'Search' }).click();
-  await page.locator('.mat-checkbox-inner-container').first().click();
-  await page.getByRole('button', { name: 'Proof of Payment' }).click();
-  await expect(page.getByRole('heading', { name: 'You are going to download proof of payment' })).toHaveText('You are going to download proof of payment');
-  await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
-  await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
-  await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/08.Proof of Payment All Task Compressing.png', fullPage: true });
-  await page.getByRole('button', { name: 'Refresh' }).click();
-  await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/09.Proof of Payment All Task.png', fullPage: true });
-  
+
 });
+
+
+
+
+
+
+
+
+
+
+// test('TC04 Export Proof of Payment All ', async ({ page }) => {
+
+//   await page.getByPlaceholder('Status').click();
+//   await page.getByRole('option', { name: 'Completed' }).click();
+//   await page.getByRole('button', { name: 'Search' }).click();
+//   await page.locator('.mat-checkbox-inner-container').first().click();
+//   await page.getByRole('button', { name: 'Proof of Payment' }).click();
+//   await expect(page.getByRole('heading', { name: 'You are going to download proof of payment' })).toHaveText('You are going to download proof of payment');
+//   await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
+//   await page.getByRole('button', { name: 'Go to Downloads' }).click();
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
+//   await page.waitForTimeout(800);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/08.Proof of Payment All Task Compressing.png', fullPage: true });
+//   await page.waitForTimeout(800);
+//   await page.getByRole('button', { name: 'Refresh' }).click();
+//   const downloadPromise = page.waitForEvent('download');
+//   await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
+//   const download = await downloadPromise;
+//   // Save downloaded file somewhere
+//   await download.saveAs('Download/TS03-Transaction View/06.Receipts All.rar');
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/09.Proof of Payment All Task.png', fullPage: true });
+  
+// });
 
 

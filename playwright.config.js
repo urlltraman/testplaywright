@@ -73,23 +73,12 @@ module.exports = defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    {
-      name: 'setup',
-      testMatch: /global.setup\.js/,
-    },
-
-
-
 
     {
       name: 'Google Chrome',
       use: {
         ...devices['Desktop Chrome'], channel: 'chrome',
-
-        launchOptions: {
-          args: ["--start-maximized"]
-        },
-
+        viewport: { width: 1440, height: 768 },
       },
     }
   ],

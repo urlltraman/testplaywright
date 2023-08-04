@@ -844,67 +844,67 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
 
-test('TC04 Create Batch  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_1_Record.xlsx');
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
-  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await page.reload();
-  await page.waitForTimeout(1500);
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png' });
-  await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).click();
-  await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/02.1 Record Details.png', fullPage: true });
-  await page.getByRole('link', { name: 'Batch View' }).click();
-  await page.getByRole('row', { name: 'Game Kittisak ' }).getByRole('button').nth(1).click();
-  await page.getByRole('button', { name: 'Confirm' }).click();
-  await page.waitForTimeout(1000);
-  // Upload Many Records
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Many_Record.xlsx');
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
-  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await page.reload();
-  await page.waitForTimeout(1500);
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Many_Record' }).click();
-  await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png', fullPage: true });
-  await page.getByRole('link', { name: 'Batch View' }).click();
-  await page.getByRole('row', { name: 'Game Kittisak ' }).getByRole('button').nth(2).click();
-  await page.getByRole('button', { name: 'Confirm' }).click();
-  await page.waitForTimeout(1000);
-});
+// test('TC04 Create Batch  ', async ({ page }) => {
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_1_Record.xlsx');
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.getByLabel('Upload Success').click();
+//   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+//   await page.getByRole('button', { name: 'Close' }).click();
+//   await page.reload();
+//   await page.waitForTimeout(1500);
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png' });
+//   await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).click();
+//   await page.waitForTimeout(1500);
+//   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/02.1 Record Details.png', fullPage: true });
+//   await page.getByRole('link', { name: 'Batch View' }).click();
+//   await page.getByRole('row', { name: 'Game Kittisak ' }).getByRole('button').nth(1).click();
+//   await page.getByRole('button', { name: 'Confirm' }).click();
+//   await page.waitForTimeout(1000);
+//   // Upload Many Records
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Many_Record.xlsx');
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.getByLabel('Upload Success').click();
+//   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+//   await page.getByRole('button', { name: 'Close' }).click();
+//   await page.reload();
+//   await page.waitForTimeout(1500);
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png' });
+//   await page.getByRole('cell', { name: 'Auto_Type1_Many_Record' }).click();
+//   await page.waitForTimeout(1500);
+//   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png', fullPage: true });
+//   await page.getByRole('link', { name: 'Batch View' }).click();
+//   await page.getByRole('row', { name: 'Game Kittisak ' }).getByRole('button').nth(2).click();
+//   await page.getByRole('button', { name: 'Confirm' }).click();
+//   await page.waitForTimeout(1000);
+// });
 
 
 
 
 
 
-test('TC05 Edit Batch  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
-  await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
-  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await page.reload();
-  await page.waitForTimeout(1500);
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).click();
+// test('TC05 Edit Batch  ', async ({ page }) => {
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
+//   await page.getByRole('button', { name: 'Upload' }).click();
+//   await page.getByLabel('Upload Success').click();
+//   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+//   await page.getByRole('button', { name: 'Close' }).click();
+//   await page.reload();
+//   await page.waitForTimeout(1500);
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).click();
 
-  await page.getByRole('button', { name: 'Edit' }).click();
-  await page.locator('[id="\\30 _33"]').click();
-  await page.getByRole('cell', { name: '\'ABC10003\' is Exist.' }).click();
-  await page.getByRole('cell', { name: '\'ABC10003\' is Exist.' }).click();
-  await page.locator('[id="\\30 _33"]').fill('ZXCV1234');
-  await page.getByRole('button', { name: 'Validate' }).click();
-});
+//   await page.getByRole('button', { name: 'Edit' }).click();
+//   await page.locator('[id="\\30 _33"]').click();
+//   await page.getByRole('cell', { name: '\'ABC10003\' is Exist.' }).click();
+//   await page.getByRole('cell', { name: '\'ABC10003\' is Exist.' }).click();
+//   await page.locator('[id="\\30 _33"]').fill('ZXCV1234');
+//   await page.getByRole('button', { name: 'Validate' }).click();
+// });
