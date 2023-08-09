@@ -942,7 +942,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/01.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).click();
+  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).first().click();
   await page.getByRole('button', { name: 'Edit' }).click();
   await expect(page.getByRole('cell', { name: '\'ABC10003\' is Exist.' })).toHaveText("'ABC10003' is Exist.");
   await page.locator('[id="\\30 _34"]').fill('ZXCV1234');
@@ -976,7 +976,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/03.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).click();
+  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).first().click();
   await page.getByRole('button', { name: 'Import Fixes' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Import.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
