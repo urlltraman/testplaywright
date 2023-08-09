@@ -25,7 +25,7 @@ test('TC01 Administrator  ', async ({ page }) => {
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/02.No Email.png' });
     await page.locator('input[name="name"]').clear();
-    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
     await page.locator('input[name="name"]').click();
     await expect(page.getByText('Name is required')).toHaveText('Name is required');
     await page.waitForTimeout(800);
@@ -46,7 +46,7 @@ test('TC01 Administrator  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Cancel' }).click();
     //Full Input Cancel
     await page.getByRole('button', { name: 'Add' }).click();
-    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
     await page.locator('input[name="name"]').fill('Auto Add User');
     await page.locator('select[name="role"]').selectOption('3');
     await page.getByRole('button', { name: 'Assign' }).click();
@@ -64,7 +64,7 @@ test('TC01 Administrator  ', async ({ page }) => {
 test('TC01 Administrator Add User Completed ', async ({ page }) => {
 
     await page.getByRole('button', { name: 'Add' }).click();
-    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
     await page.locator('input[name="name"]').fill('Auto Add User');
     await page.locator('select[name="role"]').selectOption('3');
     await page.getByRole('button', { name: 'Assign' }).click();
@@ -82,7 +82,7 @@ test('TC01 Administrator User Login ', async ({ page }) => {
     const page1Promise = page.waitForEvent('popup');
     await page.getByRole('button', { name: 'Sign in with Google' }).click();
     const page1 = await page1Promise;
-    await page1.getByLabel('Email or phone').fill('test.gamekittisak2@gmail.com');
+    await page1.getByLabel('Email or phone').fill('test.gamekittisak4@gmail.com');
     await page1.locator('#identifierNext').getByRole('button', { name: 'Next' }).click();
     await page.waitForTimeout(1000);
     await page1.getByLabel('Enter your password').fill('ZXcv.!234');
@@ -101,11 +101,11 @@ test('TC01 Administrator User Login ', async ({ page }) => {
 
 test('TC02 Edit User ', async ({ page }) => {
 
-    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak2@gmail.com GGS' }).getByRole('button').first().click();
+    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').first().click();
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/01.Before Edit.png' });
     await page.locator('input[name="email"]').clear();
-    await page.locator('input[name="email"]').fill('2kasittikemag@gmail.com');
+    await page.locator('input[name="email"]').fill('4kasittikemag@gmail.com');
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/02.Edit Email.png' });
     await page.locator('input[name="name"]').clear();
@@ -128,7 +128,7 @@ test('TC02 Edit User ', async ({ page }) => {
 
 test('TC02 Edit User Completed ', async ({ page }) => {
 
-    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak2@gmail.com GGS' }).getByRole('button').first().click();
+    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').first().click();
     await page.locator('input[name="name"]').fill('Auto Edit User');
     await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด Preparer' }).getByRole('button').click();
     await page.locator('select[name="company"]').selectOption('4');
@@ -149,7 +149,7 @@ test('TC02 Edit User Login ', async ({ page }) => {
     const page1Promise = page.waitForEvent('popup');
     await page.getByRole('button', { name: 'Sign in with Google' }).click();
     const page1 = await page1Promise;
-    await page1.getByLabel('Email or phone').fill('test.gamekittisak2@gmail.com');
+    await page1.getByLabel('Email or phone').fill('test.gamekittisak4@gmail.com');
     await page1.locator('#identifierNext').getByRole('button', { name: 'Next' }).click();
     await page.waitForTimeout(1000);
     await page1.getByLabel('Enter your password').fill('ZXcv.!234');
@@ -168,13 +168,13 @@ test('TC02 Edit User Login ', async ({ page }) => {
 
 test('TC03 Delete User ', async ({ page }) => {
 
-    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak2@gmail.com NPD' }).getByRole('button').nth(1).click();
+    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com NPD' }).getByRole('button').nth(1).click();
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/01.Before Delete User Click Cancel.png' });
     await page.getByRole('button', { name: 'Cancel' }).click();
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/02.After Delete User Click Cancel.png' });
-    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak2@gmail.com NPD' }).getByRole('button').nth(1).click();
+    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com NPD' }).getByRole('button').nth(1).click();
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/03.Before Delete User Click Confirm.png' });
     await page.getByRole('button', { name: 'Confirm' }).click();

@@ -13,6 +13,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
+
 test('TC01 Transaction View ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC01 Transaction View/01.Transaction View.png' });

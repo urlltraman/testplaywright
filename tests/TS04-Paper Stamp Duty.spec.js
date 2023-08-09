@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
@@ -11,6 +12,7 @@ test.beforeEach(async ({ page }) => {
     await page.getByRole('link', { name: 'Paper Stamp Duty' }).click();
     await page.waitForURL('http://gestamp.ddns.net/gestamp/paperstamp');
 });
+
 
 
 
@@ -208,7 +210,7 @@ test('TC05 Download Template ', async ({ page }) => {
     const download = await downloadPromise;
     // Save downloaded file somewhere
     await download.saveAs('Download/TS04-Paper Stamp Duty/PaperStampTemplate.xlsx');
-    
+
 
 
 
