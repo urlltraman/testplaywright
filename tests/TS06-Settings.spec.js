@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
 test('TC01 Show Settings ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC01 Show Settings/01.Settings.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS06-Settings/TC01 Show Settings/01.Default Page.png', fullPage: true });
 
 });
 

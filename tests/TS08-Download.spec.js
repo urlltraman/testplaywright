@@ -61,8 +61,9 @@ test('TC03 Refresh ', async ({ page }) => {
     await page.locator('div').filter({ hasText: /^SearchReceipts$/ }).getByRole('button').nth(1).click();
     await page.getByRole('button', { name: 'Go to Downloads' }).click();
     await page.waitForTimeout(500);
-    let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
+    await page.reload();
     await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
     await page.screenshot({ path: 'Output/TS08-Download/TC03 Refresh/02.Before Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByRole('button', { name: 'Refresh' }).click();
     const downloadPromiseA = page.waitForEvent('download');

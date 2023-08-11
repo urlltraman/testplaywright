@@ -896,6 +896,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   let mask_locator = await page.getByRole('row', { name: 'Auto_1_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.getByText('Auto_1_Record ').first().click();
+  await page.reload();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/02.1 Record Details.png', fullPage: true });
   await page.getByRole('link', { name: 'Batch View' }).click();
@@ -918,7 +919,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png', mask: [mask_locator1], maskColor: '#00FF00' });
   await page.getByText('Auto_Type1_Many_Record ').first().click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png'});
   await page.getByRole('link', { name: 'Batch View' }).click();
   await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_Type1_Many_Record ' }).first().getByText('delete').click();

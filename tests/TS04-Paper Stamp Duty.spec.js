@@ -51,12 +51,12 @@ test('TC02 Search Data Version ', async ({ page }) => {
     await page.getByRole('option', { name: 'Latest' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/01.Search Data Version Lastest.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/01.Search Data Version Lastest.png'});
     await page.getByLabel('Latest').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/02.Search Data Version All.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/02.Search Data Version All.png'});
 
 });
 
@@ -72,7 +72,7 @@ test('TC02 Search Uploaded Date From ', async ({ page }) => {
     await page.getByLabel('12 July 2023', { exact: true }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/03.Search Uploaded Date From.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/03.Search Uploaded Date From.png'});
 
 
 });
@@ -89,7 +89,7 @@ test('TC02 Search Uploaded Date To ', async ({ page }) => {
     await page.getByLabel('12 July 2023', { exact: true }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/04.Search Uploaded Date To.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/04.Search Uploaded Date To.png'});
 
 
 });
@@ -104,7 +104,7 @@ test('TC02 Search Contract No ', async ({ page }) => {
     await page.locator('#mat-input-4').fill('2269639948');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/05.Search Contract No.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/05.Search Contract No.png'});
 
 });
 
@@ -129,7 +129,7 @@ test('TC02 Search Full  ', async ({ page }) => {
     await page.locator('#mat-input-4').fill('21000000');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/06.Search Full.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/06.Search Full.png'});
 
 });
 
@@ -141,7 +141,7 @@ test('TC02 Search No Input ', async ({ page }) => {
     await page.getByRole('option', { name: '20' }).first().click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/07.Search No Input.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/07.Search No Input.png'});
 
 });
 

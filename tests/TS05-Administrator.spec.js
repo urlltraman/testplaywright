@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
 
 test('TC01 Administrator  ', async ({ page }) => {
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/01.Administrator Page.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/01.Administrator Page.png' });
     await page.getByRole('button', { name: 'Add' }).click();
     await page.locator('input[name="name"]').fill('Auto Add User');
     await expect(page.getByText('Email is required')).toHaveText('Email is required');
@@ -54,7 +54,7 @@ test('TC01 Administrator  ', async ({ page }) => {
     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/07.Input Full Click Cancel.png' });
     await page.getByRole('button', { name: 'Cancel' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/08.After Click Cancel.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/08.After Click Cancel.png' });
 
 });
 
@@ -72,7 +72,7 @@ test('TC01 Administrator Add User Completed ', async ({ page }) => {
     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/09.Completed User Details.png' });
     await page.getByRole('button', { name: 'Save' }).click();
     await page.waitForTimeout(1500);
-    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/10.All User.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/10.All User.png' });
 
 
 });

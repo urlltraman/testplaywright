@@ -43,7 +43,7 @@ test('TC02 Search E-Document No. ', async ({ page }) => {
   await page.getByLabel('E-Document No.').fill('00100');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.E-Document No/01.Search E-Doc.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.E-Document No/01.Search E-Doc.png' });
 
 });
 
@@ -53,7 +53,7 @@ test('TC02 Search Contract No. ', async ({ page }) => {
   await page.getByLabel('Contract No.').fill('ABC');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Contract No/01.Search Contract No.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Contract No/01.Search Contract No.png' });
 
 });
 
@@ -64,57 +64,57 @@ test('TC02 Search Status ', async ({ page }) => {
   await page.getByRole('option', { name: 'All Status' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/01.Search All Status.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/01.Search All Status.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submit Error' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/02.Search Submit Error.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/02.Search Submit Error.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Filing Error' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/03.Search Filing Error.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/03.Search Filing Error.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment Error' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/04.Search Payment Error.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/04.Search Payment Error.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Receipt Error' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/05.Search Receipt Error.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/05.Search Receipt Error.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Preparing' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(2000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/06.Search Preparing.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/06.Search Preparing.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Rejected' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/07.Search Rejected.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/07.Search Rejected.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByText('Reviewing').click();
   await page.waitForTimeout(1500);
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/08.Search Reviewing.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/08.Search Reviewing.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submitted' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/09.Search Submitted.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/09.Search Submitted.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByText('Payment', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/10.Search Payment.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/10.Search Payment.png' });
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/11.Search Completed.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/03.Status/11.Search Completed.png' });
 
 });
 
@@ -123,7 +123,7 @@ test('TC02 Search Tax Id ', async ({ page }) => {
   await page.getByLabel('Party Tax ID').fill('0107537002273');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/04.Tax ID/01.Search Tax ID.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/04.Tax ID/01.Search Tax ID.png' });
 
 });
 
@@ -132,7 +132,7 @@ test('TC02 Search First Name ', async ({ page }) => {
   await page.getByLabel('Party First Name').fill('Sopita');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/05.First Name/01.Search First Name.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/05.First Name/01.Search First Name.png' });
 
 });
 
@@ -142,7 +142,7 @@ test('TC02 Search Last Name ', async ({ page }) => {
   await page.getByLabel('Party Last Name').fill('Saetong');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06.Last Name/16.Search Last Name.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06.Last Name/16.Search Last Name.png' });
 
 });
 
@@ -157,7 +157,7 @@ test('TC02 Search Contract Type', async ({ page }) => {
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/01.Search Contract Type All.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/01.Search Contract Type All.png' });
 
 
 
@@ -165,189 +165,189 @@ test('TC02 Search Contract Type', async ({ page }) => {
   await page.getByRole('option', { name: '1 เช่าที่ดิน โรงเรือน สิ่งปลูกสร้างอย่างอื่น หรือแพ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/02.Search Contract Type 1.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/02.Search Contract Type 1.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '2 โอนใบหุ้น ใบหุ้นกู้ พันธบัตร ใบรับรองหนี้ฯ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/03.Search Contract Type 2.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/03.Search Contract Type 2.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '3 เช่าซื้อทรัพย์สิน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/04.Search Contract Type 3.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/04.Search Contract Type 3.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '4 จ้างทำของ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/05.Search Contract Type 4.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/05.Search Contract Type 4.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '5 กู้ยืมเงิน หรือการตกลงให้เบิกเงินเกินบัญชีจากธนาคาร' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/06.Search Contract Type 5.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/06.Search Contract Type 5.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '6 กรมธรรม์ประกันภัย' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/07.Search Contract Type 6.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/07.Search Contract Type 6.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '7 ใบมอบอำนาจ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/08.Search Contract Type 7.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/08.Search Contract Type 7.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '8 ใบมอบฉันทะสำหรับให้ลงมติ ในที่ประชุมของบริษัท' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/09.Search Contract Type 8.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/09.Search Contract Type 8.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '9.(1) ตั๋วแลกเงิน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/10.Search Contract Type 91.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/10.Search Contract Type 91.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '9.(2) ตั๋วสัญญาใช้เงิน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/11.Search Contract Type 92.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/11.Search Contract Type 92.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '10 บิลออฟเลดิง (ใบตราส่งสินค้า)' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/12.Search Contract Type 10.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/12.Search Contract Type 10.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '11.(1) ใบหุ้น ใบหุ้นกู้หรือใบรับรองหนี้ฯ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/13.Search Contract Type 111.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/13.Search Contract Type 111.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '11.(2) พันธบัตรของรัฐบาลใด ๆ ที่ขายในประเทศไทย' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/14.Search Contract Type 112.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/14.Search Contract Type 112.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '12 เช็ค' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/15.Search Contract Type 12.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/15.Search Contract Type 12.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '13 ใบรับฝากเงิน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/16.Search Contract Type 13.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/16.Search Contract Type 13.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '14 เลตเตอร์ออฟเครดิต' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/17.Search Contract Type 14.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/17.Search Contract Type 14.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '15 เช็คสำหรับผู้เดินทาง' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/18.Search Contract Type 15.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/18.Search Contract Type 15.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '16 ใบรับของ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/19.Search Contract Type 16.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/19.Search Contract Type 16.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '17 ค้ำประกัน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/20.Search Contract Type 17.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/20.Search Contract Type 17.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '18 จำนำ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/21.Search Contract Type 18.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/21.Search Contract Type 18.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '19 ใบรับของคลังสินค้า' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/22.Search Contract Type 19.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/22.Search Contract Type 19.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '20 คำสั่งให้ส่งมอบของ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/23.Search Contract Type 20.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/23.Search Contract Type 20.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '21 ตัวแทน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/24.Search Contract Type 21.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/24.Search Contract Type 21.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '23 คู่ฉบับหรือคู่ฉีกแห่งตราสาร' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/25.Search Contract Type 23.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/25.Search Contract Type 23.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '27.(ก) หนังสือสัญญาจัดตั้งห้างหุ้นส่วน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/26.Search Contract Type 271.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/26.Search Contract Type 271.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '27.(ข) หนังสือสัญญาที่แก้ไขสัญญาจัดตั้งห้างหุ้นส่วน' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/27.Search Contract Type 272.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/27.Search Contract Type 272.png' });
   
   
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: '28.(ค) ใบรับสำหรับการขาย ขายฝาก ให้เช่าซื้อ หรือโอนกรรมสิทธิยานพาหนะ' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/28.Search Contract Type 28.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/28.Search Contract Type 28.png' });
   
   
 
@@ -363,27 +363,27 @@ test('TC02 Search Year', async ({ page }) => {
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/01.Search Year All.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/01.Search Year All.png' });
   await page.locator('#mat-select-10').click();
   await page.getByRole('option', { name: '2026' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/05.Search Year 2026.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/05.Search Year 2026.png' });
   await page.locator('#mat-select-10').click();
   await page.getByRole('option', { name: '2025' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/04.Search Year 2025.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/04.Search Year 2025.png' });
   await page.locator('#mat-select-10').click();
   await page.getByRole('option', { name: '2024' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/03.Search Year 2024.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/03.Search Year 2024.png' });
   await page.locator('#mat-select-10').click();
   await page.getByRole('option', { name: '2023' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/02.Search Year 2023.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/08.Year/02.Search Year 2023.png' });
 
 });
 
@@ -396,67 +396,67 @@ test('TC02 Search Month', async ({ page }) => {
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/01.Search Month All.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/01.Search Month All.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'January' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/02.Search Month January.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/02.Search Month January.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'February' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/03.Search Month February.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/03.Search Month February.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'March' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/04.Search Month March.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/04.Search Month March.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'April' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/05.Search Month April.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/05.Search Month April.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'May' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/06.Search Month May.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/06.Search Month May.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'June' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/07.Search Month June.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/07.Search Month June.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'July' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/08.Search Month July.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/08.Search Month July.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'August' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/09.Search Month August.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/09.Search Month August.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'September' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/10.Search Month September.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/10.Search Month September.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'October' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/11.Search Month October.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/11.Search Month October.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'November' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/12.Search Month November.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/12.Search Month November.png' });
   await page.locator('#mat-select-12').click();
   await page.getByRole('option', { name: 'December' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(2500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/13.Search Month December.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/09.Month/13.Search Month December.png' });
 
 });
 
@@ -473,27 +473,27 @@ test('TC02 Search Period Submit', async ({ page }) => {
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/01.Search Period Submit All.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/01.Search Period Submit All.png' });
   await page.locator('#mat-select-14').click();
   await page.getByRole('option', { name: 'Round 1' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/02.Search Period Submit Round 1.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/02.Search Period Submit Round 1.png' });
   await page.locator('#mat-select-14').click();
   await page.getByRole('option', { name: 'Round 2' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/03.Search Period Submit Round 2.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/03.Search Period Submit Round 2.png' });
   await page.locator('#mat-select-14').click();
   await page.getByRole('option', { name: 'Round 3' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/04.Search Period Submit Round 3.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/04.Search Period Submit Round 3.png' });
   await page.locator('#mat-select-14').click();
   await page.getByRole('option', { name: 'Round 4' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/05.Search Period Submit Round 4.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/10.Period Submit/05.Search Period Submit Round 4.png' });
 
 });
 
@@ -507,17 +507,17 @@ test('TC02 Search Submit Type', async ({ page }) => {
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/01.Search Submit Type All.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/01.Search Submit Type All.png' });
   await page.locator('#mat-select-16').click();
   await page.getByRole('option', { name: 'Normal' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/02.Search Submit Type Normal.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/02.Search Submit Type Normal.png' });
   await page.locator('#mat-select-16').click();
   await page.getByRole('option', { name: 'Additional' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1500)
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/03.Search Submit Type Additional.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/03.Search Submit Type Additional.png' });
 
 });
 
@@ -538,7 +538,7 @@ test('TC02 Search Creation Date From', async ({ page }) => {
   await page.getByLabel('2 August 2023', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/12.Creation Date From/01.Search Creation Date From.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/12.Creation Date From/01.Search Creation Date From.png' });
 
 });
 
@@ -558,7 +558,7 @@ test('TC02 Search Creation Date To', async ({ page }) => {
   await page.getByLabel('2 August 2023', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/13.Creation Date To/01.Search Creation Date To.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/13.Creation Date To/01.Search Creation Date To.png' });
 
 });
 
@@ -573,7 +573,7 @@ test('TC02 Search Form Submit No', async ({ page }) => {
   await page.getByLabel('Form Submit No.').fill('31');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/14.Submit No/01.Search Form Submit No.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/14.Submit No/01.Search Form Submit No.png' });
 
 });
 
@@ -586,7 +586,7 @@ test('TC02 Search SD Payment Code', async ({ page }) => {
   await page.getByLabel('SD Payment Code').fill('00316607240547866553');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/15.SD Payment Code/01.Search SD Payment Code.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/15.SD Payment Code/01.Search SD Payment Code.png' });
 
 });
 
@@ -602,7 +602,7 @@ test('TC02 Search Receipt No.', async ({ page }) => {
   await page.getByLabel('Receipt No.').fill('66100122710');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/16.Receipt No/01.Search Receipt No.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/16.Receipt No/01.Search Receipt No.png' });
 
 });
 
@@ -622,7 +622,7 @@ test('TC02 Search Receipt Date From', async ({ page }) => {
   await page.getByLabel('27 July 2023', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/17.Receipt Date From/01.Search Receipt Date From.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/17.Receipt Date From/01.Search Receipt Date From.png' });
 
 });
 
@@ -642,7 +642,7 @@ test('TC02 Search Receipt Date To', async ({ page }) => {
   await page.getByLabel('24 July 2023', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18.Receipt Date From/01.Search Receipt Date To.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18.Receipt Date From/01.Search Receipt Date To.png' });
 
 });
 
@@ -696,7 +696,7 @@ test('TC02 Search All Filters', async ({ page }) => {
   await page.getByLabel('1 August 2023', { exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/58.Search All Filters.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19.All Filters/01.Search All Filters.png' });
 
 });
 
@@ -708,7 +708,7 @@ test('TC02 Search No Input Data', async ({ page }) => {
   await expect(page.getByText('AllContract TypeAllYearAllMonthAllPeriod SubmitAllSubmit TypeForm Submit No.Crea')).toBeEnabled();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/59.Search No Input Data.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19.All Filters/02.Search No Input Data.png' });
 });
 
 
@@ -802,7 +802,7 @@ test('TC04 Export Task Multi ', async ({ page }) => {
 //   // Save downloaded file somewhere
 //   await download.saveAs('Output/TS03-Transaction View/TC04 Export/06.Export Task All.csv');
 //   await page.waitForTimeout(2800);
-//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/05.Export All Task.png', fullPage: true });
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/05.Export All Task.png' });
 
 // });
 
@@ -852,7 +852,7 @@ test('TC04 Export Proof of Payment Multi ', async ({ page }) => {
   await page.getByRole('button', { name: 'Go to Downloads' }).click();
   await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/10.Proof of Payment Multi Task Compressing.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/10.Proof of Payment Multi Task Compressing.png' });
   await page.reload();
   await page.waitForTimeout(800);
   await page.getByRole('button', { name: 'Refresh' }).click();
@@ -861,7 +861,7 @@ test('TC04 Export Proof of Payment Multi ', async ({ page }) => {
   const download = await downloadPromise;
   // Save downloaded file somewhere
   await download.saveAs('Output/TS03-Transaction View/TC04 Export/11.Receipts Multi.rar');
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/12.Proof of Payment Multi Task.png', fullPage: true });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/12.Proof of Payment Multi Task.png' });
 
 });
 
@@ -886,7 +886,7 @@ test('TC04 Export Proof of Payment Multi ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Go to Downloads' }).click();
 //   await page.waitForURL('http://gestamp.ddns.net/gestamp/downloads')
 //   await page.waitForTimeout(800);
-//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/13.Proof of Payment All Task Compressing.png', fullPage: true });
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/13.Proof of Payment All Task Compressing.png' });
 //   await page.waitForTimeout(800);
 //   await page.getByRole('button', { name: 'Refresh' }).click();
 //   const downloadPromise = page.waitForEvent('download');
@@ -894,7 +894,7 @@ test('TC04 Export Proof of Payment Multi ', async ({ page }) => {
 //   const download = await downloadPromise;
 //   // Save downloaded file somewhere
 //   await download.saveAs('Output/TS03-Transaction View/TC04 Export/14.Receipts All.rar');
-//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/15.Proof of Payment All Task.png', fullPage: true });
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/15.Proof of Payment All Task.png' });
   
 // });
 
