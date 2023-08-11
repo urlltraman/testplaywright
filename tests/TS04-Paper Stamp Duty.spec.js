@@ -209,7 +209,7 @@ test('TC05 Download Template ', async ({ page }) => {
     await page.getByText('TEMPLATE').click();
     const download = await downloadPromise;
     // Save downloaded file somewhere
-    await download.saveAs('Download/TS04-Paper Stamp Duty/PaperStampTemplate.xlsx');
+    await download.saveAs('Output/TS04-Paper Stamp Duty/TC05 Download Template/PaperStampTemplate.xlsx');
 
 
 

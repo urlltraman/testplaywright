@@ -887,7 +887,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_1_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -895,20 +895,20 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
   let mask_locator = await page.getByRole('row', { name: 'Auto_1_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_1_Record' }).first().click();
+  await page.getByText('Auto_1_Record ').first().click();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/02.1 Record Details.png', fullPage: true });
   await page.getByRole('link', { name: 'Batch View' }).click();
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_1_Record ' }).first().getByRole('button').nth(1).click();
-  await page.waitForTimeout(500);
+  await page.getByRole('row', { name: 'Auto_1_Record ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
   // Upload Many Records
   await page.reload();
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Many_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -916,14 +916,17 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Many_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png', mask: [mask_locator1], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Many_Record' }).first().click();
+  await page.getByText('Auto_Type1_Many_Record ').first().click();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png', fullPage: true });
   await page.getByRole('link', { name: 'Batch View' }).click();
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_Type1_Many_Record ' }).first().getByRole('button').nth(1).click();
-  await page.waitForTimeout(500);
+  await page.getByRole('row', { name: 'Auto_Type1_Many_Record ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
+
+
+
 });
 
 
@@ -936,7 +939,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -944,7 +947,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/01.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).first().click();
+  await page.getByText('Auto_Type1_Edit ').first().click();
   await page.getByRole('button', { name: 'Edit' }).click();
   await expect(page.getByRole('cell', { name: '\'ABC10003\' is Exist.' })).toHaveText("'ABC10003' is Exist.");
   await page.locator('[id="\\30 _1"]').fill('ZXCV1234');
@@ -955,8 +958,10 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/02.Edit Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
-  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
+
 
 
 });
@@ -970,7 +975,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -978,7 +983,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/03.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Type1_Edit' }).first().click();
+  await page.getByText('Auto_Type1_Edit ').first().click();
   await page.getByRole('button', { name: 'Import Fixes' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Import.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -987,8 +992,9 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Import' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/04.Import Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_Type1_Import ' }).first().getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Auto_Type1_Import ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
 
 
 });
@@ -1001,7 +1007,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Delete.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -1010,8 +1016,9 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   let mask_locator = await page.getByRole('row', { name: 'Auto_Delete' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/01.Select Batch Delete.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_Delete ' }).first().getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Auto_Delete' }).first().getByRole('button').nth(1).click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
   await page.reload();
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(1500);
@@ -1028,7 +1035,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Reject.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -1036,7 +1043,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Reject' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Reject' }).first().click();
+  await page.getByText('Auto_Reject ').first().click();
   await page.waitForTimeout(2500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/02.Batch Details.png', fullPage: true });
   await page.getByRole('button', { name: 'Submit For Review' }).click();
@@ -1046,7 +1053,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
-  await page.getByRole('cell', { name: 'Auto_Reject' }).first().click();
+  await page.getByText('Auto_Reject ').first().click();
   await page.getByRole('button', { name: 'Reject' }).click();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/05.Click Reject.png', fullPage: true });
@@ -1055,8 +1062,10 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/06.After Reject.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_Reject' }).first().getByRole('button').nth(2).click();
+  await page.getByRole('row', { name: 'Auto_Reject' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
+
 
 
 });
@@ -1067,7 +1076,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_1_Record.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
-//   await page.getByLabel('Upload Success').click();
+// 
 //   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
@@ -1103,7 +1112,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_ Schedule Submit.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
-//   await page.getByLabel('Upload Success').click();
+// 
 //   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
@@ -1134,7 +1143,8 @@ test('TC10 Export  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.getByLabel('Upload Success').click();
+
+  await page.getByRole('button', { name: 'Close' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -1143,12 +1153,14 @@ test('TC10 Export  ', async ({ page }) => {
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC10 Export/01.Select Batch Export.png', mask: [mask_locator], maskColor: '#00FF00' });
   const downloadPromise = page.waitForEvent('download');
-  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByRole('button').nth(1).click();
   const download = await downloadPromise;
   // Save downloaded file somewhere
   await download.saveAs('Output/TS02-Batch View/TC10 Export/02.File Export.rar');
-  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByRole('button').nth(2).click();
+  await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(500);
+
 
 
 });
