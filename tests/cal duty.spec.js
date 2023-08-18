@@ -1835,6 +1835,7 @@ test('TC05 C13 TypeCode 5   ', async ({ page }) => {
 
 
 
+
 test('TC05 C14 TypeCode 5   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1877,7 +1878,7 @@ test('TC05 C15 TypeCode 5   ', async ({ page }) => {
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC5_C15 ').first().click();
     await page.waitForTimeout(1500);
-    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('9,999.00');
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/30.Stamp Duty Amount Case 15.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
@@ -1904,7 +1905,7 @@ test('TC05 C16 TypeCode 5   ', async ({ page }) => {
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/31.Case 16.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC5_C16 ').first().click();
     await page.waitForTimeout(1500);
-    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('9,999.00');
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/32.Stamp Duty Amount Case 16.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
@@ -1931,7 +1932,7 @@ test('TC05 C17 TypeCode 5   ', async ({ page }) => {
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/33.Case 17.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC5_C17 ').first().click();
     await page.waitForTimeout(1500);
-    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('9,999.00');
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/34.Stamp Duty Amount Case 17.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
@@ -1942,6 +1943,113 @@ test('TC05 C17 TypeCode 5   ', async ({ page }) => {
 });
 
 
+
+test('TC05 C18 TypeCode 5   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C18.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C18' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/35.Case 18.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC5_C18 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/36.Stamp Duty Amount Case 18.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C18 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C18  ' })).toBeHidden();
+});
+
+
+
+test('TC05 C19 TypeCode 5   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C19.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C19' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/37.Case 19.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC5_C19 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/38.Stamp Duty Amount Case 19.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C19 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C19  ' })).toBeHidden();
+});
+
+
+
+test('TC05 C20 TypeCode 5   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C20.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C20' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/39.Case 20.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC5_C20 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/40.Stamp Duty Amount Case 20.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C20 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C20  ' })).toBeHidden();
+});
+
+
+
+
+test('TC05 C21 TypeCode 5   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C21.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C21' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/41.Case 21.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC5_C21 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10,000.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/42.Stamp Duty Amount Case 21.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C21 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C21  ' })).toBeHidden();
+});
 
 
 test('TC06 C1 TypeCode 6 Action Type 1   ', async ({ page }) => {
@@ -2165,6 +2273,195 @@ test('TC06 C8 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C8  ' })).toBeHidden();
 });
 
+
+
+
+test('TC06 C9 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C9.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C9' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C9 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/18.Stamp Duty Amount Case 09.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C9 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C9  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C10 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C10.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C10' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C10 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/20.Stamp Duty Amount Case 10.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C10 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C10  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C11 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C11.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C11' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C11 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/22.Stamp Duty Amount Case 11.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C11 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C11  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C12 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C12.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C12' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C12 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/24.Stamp Duty Amount Case 12.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C12 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C12  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C13 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C13.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C13' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C13 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('3.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/26.Stamp Duty Amount Case 13.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C13 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C13  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C14 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C14.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C14' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/27.Case 14.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C14 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('3.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/28.Stamp Duty Amount Case 14.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C14 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C14  ' })).toBeHidden();
+});
+
+
+
+test('TC06 C15 TypeCode 6 Action Type 1   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C15.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C15' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT1_C15 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('3.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/30.Stamp Duty Amount Case 15.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C15 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C15  ' })).toBeHidden();
+});
 
 
 
@@ -2590,6 +2887,35 @@ test('TC07 C15 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C15  ' })).toBeHidden();
 });
+
+
+
+
+test('TC07 C16 TypeCode 6 Action Type 2   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C16.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C16' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/31.Case 16.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC6_AT2_C16 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('20.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/32.Stamp Duty Amount Case 16.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C16 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C16  ' })).toBeHidden();
+});
+
 
 
 
@@ -4730,6 +5056,38 @@ test('TC23 C14 TypeCode 17   ', async ({ page }) => {
 });
 
 
+
+test('TC23 C15 TypeCode 17   ', async ({ page }) => {
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C15.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C15' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByText('Auto_GeStamp_TSCD_TC17_C15 ').first().click();
+    await page.waitForTimeout(1500);
+    await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('10.00');
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/30.Stamp Duty Amount Case 15.png', fullPage: true });
+    await page.getByRole('link', { name: 'Batch' }).click();
+    await page.waitForTimeout(1500);
+    await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C15 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(500);
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C15 ' })).toBeHidden();
+});
+
+
+
+
+
+
+
 test('TC24 C1 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4742,11 +5100,11 @@ test('TC24 C1 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C1' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C1 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('0.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/02.Stamp Duty Amount Case 01.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/02.Stamp Duty Amount Case 01.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C1 ' }).first().getByText('delete').click();
@@ -4770,11 +5128,11 @@ test('TC24 C2 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C2' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C2 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('0.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/04.Stamp Duty Amount Case 02.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/04.Stamp Duty Amount Case 02.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C2 ' }).first().getByText('delete').click();
@@ -4798,11 +5156,11 @@ test('TC24 C3 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C3' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C3 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('0.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/06.Stamp Duty Amount Case 03.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/06.Stamp Duty Amount Case 03.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C3 ' }).first().getByText('delete').click();
@@ -4826,11 +5184,11 @@ test('TC24 C4 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C4' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C4 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('0.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/08.Stamp Duty Amount Case 04.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/08.Stamp Duty Amount Case 04.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C4 ' }).first().getByText('delete').click();
@@ -4854,11 +5212,11 @@ test('TC24 C5 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C5' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C5 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('1.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/10.Stamp Duty Amount Case 05.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/10.Stamp Duty Amount Case 05.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C5 ' }).first().getByText('delete').click();
@@ -4882,11 +5240,11 @@ test('TC24 C6 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C6' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C6 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/12.Stamp Duty Amount Case 06.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/12.Stamp Duty Amount Case 06.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C6 ' }).first().getByText('delete').click();
@@ -4910,11 +5268,11 @@ test('TC24 C7 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C7' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C7 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/14.Stamp Duty Amount Case 07.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/14.Stamp Duty Amount Case 07.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C7 ' }).first().getByText('delete').click();
@@ -4938,11 +5296,11 @@ test('TC24 C8 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C8' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C8 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/16.Stamp Duty Amount Case 08.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/16.Stamp Duty Amount Case 08.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C8 ' }).first().getByText('delete').click();
@@ -4966,11 +5324,11 @@ test('TC24 C9 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C9' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C9 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/18.Stamp Duty Amount Case 09.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/18.Stamp Duty Amount Case 09.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C9 ' }).first().getByText('delete').click();
@@ -4994,11 +5352,11 @@ test('TC24 C10 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C10' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C10 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/20.Stamp Duty Amount Case 10.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/20.Stamp Duty Amount Case 10.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C10 ' }).first().getByText('delete').click();
@@ -5022,11 +5380,11 @@ test('TC24 C11 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C11' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C11 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('2.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/22.Stamp Duty Amount Case 11.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/22.Stamp Duty Amount Case 11.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C11 ' }).first().getByText('delete').click();
@@ -5050,11 +5408,11 @@ test('TC24 C12 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C12' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C12 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('3.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/24.Stamp Duty Amount Case 12.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/24.Stamp Duty Amount Case 12.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C12 ' }).first().getByText('delete').click();
@@ -5078,11 +5436,11 @@ test('TC24 C13 TypeCode 18   ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C13' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByText('Auto_GeStamp_TSCD_TC18_C13 ').first().click();
     await page.waitForTimeout(1500);
     await expect.soft(page.locator('div').filter({ hasText: /^Stamp Duty Amount/ }).getByRole('paragraph')).toHaveText('3.00');
-    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 6 Action Type 1/26.Stamp Duty Amount Case 13.png', fullPage: true });
+    await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/26.Stamp Duty Amount Case 13.png', fullPage: true });
     await page.getByRole('link', { name: 'Batch' }).click();
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C13 ' }).first().getByText('delete').click();
