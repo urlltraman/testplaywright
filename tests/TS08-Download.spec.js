@@ -46,7 +46,7 @@ test('TC01 Show Download ', async ({ page }) => {
 
 
 test('TC03 Refresh ', async ({ page }) => {
-    await page.getByRole('link', { name: 'Batch View' }).click();
+    await page.getByRole('link', { name: 'Batch ' }).click();
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.waitForTimeout(3000);
     await page.getByPlaceholder('Status').click();

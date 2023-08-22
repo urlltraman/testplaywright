@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  await page.getByRole('link', { name: 'Transaction View' }).click();
+  await page.getByRole('link', { name: 'Transaction ' }).click();
   await page.waitForURL('http://gestamp.ddns.net/gestamp/transactions');
 });
 

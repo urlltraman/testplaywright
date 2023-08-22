@@ -19,21 +19,25 @@ test('TC01 Batch View ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/01.Batch View.png' });
-  await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
+  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
+  await page.getByRole('option', { name: '20' }).first().click();
+  await page.getByText('Rows per page').hover();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/02.Rows per page 20.png' });
+  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
   await page.getByRole('option', { name: '50' }).click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/02.Rows per page 50.png' });
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/03.Rows per page 50.png' });
   await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
   await page.getByRole('option', { name: '100' }).click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/03.Rows per page 100.png' });
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/04.Rows per page 100.png' });
   await page.locator('div').filter({ hasText: /^100$/ }).nth(2).click();
   await page.getByRole('option', { name: '200' }).click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/04.Rows per page 200.png' });
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/05.Rows per page 200.png' });
 });
 
 
@@ -866,13 +870,13 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
 test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
+  await page.getByRole('option', { name: '100' }).click();
   await page.getByLabel('Next page').click();
   await page.getByLabel('Next page').click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC03 Click Next And Previews Page/01.Click Next Page.png' });
-  await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-  await page.getByRole('option', { name: '100' }).click();
   await page.getByLabel('Previous page').click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
@@ -884,7 +888,7 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 test('TC04 Create Batch  ', async ({ page }) => {
   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_1_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
 
@@ -899,14 +903,14 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.reload();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/02.1 Record Details.png', fullPage: true });
-  await page.getByRole('link', { name: 'Batch View' }).click();
+  await page.getByRole('link', { name: 'Batch ' }).click();
   await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_1_Record ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await page.waitForTimeout(500);
   // Upload Many Records
   await page.reload();
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Many_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
 
@@ -920,7 +924,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.getByText('Auto_Type1_Many_Record ').first().click();
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/04.Many Record Details.png'});
-  await page.getByRole('link', { name: 'Batch View' }).click();
+  await page.getByRole('link', { name: 'Batch ' }).click();
   await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_Type1_Many_Record ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
@@ -953,7 +957,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await expect(page.getByRole('cell', { name: '\'ABC10003\' is Exist.' })).toHaveText("'ABC10003' is Exist.");
   await page.locator('[id="\\30 _1"]').fill('ZXCV1234');
   await page.getByRole('button', { name: 'Validate' }).click();
-  await page.getByRole('link', { name: 'Batch View' }).click();
+  await page.getByRole('link', { name: 'Batch ' }).click();
   await page.waitForTimeout(1500);
   await page.reload();
   await page.waitForTimeout(1500);
@@ -993,7 +997,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Import' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/04.Import Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
   await page.waitForTimeout(1500);
-  await page.getByRole('row', { name: 'Auto_Type1_Import ' }).first().getByText('delete').click();
+  await page.getByRole('row', { name: ' Auto_Type1_Edit ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await page.waitForTimeout(500);
 

@@ -17,7 +17,7 @@ test.beforeEach(async ({ page }) => {
 test('TC01 Type Code 01  ', async ({ page }) => {
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await page.locator('#file').setInputFiles('Data Files/27 ตราสาร/Auto_GeStamp_TC1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/27 ตราสาร/Auto_GeStamp_TC01.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
@@ -25,23 +25,23 @@ test('TC01 Type Code 01  ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(2500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TC1' }).getByRole('cell').first();
+    let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TC01' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/test Typecode/01. Type Code 01/01.Upload Success.png', mask: [mask_locator], maskColor: '#00FF00' });
-    await page.getByText('Auto_GeStamp_TC1 ').first().click();
+    await page.getByText('Auto_GeStamp_TC01 ').first().click();
     await page.waitForTimeout(2500);
     await page.screenshot({ path: 'Output/test Typecode/01. Type Code 01/02.Upload Details.png', fullPage: true });
     await page.getByRole('button', { name: 'Submit For Review' }).click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-    await page.getByText('Auto_GeStamp_TC1 ').first().click();
+    await page.getByText('Auto_GeStamp_TC01 ').first().click();
     await page.getByRole('button', { name: 'Submit', exact: true }).click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
-    await page.getByText('Auto_GeStamp_TC1 ').first().click();
+    await page.getByText('Auto_GeStamp_TC01 ').first().click();
     await page.waitForTimeout(1800);
     await page.reload();
     await page.goto('http://gestamp.ddns.net/gestamp/batch');
-    await page.getByText('Auto_GeStamp_TC1 ').first().click();
+    await page.getByText('Auto_GeStamp_TC01 ').first().click();
     await page.waitForTimeout(1800);
     await page.getByRole('button', { name: 'QR' }).click();
     const downloadPromise = page.waitForEvent('download');
@@ -52,7 +52,7 @@ test('TC01 Type Code 01  ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(2500);
     await page.goto('http://gestamp.ddns.net/gestamp/batch');
-    await page.getByText('Auto_GeStamp_TC1 ').first().click();
+    await page.getByText('Auto_GeStamp_TC01 ').first().click();
     // download 2
     const downloadPromiseA = page.waitForEvent('download');
     await page.getByRole('button', { name: 'Pay-in' }).click();
