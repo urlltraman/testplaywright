@@ -1,0 +1,12 @@
+C4  Maxlen BeanchNo = 5 Maxlen BeanchType = 1
+
+1.BeanchNo = 1234 BeanchType = O
+2.BeanchNo = 1234 BeanchType = V
+3.BeanchNo = 1234 BeanchType = S
+4.BeanchNo = 12345 BeanchType = O
+5.BeanchNo = 12345 BeanchType = V
+6.BeanchNo = 12345 BeanchType = S
+7.BeanchNo = 123456 BeanchType = O
+8.BeanchNo = 123456 BeanchType = V
+9.BeanchNo = 123456 BeanchType = S
+
