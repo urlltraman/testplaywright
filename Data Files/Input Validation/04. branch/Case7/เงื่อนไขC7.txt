@@ -1,0 +1,12 @@
+C7  Maxlen BeanchNo = 5 Maxlen BeanchType = 1
+
+1.BeanchNo = ทดสอ BeanchType = O
+2.BeanchNo = ทดสอ BeanchType = V
+3.BeanchNo = ทดสอ BeanchType = S
+4.BeanchNo = ทดสอบ BeanchType = O
+5.BeanchNo = ทดสอบ BeanchType = V
+6.BeanchNo = ทดสอบ BeanchType = S
+7.BeanchNo = ทดสอบก BeanchType = O
+8.BeanchNo = ทดสอบก BeanchType = V
+9.BeanchNo = ทดสอบก BeanchType = S
+
