@@ -25,7 +25,7 @@ test('TC01 Show Settings ', async ({ page }) => {
 
 
 test('TC02 Chang Batch Size ', async ({ page }) => {
-
+    await page.getByRole('tab', { name: 'Configuration' }).click();
     await page.getByRole('textbox').fill('2222');
     await page.screenshot({ path: 'Output/TS06-Settings/TC02 Chang Batch Size /01.2222.png', fullPage: true });
     await page.getByRole('textbox').fill('10');
@@ -39,7 +39,7 @@ test('TC02 Chang Batch Size ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval Filing ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Check Status Interval' }).click();
+    await page.getByRole('tab', { name: 'Configuration' }).click();
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/01.Default Page.png', fullPage: true });
     await page.locator('#mat-select-value-7').click();
     await page.getByText('2', { exact: true }).click();
@@ -62,7 +62,7 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/06.Check Filing 12.png', fullPage: true });
     await page.locator('#mat-select-value-7').click();
-    await page.getByText('24').click();
+    await page.getByText('24', { exact: true }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/07.Check Filing 24.png', fullPage: true });
 
@@ -73,7 +73,7 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval Payment  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Check Status Interval' }).click();
+    await page.getByRole('tab', { name: 'Configuration' }).click();
     await page.locator('#mat-select-value-9').click();
     await page.getByText('2', { exact: true }).click();
     await page.waitForTimeout(500);
@@ -95,7 +95,7 @@ test('TC03 Check Status Interval Payment  ', async ({ page }) => {
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/12.Check Payment  12.png', fullPage: true });
     await page.locator('#mat-select-value-9').click();
-    await page.getByText('24').click();
+    await page.getByText('24', { exact: true }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/13.Check Payment  24.png', fullPage: true });
 
@@ -105,11 +105,11 @@ test('TC03 Check Status Interval Payment  ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Check Status Interval' }).click();
+    await page.getByRole('tab', { name: 'Configuration' }).click();
     await page.locator('#mat-select-value-7').click();
     await page.getByRole('option', { name: '12' }).locator('span').click();
     await page.locator('#mat-select-value-9').click();
-    await page.getByText('24').first().click();
+    await page.getByText('24', { exact: true }).first().click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/14.Check All.png', fullPage: true });
 
@@ -142,6 +142,7 @@ test('TC05 Holiday  ', async ({ page }) => {
 
 
 test('TC06 Mail Server  ', async ({ page }) => {
+    await page.getByRole('tab', { name: 'E-Mail' }).click();
     await page.getByRole('tab', { name: 'Mail Server' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC06 Mail Server/01.Default Page.png' });
@@ -151,6 +152,7 @@ test('TC06 Mail Server  ', async ({ page }) => {
 
 
 test('TC07 Mail Scheduler  ', async ({ page }) => {
+    await page.getByRole('tab', { name: 'E-Mail' }).click();
     await page.getByRole('tab', { name: 'Mail Scheduler' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC07 Mail Scheduler /01.Default Page.png' });
@@ -160,7 +162,8 @@ test('TC07 Mail Scheduler  ', async ({ page }) => {
 
 
 test('TC08 Organization  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Organization' }).click();
+    await page.locator('#mat-tab-label-0-4').click();
+    await page.locator('#mat-tab-label-2-0').click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC08 Organization/01.Default Page.png' });
     await page.getByRole('tab', { name: 'Company' }).click();

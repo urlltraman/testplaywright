@@ -51,12 +51,12 @@ test('TC02 Search Data Version ', async ({ page }) => {
     await page.getByRole('option', { name: 'Latest' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/01.Search Data Version Lastest.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/01.Search Data Version Lastest.png' });
     await page.getByLabel('Latest').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/02.Search Data Version All.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/02.Search Data Version All.png' });
 
 });
 
@@ -72,7 +72,7 @@ test('TC02 Search Uploaded Date From ', async ({ page }) => {
     await page.getByLabel('12 July 2023', { exact: true }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/03.Search Uploaded Date From.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/03.Search Uploaded Date From.png' });
 
 
 });
@@ -89,7 +89,7 @@ test('TC02 Search Uploaded Date To ', async ({ page }) => {
     await page.getByLabel('12 July 2023', { exact: true }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/04.Search Uploaded Date To.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/04.Search Uploaded Date To.png' });
 
 
 });
@@ -104,7 +104,7 @@ test('TC02 Search Contract No ', async ({ page }) => {
     await page.locator('#mat-input-4').fill('2269639948');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/05.Search Contract No.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/05.Search Contract No.png' });
 
 });
 
@@ -126,10 +126,10 @@ test('TC02 Search Full  ', async ({ page }) => {
     await page.getByLabel('2023').click();
     await page.getByLabel('July 2023').click();
     await page.getByLabel('31 July 2023', { exact: true }).click();
-    await page.locator('#mat-input-4').fill('21000000');
+    await page.locator('#mat-input-4').fill('2269670000');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/06.Search Full.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/06.Search Full.png' });
 
 });
 
@@ -141,7 +141,7 @@ test('TC02 Search No Input ', async ({ page }) => {
     await page.getByRole('option', { name: '20' }).first().click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/07.Search No Input.png'});
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/07.Search No Input.png' });
 
 });
 
@@ -215,3 +215,51 @@ test('TC05 Download Template ', async ({ page }) => {
 
 
 });
+
+
+
+
+
+test('TC06 Upload Template ', async ({ page }) => {
+
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/test/PaperStampTemplate.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect.soft(page.getByLabel('Upload Success')).toHaveText('check_circle_outline Upload Success Upload Total, 1 row(s)Success, 1 row(s)Duplicate, 0 row(s)Error, 0 row(s)Close');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1000);
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_Paper ' }).getByRole('button').first();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC06 Upload Template/01.Upload Success.png' , mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.getByRole('row', { name: 'Auto_Paper ' }).getByRole('button').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(1000);
+
+});
+
+
+
+
+
+test('TC07 Delete Template ', async ({ page }) => {
+
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.locator('#file').setInputFiles('Data Files/test/PaperStampTemplate2.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await expect.soft(page.getByLabel('Upload Success')).toHaveText('check_circle_outline Upload Success Upload Total, 1 row(s)Success, 1 row(s)Duplicate, 0 row(s)Error, 0 row(s)Close');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(1000);
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_Paper ' }).getByRole('button').first();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC07 Delete Template/01.Upload Success.png' , mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.getByRole('row', { name: 'Auto_Delete ' }).getByRole('button').click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC07 Delete Template/02.Click Delete.png'  });
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(1500);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC07 Delete Template/03.Delete Sucess.png'   });
+
+});
+
+
+
