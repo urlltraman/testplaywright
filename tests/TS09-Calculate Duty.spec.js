@@ -25,6 +25,7 @@ test('TC01 C1 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -53,6 +54,7 @@ test('TC01 C2 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -81,6 +83,7 @@ test('TC01 C3 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -108,6 +111,7 @@ test('TC01 C4 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -135,6 +139,7 @@ test('TC01 C5 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -162,6 +167,7 @@ test('TC01 C6 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -189,6 +195,7 @@ test('TC01 C7 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -216,6 +223,7 @@ test('TC01 C8 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -244,6 +252,7 @@ test('TC01 C9 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -272,6 +281,7 @@ test('TC01 C10 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -300,6 +310,7 @@ test('TC01 C11 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -329,6 +340,7 @@ test('TC01 C12 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -357,6 +369,7 @@ test('TC01 C13 TypeCode 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC01 Type Code 1/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -387,6 +400,7 @@ test('TC02 C1 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -415,6 +429,7 @@ test('TC02 C2 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -443,6 +458,7 @@ test('TC02 C3 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -471,6 +487,7 @@ test('TC02 C4 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -499,6 +516,7 @@ test('TC02 C5 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -527,6 +545,7 @@ test('TC02 C6 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -555,6 +574,7 @@ test('TC02 C7 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -583,6 +603,7 @@ test('TC02 C8 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -611,6 +632,7 @@ test('TC02 C9 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -639,6 +661,7 @@ test('TC02 C10 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -667,6 +690,7 @@ test('TC02 C11 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -695,6 +719,7 @@ test('TC02 C12 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -723,6 +748,7 @@ test('TC02 C13 TypeCode 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC02 Type Code 2/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -752,6 +778,7 @@ test('TC03 C1 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -780,6 +807,7 @@ test('TC03 C2 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -808,6 +836,7 @@ test('TC03 C3 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -836,6 +865,7 @@ test('TC03 C4 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -864,6 +894,7 @@ test('TC03 C5 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -892,6 +923,7 @@ test('TC03 C6 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -920,6 +952,7 @@ test('TC03 C7 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -948,6 +981,7 @@ test('TC03 C8 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -976,6 +1010,7 @@ test('TC03 C9 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1004,6 +1039,7 @@ test('TC03 C10 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1032,6 +1068,7 @@ test('TC03 C11 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1060,6 +1097,7 @@ test('TC03 C12 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1088,6 +1126,7 @@ test('TC03 C13 TypeCode 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC03 Type Code 3/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1118,6 +1157,7 @@ test('TC04 C1 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1146,6 +1186,7 @@ test('TC04 C2 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1174,6 +1215,7 @@ test('TC04 C3 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1202,6 +1244,7 @@ test('TC04 C4 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1230,6 +1273,7 @@ test('TC04 C5 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1258,6 +1302,7 @@ test('TC04 C6 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1286,6 +1331,7 @@ test('TC04 C7 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1314,6 +1360,7 @@ test('TC04 C8 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1342,6 +1389,7 @@ test('TC04 C9 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1370,6 +1418,7 @@ test('TC04 C10 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1398,6 +1447,7 @@ test('TC04 C11 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1426,6 +1476,7 @@ test('TC04 C12 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1454,6 +1505,7 @@ test('TC04 C13 TypeCode 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC04 Type Code 4/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1481,6 +1533,7 @@ test('TC05 C1 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1509,6 +1562,7 @@ test('TC05 C2 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1537,6 +1591,7 @@ test('TC05 C3 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1565,6 +1620,7 @@ test('TC05 C4 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1593,6 +1649,7 @@ test('TC05 C5 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1621,6 +1678,7 @@ test('TC05 C6 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1649,6 +1707,7 @@ test('TC05 C7 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1677,6 +1736,7 @@ test('TC05 C8 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1705,6 +1765,7 @@ test('TC05 C9 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1733,6 +1794,7 @@ test('TC05 C10 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1761,6 +1823,7 @@ test('TC05 C11 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1789,6 +1852,7 @@ test('TC05 C12 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1817,6 +1881,7 @@ test('TC05 C13 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1846,6 +1911,7 @@ test('TC05 C14 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/27.Case 14.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1873,6 +1939,7 @@ test('TC05 C15 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1900,6 +1967,7 @@ test('TC05 C16 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/31.Case 16.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1927,6 +1995,7 @@ test('TC05 C17 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/33.Case 17.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1954,6 +2023,7 @@ test('TC05 C18 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/35.Case 18.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1981,6 +2051,7 @@ test('TC05 C19 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/37.Case 19.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2008,6 +2079,7 @@ test('TC05 C20 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/39.Case 20.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2036,6 +2108,7 @@ test('TC05 C21 TypeCode 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC05 Type Code 5/41.Case 21.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2062,6 +2135,7 @@ test('TC06 C1 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2090,6 +2164,7 @@ test('TC06 C2 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2118,6 +2193,7 @@ test('TC06 C3 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2146,6 +2222,7 @@ test('TC06 C4 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2174,6 +2251,7 @@ test('TC06 C5 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2202,6 +2280,7 @@ test('TC06 C6 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2230,6 +2309,7 @@ test('TC06 C7 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2258,6 +2338,7 @@ test('TC06 C8 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2286,6 +2367,7 @@ test('TC06 C9 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2313,6 +2395,7 @@ test('TC06 C10 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2340,6 +2423,7 @@ test('TC06 C11 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2367,6 +2451,7 @@ test('TC06 C12 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2394,6 +2479,7 @@ test('TC06 C13 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2421,6 +2507,7 @@ test('TC06 C14 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/27.Case 14.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2448,6 +2535,7 @@ test('TC06 C15 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC06 Type Code 6 Action Type 1/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2476,6 +2564,7 @@ test('TC07 C1 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2504,6 +2593,7 @@ test('TC07 C2 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2532,6 +2622,7 @@ test('TC07 C3 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2560,6 +2651,7 @@ test('TC07 C4 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2588,6 +2680,7 @@ test('TC07 C5 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2616,6 +2709,7 @@ test('TC07 C6 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2644,6 +2738,7 @@ test('TC07 C7 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2672,6 +2767,7 @@ test('TC07 C8 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2700,6 +2796,7 @@ test('TC07 C9 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2728,6 +2825,7 @@ test('TC07 C10 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2756,6 +2854,7 @@ test('TC07 C11 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2784,6 +2883,7 @@ test('TC07 C12 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2812,6 +2912,7 @@ test('TC07 C13 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2844,6 +2945,7 @@ test('TC07 C14 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/27.Case 14.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2873,6 +2975,7 @@ test('TC07 C15 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2901,6 +3004,7 @@ test('TC07 C16 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC07 Type Code 6 Action Type 2/31.Case 16.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2931,6 +3035,7 @@ test('TC08 C1 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2959,6 +3064,7 @@ test('TC08 C2 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2987,6 +3093,7 @@ test('TC08 C3 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3015,6 +3122,7 @@ test('TC08 C4 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3043,6 +3151,7 @@ test('TC08 C5 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3071,6 +3180,7 @@ test('TC08 C6 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3099,6 +3209,7 @@ test('TC08 C7 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3127,6 +3238,7 @@ test('TC08 C8 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3155,6 +3267,7 @@ test('TC08 C9 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3183,6 +3296,7 @@ test('TC08 C10 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3211,6 +3325,7 @@ test('TC08 C11 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3239,6 +3354,7 @@ test('TC08 C12 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3267,6 +3383,7 @@ test('TC08 C13 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC08 Type Code 6 Action Type 3/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3296,6 +3413,7 @@ test('TC09 C1 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3324,6 +3442,7 @@ test('TC09 C2 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3352,6 +3471,7 @@ test('TC09 C3 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3380,6 +3500,7 @@ test('TC09 C4 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3408,6 +3529,7 @@ test('TC09 C5 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3436,6 +3558,7 @@ test('TC09 C6 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3464,6 +3587,7 @@ test('TC09 C7 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3492,6 +3616,7 @@ test('TC09 C8 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3520,6 +3645,7 @@ test('TC09 C9 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3548,6 +3674,7 @@ test('TC09 C10 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3576,6 +3703,7 @@ test('TC09 C11 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3604,6 +3732,7 @@ test('TC09 C12 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3632,6 +3761,7 @@ test('TC09 C13 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC09 Type Code 6 Action Type 4/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3661,6 +3791,7 @@ test('TC10 C1 TypeCode 6 Action Type 5   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT5_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC10 Type Code 6 Action Type 5/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3690,6 +3821,7 @@ test('TC11 C1 TypeCode 7   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC11 TypeCode 7/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3718,6 +3850,7 @@ test('TC11 C2 TypeCode 7   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC11 TypeCode 7/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3746,6 +3879,7 @@ test('TC11 C3 TypeCode 7   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC11 TypeCode 7/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3774,6 +3908,7 @@ test('TC12 C1 TypeCode 8   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC8_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC12 TypeCode 8/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3802,6 +3937,7 @@ test('TC12 C2 TypeCode 8   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC8_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC12 TypeCode 8/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3830,6 +3966,7 @@ test('TC13 C1 TypeCode 9.1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC91' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC13 TypeCode 9.1/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3857,6 +3994,7 @@ test('TC14 C1 TypeCode 9.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC92' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC14 TypeCode 9.2/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3886,6 +4024,7 @@ test('TC15 C1 TypeCode 10   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC15 TypeCode 10/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3914,6 +4053,7 @@ test('TC16 C1 TypeCode 11.1   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC111' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC16 TypeCode 11.1/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3946,6 +4086,7 @@ test('TC17 C1 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3974,6 +4115,7 @@ test('TC17 C2 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4002,6 +4144,7 @@ test('TC17 C3 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4030,6 +4173,7 @@ test('TC17 C4 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4058,6 +4202,7 @@ test('TC17 C5 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4086,6 +4231,7 @@ test('TC17 C6 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4114,6 +4260,7 @@ test('TC17 C7 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4142,6 +4289,7 @@ test('TC17 C8 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4170,6 +4318,7 @@ test('TC17 C9 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4198,6 +4347,7 @@ test('TC17 C10 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4226,6 +4376,7 @@ test('TC17 C11 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4254,6 +4405,7 @@ test('TC17 C12 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4282,6 +4434,7 @@ test('TC17 C13 TypeCode 11.2   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC17 Type Code 11.2/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4310,6 +4463,7 @@ test('TC18 C1 TypeCode 12   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC18 TypeCode 12/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4338,6 +4492,7 @@ test('TC19 C1 TypeCode 13   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC19 TypeCode 13/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4368,6 +4523,7 @@ test('TC20 C1 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4396,6 +4552,7 @@ test('TC20 C2 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4424,6 +4581,7 @@ test('TC20 C3 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4452,6 +4610,7 @@ test('TC20 C4 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4480,6 +4639,7 @@ test('TC20 C5 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4508,6 +4668,7 @@ test('TC20 C6 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4536,6 +4697,7 @@ test('TC20 C7 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4564,6 +4726,7 @@ test('TC20 C8 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4590,6 +4753,7 @@ test('TC20 C9 TypeCode 14   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC20 Type Code 14/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4616,6 +4780,7 @@ test('TC21 C1 TypeCode 15   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC21 TypeCode 15/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4644,6 +4809,7 @@ test('TC22 C1 TypeCode 16   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC22 TypeCode 16/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4675,6 +4841,7 @@ test('TC23 C1 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4703,6 +4870,7 @@ test('TC23 C2 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4731,6 +4899,7 @@ test('TC23 C3 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4759,6 +4928,7 @@ test('TC23 C4 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4787,6 +4957,7 @@ test('TC23 C5 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4815,6 +4986,7 @@ test('TC23 C6 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4843,6 +5015,7 @@ test('TC23 C7 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4871,6 +5044,7 @@ test('TC23 C8 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4899,6 +5073,7 @@ test('TC23 C9 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4927,6 +5102,7 @@ test('TC23 C10 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4955,6 +5131,7 @@ test('TC23 C11 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4983,6 +5160,7 @@ test('TC23 C12 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5011,6 +5189,7 @@ test('TC23 C13 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5040,6 +5219,7 @@ test('TC23 C14 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/27.Case 14.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5067,6 +5247,7 @@ test('TC23 C15 TypeCode 17   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC23 Type Code 17/29.Case 15.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5098,6 +5279,7 @@ test('TC24 C1 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5126,6 +5308,7 @@ test('TC24 C2 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5154,6 +5337,7 @@ test('TC24 C3 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/05.Case 03.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5182,6 +5366,7 @@ test('TC24 C4 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/07.Case 04.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5210,6 +5395,7 @@ test('TC24 C5 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/09.Case 05.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5238,6 +5424,7 @@ test('TC24 C6 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/11.Case 06.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5266,6 +5453,7 @@ test('TC24 C7 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/13.Case 07.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5294,6 +5482,7 @@ test('TC24 C8 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/15.Case 08.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5322,6 +5511,7 @@ test('TC24 C9 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/17.Case 09.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5350,6 +5540,7 @@ test('TC24 C10 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/19.Case 10.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5378,6 +5569,7 @@ test('TC24 C11 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/21.Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5406,6 +5598,7 @@ test('TC24 C12 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/23.Case 12.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5434,6 +5627,7 @@ test('TC24 C13 TypeCode 18   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC24 Type Code 18/25.Case 13.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5462,6 +5656,7 @@ test('TC25 C1 TypeCode 19   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC25 TypeCode 19/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5491,6 +5686,7 @@ test('TC26 C1 TypeCode 20   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC26 TypeCode 20/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5520,6 +5716,7 @@ test('TC27 C1 TypeCode 21   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC21_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC27 Type Code 21/01.Case 01.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5548,6 +5745,7 @@ test('TC27 C2 TypeCode 21   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC21_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC27 Type Code 21/03.Case 02.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5575,6 +5773,7 @@ test('TC28 C1 TypeCode 271   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC271' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC28 TypeCode 271/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -5604,6 +5803,7 @@ test('TC29 C1 TypeCode 272   ', async ({ page }) => {
     await page.reload();
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC272' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/Cal Duty Amount/TC29 TypeCode 272/01.Upload 1 Copy.png', mask: [mask_locator], maskColor: '#00FF00' });
