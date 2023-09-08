@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
@@ -17,7 +17,7 @@ test.beforeEach(async ({ page }) => {
 
 test('TC01 type code  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -26,7 +26,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_TypeCode_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/01. Input Type Code.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -43,7 +43,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_TypeCode_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/02. No Input Type Code.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -77,7 +77,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_TypeCode_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/05. Delete Column Type Code.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -112,7 +112,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_TypeCode_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/08. Input TH.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -128,7 +128,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_TypeCode_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/09. Input EN.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -144,7 +144,7 @@ test('TC01 type code  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_TypeCode_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/10. Input Special Characters.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -161,7 +161,7 @@ test('TC01 type code  ', async ({ page }) => {
 
 test('TC02 recive date case 1  ', async ({ page }) => {
     //  C1-1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C1-1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -170,7 +170,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/01. Case 1-1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -203,7 +203,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/04. Case 1-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -236,7 +236,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/07. Case 1-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -269,7 +269,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/10. Case 1-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -303,7 +303,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
 
 test('TC02 recive date case 2  ', async ({ page }) => {
     //  C2-1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C2-1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -312,7 +312,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/13. Case 2-1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -328,7 +328,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/14. Case 2-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -361,7 +361,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/17. Case 2-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -394,7 +394,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/20. Case 2-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -428,7 +428,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
 
 test('TC02 recive date case 3  ', async ({ page }) => {
     //  C2-1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C3-1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -437,7 +437,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/23. Case 3-1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -453,7 +453,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/24. Case 3-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -486,7 +486,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/27. Case 3-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -519,7 +519,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/30. Case 3-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -552,7 +552,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
 
 test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -561,7 +561,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/33. Case 4.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -570,7 +570,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C4  ' })).toBeHidden();
 
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -579,7 +579,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/34. Case 5.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -597,7 +597,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
 
 test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/03. instAmount/Auto_InstAmount_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -606,7 +606,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_InstAmount_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/01. Input Contract Amount.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -622,7 +622,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/02. Input 10 Digit Number .png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -638,7 +638,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/03. Input 11 Digit Number.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -654,7 +654,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/04. Input 12 Digit Number.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -688,7 +688,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_InstAmount_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/07. Case 3.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -722,7 +722,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_InstAmount_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/10. Case 4.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -756,7 +756,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_InstAmount_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/13. Input TH.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -790,7 +790,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_InstAmount_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/16. Input EN.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -824,7 +824,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_InstAmount_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/19. Input Special Characters.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -850,7 +850,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_InstAmount_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/03. instAmount/Auto_InstAmount_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -859,7 +859,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_InstAmount_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/22. Case 8.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -875,7 +875,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_InstAmount_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/23. Case 9 .png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -904,7 +904,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_InstAmount_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/24. Case 10.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -930,7 +930,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_InstAmount_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/03. instAmount/Auto_InstAmount_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -939,7 +939,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator12 = await page.getByRole('row', { name: 'Auto_InstAmount_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/27. Case 11.png', mask: [mask_locator12], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -955,7 +955,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator13 = await page.getByRole('row', { name: 'Auto_InstAmount_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/28. Case 12 .png', mask: [mask_locator13], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -971,7 +971,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator14 = await page.getByRole('row', { name: 'Auto_InstAmount_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/29. Case 13.png', mask: [mask_locator14], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -997,7 +997,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_InstAmount_C13  ' })).toBeHidden();
     //  C14
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/03. instAmount/Auto_InstAmount_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1006,7 +1006,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator15 = await page.getByRole('row', { name: 'Auto_InstAmount_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/32. Case 14.png', mask: [mask_locator15], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1040,7 +1040,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator16 = await page.getByRole('row', { name: 'Auto_InstAmount_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/35. Case 15 .png', mask: [mask_locator16], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1074,7 +1074,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator17 = await page.getByRole('row', { name: 'Auto_InstAmount_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/38. Case 16.png', mask: [mask_locator17], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1107,7 +1107,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
 
 test('TC04 branch case 1  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1116,7 +1116,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1124,7 +1124,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1133,7 +1133,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1159,7 +1159,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1168,7 +1168,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1194,7 +1194,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1203,7 +1203,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1229,7 +1229,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1238,7 +1238,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1264,7 +1264,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1273,7 +1273,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1299,7 +1299,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1308,7 +1308,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1334,7 +1334,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1343,7 +1343,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1369,7 +1369,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1378,7 +1378,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1404,7 +1404,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1413,7 +1413,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/26. Case 10.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1439,7 +1439,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C10  ' })).toBeHidden();
     // C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1448,7 +1448,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/29. Case 11.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1481,7 +1481,7 @@ test('TC04 branch case 1  ', async ({ page }) => {
 
 test('TC02 branch case 2  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1490,7 +1490,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1498,7 +1498,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1507,7 +1507,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1533,7 +1533,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1542,7 +1542,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1568,7 +1568,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1577,7 +1577,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1603,7 +1603,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1612,7 +1612,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1638,7 +1638,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1647,7 +1647,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1673,7 +1673,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1682,7 +1682,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1708,7 +1708,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1717,7 +1717,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1743,7 +1743,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1752,7 +1752,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1778,7 +1778,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1787,7 +1787,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/26. case 20.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1813,7 +1813,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C10  ' })).toBeHidden();
     // C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1822,7 +1822,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/29. case 21.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1857,7 +1857,7 @@ test('TC02 branch case 2  ', async ({ page }) => {
 
 test('TC04 branch case 3  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1866,7 +1866,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case3_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1874,7 +1874,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1883,7 +1883,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1909,7 +1909,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1918,7 +1918,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1944,7 +1944,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1953,7 +1953,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1979,7 +1979,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1988,7 +1988,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2014,7 +2014,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2023,7 +2023,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2049,7 +2049,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2058,7 +2058,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2084,7 +2084,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2093,7 +2093,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2119,7 +2119,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2128,7 +2128,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2154,7 +2154,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2163,7 +2163,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/26. case 20.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2189,7 +2189,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C10  ' })).toBeHidden();
     // C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2198,7 +2198,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/29. case 21.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2233,7 +2233,7 @@ test('TC04 branch case 3  ', async ({ page }) => {
 
 test('TC04 branch case 4  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2242,7 +2242,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case4_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2268,7 +2268,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2277,7 +2277,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2285,7 +2285,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2294,7 +2294,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/05. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2302,7 +2302,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2311,7 +2311,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/06. case 1.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2337,7 +2337,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2346,7 +2346,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/09. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2354,7 +2354,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2363,7 +2363,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/10. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2371,7 +2371,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2380,7 +2380,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/11. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2406,7 +2406,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2415,7 +2415,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/14. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2441,7 +2441,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2450,7 +2450,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/17. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2485,7 +2485,7 @@ test('TC04 branch case 4  ', async ({ page }) => {
 
 test('TC04 branch case 5  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2494,7 +2494,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case5_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2520,7 +2520,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2529,7 +2529,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2555,7 +2555,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2564,7 +2564,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2590,7 +2590,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2599,7 +2599,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2625,7 +2625,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2634,7 +2634,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2660,7 +2660,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2669,7 +2669,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2695,7 +2695,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2704,7 +2704,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2730,7 +2730,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2739,7 +2739,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2765,7 +2765,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2774,7 +2774,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2810,7 +2810,7 @@ test('TC04 branch case 5  ', async ({ page }) => {
 
 test('TC04 branch case 6  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2819,7 +2819,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case6_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2845,7 +2845,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2854,7 +2854,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2880,7 +2880,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2889,7 +2889,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2915,7 +2915,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2924,7 +2924,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2950,7 +2950,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2959,7 +2959,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2985,7 +2985,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2994,7 +2994,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3020,7 +3020,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3029,7 +3029,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3055,7 +3055,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3064,7 +3064,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3090,7 +3090,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3099,7 +3099,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3138,7 +3138,7 @@ test('TC04 branch case 6  ', async ({ page }) => {
 
 test('TC04 branch case 7  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3147,7 +3147,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case7_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3173,7 +3173,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3182,7 +3182,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3208,7 +3208,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3217,7 +3217,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3243,7 +3243,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3252,7 +3252,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3278,7 +3278,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3287,7 +3287,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3313,7 +3313,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3322,7 +3322,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3348,7 +3348,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3357,7 +3357,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3383,7 +3383,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3392,7 +3392,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3418,7 +3418,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3427,7 +3427,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3461,7 +3461,7 @@ test('TC04 branch case 7  ', async ({ page }) => {
 
 test('TC04 branch case 8  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3470,7 +3470,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case8_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3496,7 +3496,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3505,7 +3505,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3531,7 +3531,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3540,7 +3540,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3566,7 +3566,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3575,7 +3575,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3601,7 +3601,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3610,7 +3610,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3636,7 +3636,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3645,7 +3645,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3671,7 +3671,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3680,7 +3680,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3706,7 +3706,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3715,7 +3715,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3741,7 +3741,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3750,7 +3750,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3784,7 +3784,7 @@ test('TC04 branch case 8  ', async ({ page }) => {
 
 test('TC04 branch case 9  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3793,7 +3793,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case9_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3819,7 +3819,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3828,7 +3828,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3854,7 +3854,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3863,7 +3863,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3889,7 +3889,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3898,7 +3898,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3924,7 +3924,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3933,7 +3933,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3959,7 +3959,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -3968,7 +3968,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -3994,7 +3994,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4003,7 +4003,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4029,7 +4029,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4038,7 +4038,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4064,7 +4064,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4073,7 +4073,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4108,7 +4108,7 @@ test('TC04 branch case 9  ', async ({ page }) => {
 
 test('TC04 branch case 10  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4117,7 +4117,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case10_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4143,7 +4143,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4152,7 +4152,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4178,7 +4178,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4187,7 +4187,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4213,7 +4213,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4222,7 +4222,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4248,7 +4248,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4257,7 +4257,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4283,7 +4283,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C5  ' })).toBeHidden();
     // C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4292,7 +4292,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4318,7 +4318,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4327,7 +4327,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4353,7 +4353,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4362,7 +4362,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4388,7 +4388,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4397,7 +4397,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4433,7 +4433,7 @@ test('TC04 branch case 10  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4442,7 +4442,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4450,7 +4450,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4459,7 +4459,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4467,7 +4467,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4476,7 +4476,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4484,7 +4484,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4493,7 +4493,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4501,7 +4501,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4510,7 +4510,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4518,7 +4518,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4527,7 +4527,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4535,7 +4535,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4544,7 +4544,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4570,7 +4570,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4579,7 +4579,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/10. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4605,7 +4605,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4614,7 +4614,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/13. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4640,7 +4640,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/01. Typecode 2/Auto_Detail1_TC2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4649,7 +4649,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/01. Typecode 2/16. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4685,7 +4685,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4694,7 +4694,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4702,7 +4702,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4711,7 +4711,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4719,7 +4719,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4728,7 +4728,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4736,7 +4736,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4745,7 +4745,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4753,7 +4753,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4762,7 +4762,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4770,7 +4770,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4779,7 +4779,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4787,7 +4787,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4796,7 +4796,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4804,7 +4804,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4813,7 +4813,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4839,7 +4839,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4848,7 +4848,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4874,7 +4874,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4883,7 +4883,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4909,7 +4909,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/02. Typecode 4/Auto_Detail1_TC4_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4918,7 +4918,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC4_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/02. Typecode 4/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4954,7 +4954,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4963,7 +4963,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4971,7 +4971,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4980,7 +4980,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -4988,7 +4988,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -4997,7 +4997,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5005,7 +5005,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5014,7 +5014,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5022,7 +5022,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5031,7 +5031,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5039,7 +5039,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5048,7 +5048,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5056,7 +5056,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5065,7 +5065,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5073,7 +5073,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5082,7 +5082,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5108,7 +5108,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5117,7 +5117,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5143,7 +5143,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5152,7 +5152,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5178,7 +5178,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/03. Typecode 5/Auto_Detail1_TC5_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5187,7 +5187,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC5_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/03. Typecode 5/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5221,7 +5221,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5230,7 +5230,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5238,7 +5238,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5247,7 +5247,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5255,7 +5255,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5264,7 +5264,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5272,7 +5272,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5281,7 +5281,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5289,7 +5289,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5298,7 +5298,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5306,7 +5306,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5315,7 +5315,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5323,7 +5323,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5332,7 +5332,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5340,7 +5340,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5349,7 +5349,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5375,7 +5375,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5384,7 +5384,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5410,7 +5410,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5419,7 +5419,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5445,7 +5445,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/04. Typecode 6/Auto_Detail1_TC6_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5454,7 +5454,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC6_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/04. Typecode 6/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5489,7 +5489,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5498,7 +5498,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5506,7 +5506,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5515,7 +5515,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5523,7 +5523,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5532,7 +5532,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5540,7 +5540,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5549,7 +5549,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5557,7 +5557,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5566,7 +5566,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5574,7 +5574,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5583,7 +5583,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5591,7 +5591,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5600,7 +5600,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5608,7 +5608,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5617,7 +5617,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5643,7 +5643,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5652,7 +5652,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5678,7 +5678,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5687,7 +5687,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5713,7 +5713,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/05. Typecode 7/Auto_Detail1_TC7_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5722,7 +5722,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC7_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/05. Typecode 7/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5757,7 +5757,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5766,7 +5766,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5774,7 +5774,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5783,7 +5783,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5791,7 +5791,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5800,7 +5800,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5808,7 +5808,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5817,7 +5817,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5825,7 +5825,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5834,7 +5834,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5842,7 +5842,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5851,7 +5851,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5859,7 +5859,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5868,7 +5868,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5876,7 +5876,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5885,7 +5885,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5911,7 +5911,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5920,7 +5920,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5946,7 +5946,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5955,7 +5955,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -5981,7 +5981,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/06. Typecode 8/Auto_Detail1_TC8_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -5990,7 +5990,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC8_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/06. Typecode 8/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6027,7 +6027,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6036,7 +6036,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6044,7 +6044,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6053,7 +6053,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6061,7 +6061,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6070,7 +6070,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6078,7 +6078,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6087,7 +6087,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6095,7 +6095,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6104,7 +6104,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6112,7 +6112,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6121,7 +6121,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6129,7 +6129,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6138,7 +6138,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6146,7 +6146,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6155,7 +6155,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6181,7 +6181,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6190,7 +6190,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6216,7 +6216,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6225,7 +6225,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6251,7 +6251,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/07. Typecode 10/Auto_Detail1_TC10_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6260,7 +6260,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC10_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/07. Typecode 10/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6296,7 +6296,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6305,7 +6305,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6313,7 +6313,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6322,7 +6322,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6330,7 +6330,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6339,7 +6339,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6347,7 +6347,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6356,7 +6356,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6364,7 +6364,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6373,7 +6373,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6381,7 +6381,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6390,7 +6390,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6398,7 +6398,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6407,7 +6407,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6433,7 +6433,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6442,7 +6442,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/10. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6468,7 +6468,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6477,7 +6477,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/13. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6503,7 +6503,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/08. Typecode 111/Auto_Detail1_TC111_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6512,7 +6512,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC111_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/08. Typecode 111/16. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6549,7 +6549,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6558,7 +6558,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6566,7 +6566,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6575,7 +6575,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6583,7 +6583,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6592,7 +6592,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6600,7 +6600,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6609,7 +6609,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6617,7 +6617,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6626,7 +6626,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6634,7 +6634,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6643,7 +6643,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6651,7 +6651,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6660,7 +6660,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6668,7 +6668,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6677,7 +6677,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6703,7 +6703,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6712,7 +6712,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6738,7 +6738,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6747,7 +6747,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6773,7 +6773,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/09. Typecode 16/Auto_Detail1_TC16_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6782,7 +6782,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC16_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/09. Typecode 16/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6817,7 +6817,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6826,7 +6826,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6834,7 +6834,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6843,7 +6843,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6851,7 +6851,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6860,7 +6860,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6868,7 +6868,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6877,7 +6877,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6885,7 +6885,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6894,7 +6894,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6902,7 +6902,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6911,7 +6911,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6919,7 +6919,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6928,7 +6928,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6936,7 +6936,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6945,7 +6945,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -6971,7 +6971,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -6980,7 +6980,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7006,7 +7006,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7015,7 +7015,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7041,7 +7041,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/10. Typecode 18/Auto_Detail1_TC18_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7050,7 +7050,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC18_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7086,7 +7086,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7095,7 +7095,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7103,7 +7103,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7112,7 +7112,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7120,7 +7120,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7129,7 +7129,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7137,7 +7137,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7146,7 +7146,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7154,7 +7154,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7163,7 +7163,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7171,7 +7171,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7180,7 +7180,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7188,7 +7188,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7197,7 +7197,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7205,7 +7205,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7214,7 +7214,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7240,7 +7240,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7249,7 +7249,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7275,7 +7275,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7284,7 +7284,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7310,7 +7310,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/11. Typecode 19/Auto_Detail1_TC19_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7319,7 +7319,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC19_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7354,7 +7354,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7363,7 +7363,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7371,7 +7371,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7380,7 +7380,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7388,7 +7388,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7397,7 +7397,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7405,7 +7405,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7414,7 +7414,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7422,7 +7422,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7431,7 +7431,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7439,7 +7439,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7448,7 +7448,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7456,7 +7456,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7465,7 +7465,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7473,7 +7473,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7482,7 +7482,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7508,7 +7508,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7517,7 +7517,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7543,7 +7543,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7552,7 +7552,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7578,7 +7578,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/12. Typecode 20/Auto_Detail1_TC20_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7587,7 +7587,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC20_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7622,7 +7622,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7631,7 +7631,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7639,7 +7639,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7648,7 +7648,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7656,7 +7656,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7665,7 +7665,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7673,7 +7673,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7682,7 +7682,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7690,7 +7690,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7699,7 +7699,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7707,7 +7707,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7716,7 +7716,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7724,7 +7724,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7733,7 +7733,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7741,7 +7741,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7750,7 +7750,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7776,7 +7776,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7785,7 +7785,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7811,7 +7811,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7820,7 +7820,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7846,7 +7846,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/13. Typecode 21/Auto_Detail1_TC21_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7855,7 +7855,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC21_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7890,7 +7890,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7899,7 +7899,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7907,7 +7907,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7916,7 +7916,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7924,7 +7924,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7933,7 +7933,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7941,7 +7941,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7950,7 +7950,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7958,7 +7958,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7967,7 +7967,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7975,7 +7975,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -7984,7 +7984,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -7992,7 +7992,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8001,7 +8001,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8009,7 +8009,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8018,7 +8018,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8044,7 +8044,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8053,7 +8053,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8079,7 +8079,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8088,7 +8088,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8114,7 +8114,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/14. Typecode 271/Auto_Detail1_TC271_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8123,7 +8123,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC271_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8159,7 +8159,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
 
 test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8168,7 +8168,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8176,7 +8176,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8185,7 +8185,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8193,7 +8193,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8202,7 +8202,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8210,7 +8210,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8219,7 +8219,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8227,7 +8227,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8236,7 +8236,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8244,7 +8244,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8253,7 +8253,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8261,7 +8261,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8270,7 +8270,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8278,7 +8278,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8287,7 +8287,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8313,7 +8313,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8322,7 +8322,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8348,7 +8348,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8357,7 +8357,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8383,7 +8383,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/05. detail1/15. Typecode 272/Auto_Detail1_TC272_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8392,7 +8392,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail1_TC272_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8428,7 +8428,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
 
 test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8437,7 +8437,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8445,7 +8445,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8454,7 +8454,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8462,7 +8462,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8471,7 +8471,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8479,7 +8479,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8488,7 +8488,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8496,7 +8496,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8505,7 +8505,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8513,7 +8513,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8522,7 +8522,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8530,7 +8530,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8539,7 +8539,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8547,7 +8547,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8556,7 +8556,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8582,7 +8582,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8591,7 +8591,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8617,7 +8617,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8626,7 +8626,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8652,7 +8652,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/01. Typecode 6/Auto_Detail2_TC6_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8661,7 +8661,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail2_TC6_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/01. Typecode 6/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8698,7 +8698,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
 
 test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8707,7 +8707,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8715,7 +8715,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8724,7 +8724,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8732,7 +8732,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8741,7 +8741,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8749,7 +8749,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8758,7 +8758,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8766,7 +8766,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8775,7 +8775,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8783,7 +8783,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8792,7 +8792,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8800,7 +8800,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8809,7 +8809,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8817,7 +8817,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8826,7 +8826,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8852,7 +8852,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8861,7 +8861,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8887,7 +8887,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8896,7 +8896,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8922,7 +8922,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/02. Typecode 8/Auto_Detail2_TC8_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8931,7 +8931,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail2_TC8_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/02. Typecode 8/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8967,7 +8967,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
 
 test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8976,7 +8976,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -8984,7 +8984,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -8993,7 +8993,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9001,7 +9001,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9010,7 +9010,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9018,7 +9018,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9027,7 +9027,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9035,7 +9035,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9044,7 +9044,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9052,7 +9052,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9061,7 +9061,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9069,7 +9069,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9078,7 +9078,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9086,7 +9086,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9095,7 +9095,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9121,7 +9121,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9130,7 +9130,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9156,7 +9156,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9165,7 +9165,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9191,7 +9191,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/03. Typecode 18/Auto_Detail2_TC18_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9200,7 +9200,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail2_TC18_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/03. Typecode 18/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9236,7 +9236,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
 
 test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9245,7 +9245,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9253,7 +9253,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9262,7 +9262,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9270,7 +9270,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9279,7 +9279,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9287,7 +9287,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9296,7 +9296,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9304,7 +9304,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9313,7 +9313,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9321,7 +9321,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9330,7 +9330,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9338,7 +9338,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9347,7 +9347,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9355,7 +9355,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9364,7 +9364,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9390,7 +9390,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9399,7 +9399,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9425,7 +9425,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9434,7 +9434,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9460,7 +9460,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/04. Typecode 271/Auto_Detail2_TC271_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9469,7 +9469,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail2_TC271_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/04. Typecode 271/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9504,7 +9504,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
 
 test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9513,7 +9513,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9521,7 +9521,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9530,7 +9530,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9538,7 +9538,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9547,7 +9547,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9555,7 +9555,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9564,7 +9564,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9572,7 +9572,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9581,7 +9581,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9589,7 +9589,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9598,7 +9598,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9606,7 +9606,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9615,7 +9615,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9623,7 +9623,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9632,7 +9632,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9658,7 +9658,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9667,7 +9667,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9693,7 +9693,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9702,7 +9702,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9728,7 +9728,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/06. detail2/05. Typecode 272/Auto_Detail2_TC272_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9737,7 +9737,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail2_TC272_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC06. Detail 2/05. Typecode 272/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9772,7 +9772,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
 
 test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9781,7 +9781,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9789,7 +9789,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9798,7 +9798,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9806,7 +9806,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9815,7 +9815,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9823,7 +9823,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9832,7 +9832,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9840,7 +9840,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9849,7 +9849,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9857,7 +9857,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9866,7 +9866,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9874,7 +9874,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9883,7 +9883,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9891,7 +9891,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9900,7 +9900,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9926,7 +9926,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9935,7 +9935,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9961,7 +9961,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -9970,7 +9970,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -9996,7 +9996,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/01. Typecode 18/Auto_Detail3_TC18_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10005,7 +10005,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail3_TC18_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/01. Typecode 18/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10040,7 +10040,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
 
 test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10049,7 +10049,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10057,7 +10057,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10066,7 +10066,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10074,7 +10074,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10083,7 +10083,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10091,7 +10091,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10100,7 +10100,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10108,7 +10108,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10117,7 +10117,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10125,7 +10125,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10134,7 +10134,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10142,7 +10142,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10151,7 +10151,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10159,7 +10159,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10168,7 +10168,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10194,7 +10194,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10203,7 +10203,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10229,7 +10229,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10238,7 +10238,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10264,7 +10264,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/02. Typecode 271/Auto_Detail3_TC271_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10273,7 +10273,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail3_TC271_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/02. Typecode 271/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10310,7 +10310,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
 
 test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10319,7 +10319,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10327,7 +10327,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10336,7 +10336,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10344,7 +10344,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10353,7 +10353,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10361,7 +10361,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10370,7 +10370,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10378,7 +10378,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10387,7 +10387,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10395,7 +10395,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10404,7 +10404,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10412,7 +10412,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10421,7 +10421,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10429,7 +10429,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10438,7 +10438,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10464,7 +10464,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10473,7 +10473,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/11. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10499,7 +10499,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10508,7 +10508,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/14. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10534,7 +10534,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/07. detail3/03. Typecode 272/Auto_Detail3_TC272_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10543,7 +10543,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_Detail3_TC272_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC07. Detail 3/03. Typecode 272/17. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10578,7 +10578,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
 
 test('TC08 Select Type  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10587,7 +10587,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_SelectType_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10595,7 +10595,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10604,7 +10604,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_SelectType_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10612,7 +10612,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10621,7 +10621,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_SelectType_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10647,7 +10647,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10656,7 +10656,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_SelectType_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/06. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10682,7 +10682,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10691,7 +10691,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_SelectType_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/09. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10717,7 +10717,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10726,7 +10726,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_SelectType_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/12. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10752,7 +10752,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10761,7 +10761,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_SelectType_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/15. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10787,7 +10787,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10796,7 +10796,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_SelectType_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/17. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10822,7 +10822,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10831,7 +10831,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_SelectType_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/20. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10857,7 +10857,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10866,7 +10866,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_SelectType_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/23. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10892,7 +10892,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10901,7 +10901,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_SelectType_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/26. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10927,7 +10927,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C11  ' })).toBeHidden();
     //  C12
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10936,7 +10936,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator12 = await page.getByRole('row', { name: 'Auto_SelectType_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/29. Case 12.png', mask: [mask_locator12], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10962,7 +10962,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C12  ' })).toBeHidden();
     //  C13
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -10971,7 +10971,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator13 = await page.getByRole('row', { name: 'Auto_SelectType_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/32. Case 13.png', mask: [mask_locator13], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -10997,7 +10997,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C13  ' })).toBeHidden();
     //  C14
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11006,7 +11006,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator14 = await page.getByRole('row', { name: 'Auto_SelectType_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/35. Case 14.png', mask: [mask_locator14], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11032,7 +11032,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C14  ' })).toBeHidden();
     //  C15
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11041,7 +11041,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator15 = await page.getByRole('row', { name: 'Auto_SelectType_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/38. Case 15.png', mask: [mask_locator15], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11067,7 +11067,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C15  ' })).toBeHidden();
     //  C16
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11076,7 +11076,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator16 = await page.getByRole('row', { name: 'Auto_SelectType_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/41. Case 16.png', mask: [mask_locator16], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11102,7 +11102,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C16  ' })).toBeHidden();
     //  C17
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C17.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11111,7 +11111,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator17 = await page.getByRole('row', { name: 'Auto_SelectType_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/44. Case 17.png', mask: [mask_locator17], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11137,7 +11137,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C17  ' })).toBeHidden();
     //  C18
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C18.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11146,7 +11146,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator18 = await page.getByRole('row', { name: 'Auto_SelectType_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/47. Case 18.png', mask: [mask_locator18], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11172,7 +11172,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C18  ' })).toBeHidden();
     //  C19
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/08. selecttype/Auto_SelectType_C19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11181,7 +11181,7 @@ test('TC08 Select Type  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator19 = await page.getByRole('row', { name: 'Auto_SelectType_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC08. Select Type/50. Case 19.png', mask: [mask_locator19], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11215,7 +11215,7 @@ test('TC08 Select Type  ', async ({ page }) => {
 
 test('TC09 Contract No Case 1  ', async ({ page }) => {
     //  C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11224,7 +11224,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11232,7 +11232,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C1  ' })).toBeHidden();
     //  C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11241,7 +11241,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11249,7 +11249,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11258,7 +11258,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11266,7 +11266,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11275,7 +11275,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11300,7 +11300,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11309,7 +11309,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/07. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11318,7 +11318,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C5  ' })).toBeHidden();
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11327,7 +11327,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/08. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11336,7 +11336,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11345,7 +11345,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/09. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11354,7 +11354,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11363,7 +11363,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/10. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11388,7 +11388,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11397,7 +11397,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/13. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11422,7 +11422,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C9  ' })).toBeHidden();
     //  C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11431,7 +11431,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/16. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11456,7 +11456,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C10  ' })).toBeHidden();
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case1/Auto_ContractNo_Case1_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11465,7 +11465,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/19. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11496,7 +11496,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
 
 test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     // C1
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11505,7 +11505,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11513,7 +11513,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11522,7 +11522,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11530,7 +11530,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C2  ' })).toBeHidden();
     //  C3
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11539,7 +11539,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11547,7 +11547,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11556,7 +11556,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11564,7 +11564,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11573,7 +11573,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11582,7 +11582,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C5  ' })).toBeHidden();
     await page.waitForTimeout(1000);
     //  C6
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11591,7 +11591,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11599,7 +11599,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11608,7 +11608,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11616,7 +11616,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11625,7 +11625,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11633,7 +11633,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11642,7 +11642,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/09. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11650,7 +11650,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11659,7 +11659,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/10. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11693,7 +11693,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
 
 test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     //  C11
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11702,7 +11702,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/01. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11727,7 +11727,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C11  ' })).toBeHidden();
     //  C12
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11736,7 +11736,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/04. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11761,7 +11761,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C12  ' })).toBeHidden();
     //  C13
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11770,7 +11770,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/07. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11795,7 +11795,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C13  ' })).toBeHidden();
     //  C14
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11804,7 +11804,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/10. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11829,7 +11829,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C14  ' })).toBeHidden();
     //  C15
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11838,7 +11838,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/13. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11863,7 +11863,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C15  ' })).toBeHidden();
     //  C16
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11872,7 +11872,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/16. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11897,7 +11897,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C16  ' })).toBeHidden();
     //  C17
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C17.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11906,7 +11906,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/19. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11931,7 +11931,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C17  ' })).toBeHidden();
     //  C18
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C18.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11940,7 +11940,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/22. Case 25.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -11966,7 +11966,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18  ' })).toBeHidden();
     
     //  C19
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -11975,7 +11975,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/25. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12001,7 +12001,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C19  ' })).toBeHidden();
     
     //  C20
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C20.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12010,7 +12010,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/28. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12040,7 +12040,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
 
 test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     //  C21
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C21.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12049,7 +12049,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/01. Case 21.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12074,7 +12074,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C21  ' })).toBeHidden();
     //  C22
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C22.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12083,7 +12083,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/04. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12108,7 +12108,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C22  ' })).toBeHidden();
     //  C23
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C23.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12117,7 +12117,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/07. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12142,7 +12142,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C23  ' })).toBeHidden();
     //  C24
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C24.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12151,7 +12151,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C24' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/10. Case 24.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12176,7 +12176,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C24  ' })).toBeHidden();
     //  C25
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C25.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12185,7 +12185,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C25' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/13. Case 25.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12210,7 +12210,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C25  ' })).toBeHidden();
     //  C26
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C26.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12219,7 +12219,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C26' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/16. Case 26.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12244,7 +12244,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C26  ' })).toBeHidden();
     //  C27
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C27.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12253,7 +12253,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C27' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/19. Case 27.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12278,7 +12278,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C27  ' })).toBeHidden();
     //  C28
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C28.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12287,7 +12287,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C28' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/22. Case 28.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12312,7 +12312,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C28  ' })).toBeHidden();
     //  C29
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C29.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12321,7 +12321,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C29' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/25. Case 29.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12346,7 +12346,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C29  ' })).toBeHidden();
     //  C30
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C30.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12355,7 +12355,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C30' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/28. Case 30.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -12380,7 +12380,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C30  ' })).toBeHidden();
     // C31
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/09. contractno/Case2/Auto_ContractNo_Case2_C31.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -12389,7 +12389,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(2500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C31' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/31. Case 31.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);

@@ -5,7 +5,7 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
   // Runs before each test and signs in each page.
 
-  await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+  await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
@@ -16,7 +16,7 @@ test.beforeEach(async ({ page }) => {
 test('TC01 Batch View ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/01.Batch View.png' });
   await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
@@ -44,7 +44,7 @@ test('TC01 Batch View ', async ({ page }) => {
 test('TC02 Search Status : All Status  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'All Status' }).click();
@@ -104,7 +104,7 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
 test('TC02 Search Status : Uploading  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Uploading' }).click();
@@ -167,7 +167,7 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
 test('TC02 Search Status : Input Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Input Error' }).click();
@@ -231,7 +231,7 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
 test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submit Error' }).click();
@@ -294,7 +294,7 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Filing Error' }).click();
@@ -358,7 +358,7 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment Error' }).click();
@@ -423,7 +423,7 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Receipt Error' }).click();
@@ -488,7 +488,7 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 test('TC02 Search Status : Preparing  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Preparing' }).click();
@@ -553,7 +553,7 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
 test('TC02 Search Status : Rejected  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Rejected' }).click();
@@ -618,7 +618,7 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
 test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Reviewing' }).click();
@@ -684,7 +684,7 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 test('TC02 Search Status : Submitted  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submitted' }).click();
@@ -749,7 +749,7 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
 test('TC02 Search Status : Payment  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment', exact: true }).click();
@@ -810,7 +810,7 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
 test('TC02 Search Status : Completed  ', async ({ page }) => {
 
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();
@@ -869,7 +869,7 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
 
 test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
   await page.getByRole('option', { name: '100' }).click();
   await page.getByLabel('Next page').click();
@@ -887,7 +887,7 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
 test('TC04 Create Batch  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_1_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -896,7 +896,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
   await page.waitForTimeout(1500);
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   let mask_locator = await page.getByRole('row', { name: 'Auto_1_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.getByText('Auto_1_Record ').first().click();
@@ -918,7 +918,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
   await page.waitForTimeout(1500);
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Many_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png', mask: [mask_locator1], maskColor: '#00FF00' });
   await page.getByText('Auto_Type1_Many_Record ').first().click();
@@ -941,7 +941,7 @@ test('TC04 Create Batch  ', async ({ page }) => {
 
 
 test('TC05 Edit Batch On Web  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -949,7 +949,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/01.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -978,14 +978,14 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
 
 
 test('TC05 Edit Batch Import Files  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/03.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -993,7 +993,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Import Fixes' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Import.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Import' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/04.Import Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
@@ -1010,7 +1010,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
 
 
 test('TC06 Delete Batch  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Delete.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1018,7 +1018,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Delete' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/01.Select Batch Delete.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1028,7 +1028,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   await expect.soft(page.getByRole('row', { name: 'Auto_Delete  ' })).toBeHidden();
   await page.waitForTimeout(1000);
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/02.After Delete.png' });
 
@@ -1039,7 +1039,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
 
 
 test('TC07 Reject Batch  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Reject.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1047,7 +1047,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Reject' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1058,7 +1058,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/03.Click Confirm.png', fullPage: true });
   await page.getByRole('button', { name: 'Confirm' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.getByText('Auto_Reject ').first().click();
@@ -1066,7 +1066,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/05.Click Reject.png', fullPage: true });
   await page.getByRole('button', { name: 'Reject' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/06.After Reject.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
@@ -1082,7 +1082,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 // test('TC08 Submit Batch  ', async ({ page }) => {
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_1_Record.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1091,7 +1091,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
 //   await page.waitForTimeout(2500);
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_1_Record' }).getByRole('cell').first();
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).first().click();
@@ -1101,7 +1101,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/03.Click Confirm.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   await page.waitForTimeout(1500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).first().click();
@@ -1109,7 +1109,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/05.Click Submit.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   await page.waitForTimeout(4500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/06.After Submit.png', mask: [mask_locator], maskColor: '#00FF00' });
 
@@ -1118,7 +1118,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 // test('TC09 Schedule Submit Batch  ', async ({ page }) => {
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_ Schedule Submit.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1127,7 +1127,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
 //   await page.waitForTimeout(2500);
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   let mask_locator = await page.getByRole('row', { name: 'Auto_ Schedule Submit' }).getByRole('cell').first();
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_ Schedule Submit' }).first().click();
@@ -1137,7 +1137,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/03.Click Confirm.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
 //   await page.waitForTimeout(1500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_ Schedule Submit' }).first().click();
@@ -1149,14 +1149,14 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 test('TC10 Export  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(2500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC10 Export/01.Select Batch Export.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1179,7 +1179,7 @@ test('TC10 Export  ', async ({ page }) => {
 
 
 test('TC11 Download QR Payin  ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment', exact: true }).click();
@@ -1206,7 +1206,7 @@ test('TC11 Download QR Payin  ', async ({ page }) => {
 
 
 test('TC11 Download Receipts ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/batch');
+  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();

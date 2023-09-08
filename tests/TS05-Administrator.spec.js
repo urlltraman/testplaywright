@@ -4,12 +4,12 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.getByRole('link', { name: 'Administrator' }).click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/admin');
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/admin');
 });
 
 
@@ -157,11 +157,11 @@ test('TC01 Administrator Add Basic ', async ({ page }) => {
 
 // test('TC01 Administrator User Login ', async ({ page }) => {
 //     await page.getByText('logout').click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
 //     await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
 //     await page.locator('input[name="password"]').fill('ZXcv.!234');
 //     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/batch');
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
 //     await page.waitForTimeout(1800);
 //     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/17.User Login.png' });
 
@@ -220,11 +220,11 @@ test('TC01 Administrator Add Basic ', async ({ page }) => {
 
 // test('TC02 Edit User Login ', async ({ page }) => {
 //     await page.getByText('logout').click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/auth/login');
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
 //     await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
 //     await page.locator('input[name="password"]').fill('ZXcv.!234');
 //     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/batch');
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
 //     await page.waitForTimeout(1800);
 //     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/08.Edit User Login.png' });
 

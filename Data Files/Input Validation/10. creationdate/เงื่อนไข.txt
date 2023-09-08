@@ -1,0 +1,14 @@
+ Format YYYY-MM-DD ค.ศ   x
+ Format YYYY-MM-DD พ.ศ
+ Format DD-MM-YYYY ค.ศ
+ Format DD-MM-YYYY พ.ศ
+ Format YYYY/MM/DD ค.ศ
+ Format YYYY/MM/DD พ.ศ
+ Format DD/MM/YYYY ค.ศ
+ Format DD/MM/YYYY พ.ศ
+   วันที่ล่วงหน้านับถัดจากวันยื่นไม่เกิน 30 วัน(auto ทำเป็น3ปี) 
+   ไม่ระบุ   กรณีไม่ระบุวันที่ทำสัญญา <creationDate> ต้องชำระเงินภายในวันที่นำส่ง
+   ลบ Column 
+   ภาษาไทย
+   ภาษาอังกฤษ
+   อักษรพิเศษ
