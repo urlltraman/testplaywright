@@ -12,3 +12,10 @@
    ภาษาไทย
    ภาษาอังกฤษ
    อักษรพิเศษ
+15.Format YYYY-M-DD  2023-09-01
+16.Format YYYY-MM-D
+17.Format YYYY-M-D
+18.Format YY-MM-DD   23-09-01
+19.Format YY-M-DD
+20.Format YY-MM-D
+21.Format YY-M-D
