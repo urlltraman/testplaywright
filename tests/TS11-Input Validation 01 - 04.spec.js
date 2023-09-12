@@ -594,6 +594,246 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
 
 
 
+test('TC02 recive date case 6 - 12  ', async ({ page }) => {
+    //  C6
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C6.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C6' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/35. Case 6.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/36.Case 6 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C6').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/37. Case 6 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C6 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C6  ' })).toBeHidden();
+    //C7
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C7.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C7' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/38. Case 7.png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/39. Case 7 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C7').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/40. Case 7 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C7 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C7  ' })).toBeHidden();
+    //  C8
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C8.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C8' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/41. Case 8.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/42. Case 8 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C8').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/43. Case 8 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C8 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C8  ' })).toBeHidden();
+    //  C9
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C9.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C9' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/44. Case 9.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/45. Case 9 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C9').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/46. Case 9 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C9 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C9  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+    //  C10
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C10.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator4 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C10' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/47. Case 10.png', mask: [mask_locator4], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/48. Case 10 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C10').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/49. Case 10 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C10 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C10  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+    //  C11
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C11.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator5 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C11' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/50. Case 11.png', mask: [mask_locator5], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/51. Case 11 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C11').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/52. Case 11 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C11 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C11  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+    //  C12
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C12.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator6 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C12' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/53. Case 12.png', mask: [mask_locator6], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/54. Case 12 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ReceiveDate_C12').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/55. Case 12 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ReceiveDate_C12 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C12  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
+
+
 
 test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     //  C1

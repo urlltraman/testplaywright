@@ -766,7 +766,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18  ' })).toBeHidden();
-    
+
     //  C19
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -801,7 +801,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C19 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C19  ' })).toBeHidden();
-    
+
     //  C20
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1691,6 +1691,247 @@ test('TC10 Creation Date  11 - 14  ', async ({ page }) => {
 
 
 
+test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
+    //  C15
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C15.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator1 = await page.getByRole('row', { name: 'Auto_CreationDate_C15' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/41. Case 15.png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/42. Case 15 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C15').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/43. Case 15 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C15 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C15  ' })).toBeHidden();
+    //  C16
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C16.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_CreationDate_C16' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/44. Case 16.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/45. Case 16 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C16').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/46. Case 16 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C16 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C16  ' })).toBeHidden();
+    //  C17
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C17.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator3 = await page.getByRole('row', { name: 'Auto_CreationDate_C17' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/47. Case 17.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/48. Case 17 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C17').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/49. Case 17 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C17 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C17  ' })).toBeHidden();
+    //  C18
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C18.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator4 = await page.getByRole('row', { name: 'Auto_CreationDate_C18' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/50. Case 18.png', mask: [mask_locator4], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/51. Case 18 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C18').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/52. Case 18 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C18 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C18  ' })).toBeHidden();
+    //  C19
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C19.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator5 = await page.getByRole('row', { name: 'Auto_CreationDate_C19' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/53. Case 19.png', mask: [mask_locator5], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/54. Case 19 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C19').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/55. Case 19 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C19 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C19  ' })).toBeHidden();
+    //  C20
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C20.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator6 = await page.getByRole('row', { name: 'Auto_CreationDate_C20' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/56. Case 20.png', mask: [mask_locator6], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/57. Case 20 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C20').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/58. Case 20 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C20 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C20  ' })).toBeHidden();
+    //  C21
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/10. creationdate/Auto_CreationDate_C21.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator7 = await page.getByRole('row', { name: 'Auto_CreationDate_C21' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/59. Case 21.png', mask: [mask_locator7], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/60. Case 21 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_CreationDate_C21').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/61. Case 21 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_CreationDate_C21 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C21  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
 
 
 test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
@@ -1900,7 +2141,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/17. Case 8 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -1908,7 +2149,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/18. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -1934,7 +2175,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/20. Case 9 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -1942,7 +2183,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/21. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -1968,7 +2209,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/23. Case 10 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -1976,7 +2217,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C10').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/24. Case 10 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -1988,7 +2229,10 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
 
 
 
-test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
+
+
+
+test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     //  C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2008,7 +2252,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/26. Case 11 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -2016,7 +2260,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C11').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/27. Case 11 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -2110,7 +2354,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/35. Case 14 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -2118,7 +2362,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C14').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/36. Case 14 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -2144,7 +2388,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/38. Case 15 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -2152,7 +2396,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C15').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' length is overflow ข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/39. Case 15 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -2178,7 +2422,7 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/41. Case 16 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -2186,16 +2430,262 @@ test('TC11 Effective Date  11 - 16  ', async ({ page }) => {
     await page.getByText('Auto_EffectiveDate_C16').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8]  Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/42. Case 16 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_EffectiveDate_C16 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C16  ' })).toBeHidden();
+    //  C17
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C17.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator7 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C17' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/43. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/44. Case 17 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C17').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/45. Case 17 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C17 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C17  ' })).toBeHidden();
+    //  C18
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C18.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator8 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C18' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/46. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/47. Case 18 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C18').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/48. Case 18 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C18 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C18  ' })).toBeHidden();
+    //  C19
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C19.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator9 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C19' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/49. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/50. Case 19 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C19').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/51. Case 19 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C19 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C19  ' })).toBeHidden();
+    //  C20
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C20.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator10 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C20' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/52. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/53. Case 20 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C20').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/54. Case 20 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C20 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C20  ' })).toBeHidden();
     await page.waitForTimeout(1000);
 });
 
+
+
+test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
+    
+    //  C21
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C21.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator1 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C21' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/55. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/56. Case 21 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C21').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/57. Case 21 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C21 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C21  ' })).toBeHidden();
+    
+    //  C22
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C22.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C22' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/58. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/59. Case 22 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C22').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/60. Case 22 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C22 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C22  ' })).toBeHidden();
+    
+    //  C23
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C23.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C23' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/61. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date format");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/62. Case 23 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_EffectiveDate_C23').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'effectiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/63. Case 23 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_EffectiveDate_C23 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C23  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
 
 
 
@@ -2478,7 +2968,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
 
 
 
-test('TC12 Expire Date  11 - 16  ', async ({ page }) => {
+test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     //  C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2683,9 +3173,255 @@ test('TC12 Expire Date  11 - 16  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ExpireDate_C16 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C16  ' })).toBeHidden();
+    //  C17
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C17.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator7 = await page.getByRole('row', { name: 'Auto_ExpireDate_C17' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/41. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/42. Case 17 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C17').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/43. Case 17 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C17 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C17  ' })).toBeHidden();
+    //  C18
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C18.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator8 = await page.getByRole('row', { name: 'Auto_ExpireDate_C18' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/44. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/45. Case 18 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C18').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/46. Case 18 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C18 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C18  ' })).toBeHidden();
+    //  C19
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C19.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator9 = await page.getByRole('row', { name: 'Auto_ExpireDate_C19' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/47. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/48. Case 19 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C19').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/49. Case 19 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C19 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C19  ' })).toBeHidden();
+    //  C20
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C20.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator10 = await page.getByRole('row', { name: 'Auto_ExpireDate_C20' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/50. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/51. Case 20 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C20').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/52. Case 20 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C20 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C20  ' })).toBeHidden();
     await page.waitForTimeout(1000);
 });
 
+
+
+
+
+
+test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
+    //  C21
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C21.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator1 = await page.getByRole('row', { name: 'Auto_ExpireDate_C21' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/53. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/54. Case 21 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C21').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/55. Case 21 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C21 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C21  ' })).toBeHidden();
+    //  C22
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C22.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C22' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/56. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/57. Case 22 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C22').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/58. Case 22 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C22 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C22  ' })).toBeHidden();
+    //  C23
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.getByRole('button', { name: 'Upload' }).first().click();
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C23.xlsx');
+    await page.getByRole('button', { name: 'Upload' }).click();
+    await page.getByLabel('Upload Success').click();
+    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await page.reload();
+    await page.waitForTimeout(2500);
+    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C23' }).getByRole('cell').first();
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/59. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    await page.waitForTimeout(1500);
+    await page.getByRole('button', { name: 'Search' }).first().click();
+    await page.waitForTimeout(500);
+    await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    await expect.soft(page.getByLabel('Message')).toBeVisible();
+    await expect.soft(page.getByLabel('Message'))
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] ");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/60. Case 23 Click Status Error Msg.png' });
+    await page.waitForTimeout(500);
+    await page.reload();
+    await page.getByText('Auto_ExpireDate_C23').first().click();
+    await expect.soft(page.locator('.card-error')).toBeVisible();
+    await expect.soft(page.locator('.card-error'))
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'expireDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate is not empty; therefore, expireDate must not be before effectiveDate. [R7] ข้อมูลบรรทัดที่ 1 column 'expireDate' expireDate must not be before effectiveDate. [R8] Import FixesExport FixesEdit");
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/61. Case 23 Error Msg.png' });
+    await page.locator('a').filter({ hasText: 'Batch' }).click();
+    await page.getByRole('row', { name: 'Auto_ExpireDate_C23 ' }).first().getByText('delete').click();
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C23  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
 
 
 

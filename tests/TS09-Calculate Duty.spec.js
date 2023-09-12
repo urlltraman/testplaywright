@@ -20,7 +20,7 @@ test('TC01 C1 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -37,8 +37,9 @@ test('TC01 C1 TypeCode 1   ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C1 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
-    await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+    await page.waitForTimeout(500);
 });
 
 
@@ -49,7 +50,7 @@ test('TC01 C2 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -68,6 +69,7 @@ test('TC01 C2 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -78,7 +80,7 @@ test('TC01 C3 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -96,7 +98,9 @@ test('TC01 C3 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
-    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C3  ' })).toBeHidden();});
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+});
 
 
 
@@ -106,7 +110,7 @@ test('TC01 C4 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -124,7 +128,9 @@ test('TC01 C4 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C4 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
-    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C4  ' })).toBeHidden();});
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+});
 
 
 
@@ -134,7 +140,7 @@ test('TC01 C5 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -152,7 +158,9 @@ test('TC01 C5 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
-    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C5  ' })).toBeHidden();});
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+});
 
 
 
@@ -162,7 +170,7 @@ test('TC01 C6 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -180,7 +188,9 @@ test('TC01 C6 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C6 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
-    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C6  ' })).toBeHidden();});
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+});
 
 
 
@@ -190,7 +200,7 @@ test('TC01 C7 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -208,7 +218,9 @@ test('TC01 C7 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C7 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
-    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C7  ' })).toBeHidden();});
+    await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
+});
 
 
 
@@ -218,7 +230,7 @@ test('TC01 C8 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -237,6 +249,7 @@ test('TC01 C8 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -247,7 +260,7 @@ test('TC01 C9 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -266,6 +279,7 @@ test('TC01 C9 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -276,7 +290,7 @@ test('TC01 C10 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -295,6 +309,7 @@ test('TC01 C10 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -305,7 +320,7 @@ test('TC01 C11 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -324,6 +339,7 @@ test('TC01 C11 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 
 });
 
@@ -335,7 +351,7 @@ test('TC01 C12 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -354,6 +370,7 @@ test('TC01 C12 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -364,7 +381,7 @@ test('TC01 C13 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 1/Auto_GeStamp_TSCD_TC1_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -383,6 +400,7 @@ test('TC01 C13 TypeCode 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC1_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -395,7 +413,7 @@ test('TC02 C1 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -414,6 +432,7 @@ test('TC02 C1 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -424,7 +443,7 @@ test('TC02 C2 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -443,6 +462,7 @@ test('TC02 C2 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -453,7 +473,7 @@ test('TC02 C3 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -472,6 +492,7 @@ test('TC02 C3 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -482,7 +503,7 @@ test('TC02 C4 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -501,6 +522,7 @@ test('TC02 C4 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -511,7 +533,7 @@ test('TC02 C5 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -530,6 +552,7 @@ test('TC02 C5 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -540,7 +563,7 @@ test('TC02 C6 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -559,6 +582,7 @@ test('TC02 C6 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -569,7 +593,7 @@ test('TC02 C7 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -588,6 +612,7 @@ test('TC02 C7 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -598,7 +623,7 @@ test('TC02 C8 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -617,6 +642,7 @@ test('TC02 C8 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -627,7 +653,7 @@ test('TC02 C9 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -646,6 +672,7 @@ test('TC02 C9 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -656,7 +683,7 @@ test('TC02 C10 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -675,6 +702,7 @@ test('TC02 C10 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -685,7 +713,7 @@ test('TC02 C11 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -704,6 +732,7 @@ test('TC02 C11 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -714,7 +743,7 @@ test('TC02 C12 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -733,6 +762,7 @@ test('TC02 C12 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -743,7 +773,7 @@ test('TC02 C13 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 2/Auto_GeStamp_TSCD_TC2_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -762,6 +792,7 @@ test('TC02 C13 TypeCode 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC2_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -773,7 +804,7 @@ test('TC03 C1 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -792,6 +823,7 @@ test('TC03 C1 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -802,7 +834,7 @@ test('TC03 C2 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -821,6 +853,7 @@ test('TC03 C2 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -831,7 +864,7 @@ test('TC03 C3 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -850,6 +883,7 @@ test('TC03 C3 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -860,7 +894,7 @@ test('TC03 C4 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -879,6 +913,7 @@ test('TC03 C4 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -889,7 +924,7 @@ test('TC03 C5 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -908,6 +943,7 @@ test('TC03 C5 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -918,7 +954,7 @@ test('TC03 C6 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -937,6 +973,7 @@ test('TC03 C6 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -947,7 +984,7 @@ test('TC03 C7 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -966,6 +1003,7 @@ test('TC03 C7 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -976,7 +1014,7 @@ test('TC03 C8 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -995,6 +1033,7 @@ test('TC03 C8 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1005,7 +1044,7 @@ test('TC03 C9 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1024,6 +1063,7 @@ test('TC03 C9 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1034,7 +1074,7 @@ test('TC03 C10 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1053,6 +1093,7 @@ test('TC03 C10 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1063,7 +1104,7 @@ test('TC03 C11 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1082,6 +1123,7 @@ test('TC03 C11 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1092,7 +1134,7 @@ test('TC03 C12 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1111,6 +1153,7 @@ test('TC03 C12 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1121,7 +1164,7 @@ test('TC03 C13 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 3/Auto_GeStamp_TSCD_TC3_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1140,6 +1183,7 @@ test('TC03 C13 TypeCode 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC3_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1152,7 +1196,7 @@ test('TC04 C1 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1171,6 +1215,7 @@ test('TC04 C1 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1181,7 +1226,7 @@ test('TC04 C2 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1200,6 +1245,7 @@ test('TC04 C2 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1210,7 +1256,7 @@ test('TC04 C3 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1229,6 +1275,7 @@ test('TC04 C3 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1239,7 +1286,7 @@ test('TC04 C4 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1258,6 +1305,7 @@ test('TC04 C4 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1268,7 +1316,7 @@ test('TC04 C5 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1287,6 +1335,7 @@ test('TC04 C5 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1297,7 +1346,7 @@ test('TC04 C6 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1316,6 +1365,7 @@ test('TC04 C6 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1326,7 +1376,7 @@ test('TC04 C7 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1345,6 +1395,7 @@ test('TC04 C7 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1355,7 +1406,7 @@ test('TC04 C8 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1374,6 +1425,7 @@ test('TC04 C8 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1384,7 +1436,7 @@ test('TC04 C9 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1403,6 +1455,7 @@ test('TC04 C9 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1413,7 +1466,7 @@ test('TC04 C10 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1432,6 +1485,7 @@ test('TC04 C10 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1442,7 +1496,7 @@ test('TC04 C11 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1461,6 +1515,7 @@ test('TC04 C11 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1471,7 +1526,7 @@ test('TC04 C12 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1490,6 +1545,7 @@ test('TC04 C12 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1500,7 +1556,7 @@ test('TC04 C13 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 4/Auto_GeStamp_TSCD_TC4_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1519,6 +1575,7 @@ test('TC04 C13 TypeCode 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC4_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1528,7 +1585,7 @@ test('TC05 C1 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1547,6 +1604,7 @@ test('TC05 C1 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1557,7 +1615,7 @@ test('TC05 C2 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1576,6 +1634,7 @@ test('TC05 C2 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1586,7 +1645,7 @@ test('TC05 C3 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1605,6 +1664,7 @@ test('TC05 C3 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1615,7 +1675,7 @@ test('TC05 C4 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1634,6 +1694,7 @@ test('TC05 C4 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1644,7 +1705,7 @@ test('TC05 C5 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1663,6 +1724,7 @@ test('TC05 C5 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1673,7 +1735,7 @@ test('TC05 C6 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1692,6 +1754,7 @@ test('TC05 C6 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1702,7 +1765,7 @@ test('TC05 C7 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1721,6 +1784,7 @@ test('TC05 C7 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1731,7 +1795,7 @@ test('TC05 C8 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1750,6 +1814,7 @@ test('TC05 C8 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1760,7 +1825,7 @@ test('TC05 C9 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1779,6 +1844,7 @@ test('TC05 C9 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1789,7 +1855,7 @@ test('TC05 C10 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1808,6 +1874,7 @@ test('TC05 C10 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1818,7 +1885,7 @@ test('TC05 C11 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1837,6 +1904,7 @@ test('TC05 C11 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1847,7 +1915,7 @@ test('TC05 C12 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1866,6 +1934,7 @@ test('TC05 C12 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1876,7 +1945,7 @@ test('TC05 C13 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1895,6 +1964,7 @@ test('TC05 C13 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1906,7 +1976,7 @@ test('TC05 C14 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1925,6 +1995,7 @@ test('TC05 C14 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C14  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1934,7 +2005,7 @@ test('TC05 C15 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1953,6 +2024,7 @@ test('TC05 C15 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C15  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1962,7 +2034,7 @@ test('TC05 C16 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -1981,6 +2053,7 @@ test('TC05 C16 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C16  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -1990,7 +2063,7 @@ test('TC05 C17 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C17.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2009,6 +2082,7 @@ test('TC05 C17 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C17  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2018,7 +2092,7 @@ test('TC05 C18 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C18.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2037,6 +2111,7 @@ test('TC05 C18 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C18  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2046,7 +2121,7 @@ test('TC05 C19 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2065,6 +2140,7 @@ test('TC05 C19 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C19  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2074,7 +2150,7 @@ test('TC05 C20 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C20.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2093,6 +2169,7 @@ test('TC05 C20 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C20  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2103,7 +2180,7 @@ test('TC05 C21 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 5/Auto_GeStamp_TSCD_TC5_C21.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2122,6 +2199,7 @@ test('TC05 C21 TypeCode 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC5_C21  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2130,7 +2208,7 @@ test('TC06 C1 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2149,6 +2227,7 @@ test('TC06 C1 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2159,7 +2238,7 @@ test('TC06 C2 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2178,6 +2257,7 @@ test('TC06 C2 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2188,7 +2268,7 @@ test('TC06 C3 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2207,6 +2287,7 @@ test('TC06 C3 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2217,7 +2298,7 @@ test('TC06 C4 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2236,6 +2317,7 @@ test('TC06 C4 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2246,7 +2328,7 @@ test('TC06 C5 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2265,6 +2347,7 @@ test('TC06 C5 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2275,7 +2358,7 @@ test('TC06 C6 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2294,6 +2377,7 @@ test('TC06 C6 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2304,7 +2388,7 @@ test('TC06 C7 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2323,6 +2407,7 @@ test('TC06 C7 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2333,7 +2418,7 @@ test('TC06 C8 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2352,6 +2437,7 @@ test('TC06 C8 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2362,7 +2448,7 @@ test('TC06 C9 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2381,6 +2467,7 @@ test('TC06 C9 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2390,7 +2477,7 @@ test('TC06 C10 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2409,6 +2496,7 @@ test('TC06 C10 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2418,7 +2506,7 @@ test('TC06 C11 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2437,6 +2525,7 @@ test('TC06 C11 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2446,7 +2535,7 @@ test('TC06 C12 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2465,6 +2554,7 @@ test('TC06 C12 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2474,7 +2564,7 @@ test('TC06 C13 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2493,6 +2583,7 @@ test('TC06 C13 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2502,7 +2593,7 @@ test('TC06 C14 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2521,6 +2612,7 @@ test('TC06 C14 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C14  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2530,7 +2622,7 @@ test('TC06 C15 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 1/Auto_GeStamp_TSCD_TC6_AT1_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2549,6 +2641,7 @@ test('TC06 C15 TypeCode 6 Action Type 1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT1_C15  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2559,7 +2652,7 @@ test('TC07 C1 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2578,6 +2671,7 @@ test('TC07 C1 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2588,7 +2682,7 @@ test('TC07 C2 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2607,6 +2701,7 @@ test('TC07 C2 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2617,7 +2712,7 @@ test('TC07 C3 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2636,6 +2731,7 @@ test('TC07 C3 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2646,7 +2742,7 @@ test('TC07 C4 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2665,6 +2761,7 @@ test('TC07 C4 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2675,7 +2772,7 @@ test('TC07 C5 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2694,6 +2791,7 @@ test('TC07 C5 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2704,7 +2802,7 @@ test('TC07 C6 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2723,6 +2821,7 @@ test('TC07 C6 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2733,7 +2832,7 @@ test('TC07 C7 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2752,6 +2851,7 @@ test('TC07 C7 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2762,7 +2862,7 @@ test('TC07 C8 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2781,6 +2881,7 @@ test('TC07 C8 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2791,7 +2892,7 @@ test('TC07 C9 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2810,6 +2911,7 @@ test('TC07 C9 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2820,7 +2922,7 @@ test('TC07 C10 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2839,6 +2941,7 @@ test('TC07 C10 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2849,7 +2952,7 @@ test('TC07 C11 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2868,6 +2971,7 @@ test('TC07 C11 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2878,7 +2982,7 @@ test('TC07 C12 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2897,6 +3001,7 @@ test('TC07 C12 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2907,7 +3012,7 @@ test('TC07 C13 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2926,6 +3031,7 @@ test('TC07 C13 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2940,7 +3046,7 @@ test('TC07 C14 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2959,6 +3065,7 @@ test('TC07 C14 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C14  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2970,7 +3077,7 @@ test('TC07 C15 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -2989,6 +3096,7 @@ test('TC07 C15 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C15  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -2999,7 +3107,7 @@ test('TC07 C16 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 2/Auto_GeStamp_TSCD_TC6_AT2_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3018,6 +3126,7 @@ test('TC07 C16 TypeCode 6 Action Type 2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT2_C16  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3030,7 +3139,7 @@ test('TC08 C1 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3049,6 +3158,7 @@ test('TC08 C1 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3059,7 +3169,7 @@ test('TC08 C2 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3078,6 +3188,7 @@ test('TC08 C2 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3088,7 +3199,7 @@ test('TC08 C3 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3107,6 +3218,7 @@ test('TC08 C3 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3117,7 +3229,7 @@ test('TC08 C4 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3136,6 +3248,7 @@ test('TC08 C4 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3146,7 +3259,7 @@ test('TC08 C5 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3165,6 +3278,7 @@ test('TC08 C5 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3175,7 +3289,7 @@ test('TC08 C6 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3194,6 +3308,7 @@ test('TC08 C6 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3204,7 +3319,7 @@ test('TC08 C7 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3223,6 +3338,7 @@ test('TC08 C7 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3233,7 +3349,7 @@ test('TC08 C8 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3252,6 +3368,7 @@ test('TC08 C8 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3262,7 +3379,7 @@ test('TC08 C9 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3281,6 +3398,7 @@ test('TC08 C9 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3291,7 +3409,7 @@ test('TC08 C10 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3310,6 +3428,7 @@ test('TC08 C10 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3320,7 +3439,7 @@ test('TC08 C11 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3339,6 +3458,7 @@ test('TC08 C11 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3349,7 +3469,7 @@ test('TC08 C12 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3368,6 +3488,7 @@ test('TC08 C12 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3378,7 +3499,7 @@ test('TC08 C13 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 3/Auto_GeStamp_TSCD_TC6_AT3_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3397,6 +3518,7 @@ test('TC08 C13 TypeCode 6 Action Type 3   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT3_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3408,7 +3530,7 @@ test('TC09 C1 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3427,6 +3549,7 @@ test('TC09 C1 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3437,7 +3560,7 @@ test('TC09 C2 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3456,6 +3579,7 @@ test('TC09 C2 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3466,7 +3590,7 @@ test('TC09 C3 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3485,6 +3609,7 @@ test('TC09 C3 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3495,7 +3620,7 @@ test('TC09 C4 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3514,6 +3639,7 @@ test('TC09 C4 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C4  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3524,7 +3650,7 @@ test('TC09 C5 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3543,6 +3669,7 @@ test('TC09 C5 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C5  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3553,7 +3680,7 @@ test('TC09 C6 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3572,6 +3699,7 @@ test('TC09 C6 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C6  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3582,7 +3710,7 @@ test('TC09 C7 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3601,6 +3729,7 @@ test('TC09 C7 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C7  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3611,7 +3740,7 @@ test('TC09 C8 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3630,6 +3759,7 @@ test('TC09 C8 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C8  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3640,7 +3770,7 @@ test('TC09 C9 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3659,6 +3789,7 @@ test('TC09 C9 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C9  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3669,7 +3800,7 @@ test('TC09 C10 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3688,6 +3819,7 @@ test('TC09 C10 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C10  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3698,7 +3830,7 @@ test('TC09 C11 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3717,6 +3849,7 @@ test('TC09 C11 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C11  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3727,7 +3860,7 @@ test('TC09 C12 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3746,6 +3879,7 @@ test('TC09 C12 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C12  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3756,7 +3890,7 @@ test('TC09 C13 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 4/Auto_GeStamp_TSCD_TC6_AT4_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3775,6 +3909,7 @@ test('TC09 C13 TypeCode 6 Action Type 4   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT4_C13  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3786,7 +3921,7 @@ test('TC10 C1 TypeCode 6 Action Type 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 6/Action Type 5/Auto_GeStamp_TSCD_TC6_AT5_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3805,6 +3940,7 @@ test('TC10 C1 TypeCode 6 Action Type 5   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC6_AT5_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3816,7 +3952,7 @@ test('TC11 C1 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 7/Auto_GeStamp_TSCD_TC7_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3835,6 +3971,7 @@ test('TC11 C1 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3845,7 +3982,7 @@ test('TC11 C2 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 7/Auto_GeStamp_TSCD_TC7_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3864,6 +4001,7 @@ test('TC11 C2 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3874,7 +4012,7 @@ test('TC11 C3 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 7/Auto_GeStamp_TSCD_TC7_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3893,6 +4031,7 @@ test('TC11 C3 TypeCode 7   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC7_C3  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3903,7 +4042,7 @@ test('TC12 C1 TypeCode 8   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 8/Auto_GeStamp_TSCD_TC8_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3922,6 +4061,7 @@ test('TC12 C1 TypeCode 8   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC8_C1  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3932,7 +4072,7 @@ test('TC12 C2 TypeCode 8   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 8/Auto_GeStamp_TSCD_TC8_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3951,6 +4091,7 @@ test('TC12 C2 TypeCode 8   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC8_C2  ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3961,7 +4102,7 @@ test('TC13 C1 TypeCode 9.1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 9.1/Auto_GeStamp_TSCD_TC91.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -3980,6 +4121,7 @@ test('TC13 C1 TypeCode 9.1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC91 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -3989,7 +4131,7 @@ test('TC14 C1 TypeCode 9.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 9.2/Auto_GeStamp_TSCD_TC92.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4008,6 +4150,7 @@ test('TC14 C1 TypeCode 9.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC92 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4019,7 +4162,7 @@ test('TC15 C1 TypeCode 10   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 10/Auto_GeStamp_TSCD_TC10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4038,6 +4181,7 @@ test('TC15 C1 TypeCode 10   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC10 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4048,7 +4192,7 @@ test('TC16 C1 TypeCode 11.1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.1/Auto_GeStamp_TSCD_TC111.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4067,6 +4211,7 @@ test('TC16 C1 TypeCode 11.1   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC111 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4081,7 +4226,7 @@ test('TC17 C1 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4100,6 +4245,7 @@ test('TC17 C1 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C1 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4110,7 +4256,7 @@ test('TC17 C2 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4129,6 +4275,7 @@ test('TC17 C2 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C2 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4139,7 +4286,7 @@ test('TC17 C3 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4158,6 +4305,7 @@ test('TC17 C3 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C3 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4168,7 +4316,7 @@ test('TC17 C4 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4187,6 +4335,7 @@ test('TC17 C4 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C4 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4197,7 +4346,7 @@ test('TC17 C5 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4216,6 +4365,7 @@ test('TC17 C5 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C5 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4226,7 +4376,7 @@ test('TC17 C6 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4245,6 +4395,7 @@ test('TC17 C6 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C6 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4255,7 +4406,7 @@ test('TC17 C7 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4274,6 +4425,7 @@ test('TC17 C7 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C7 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4284,7 +4436,7 @@ test('TC17 C8 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4303,6 +4455,7 @@ test('TC17 C8 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C8 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4313,7 +4466,7 @@ test('TC17 C9 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4332,6 +4485,7 @@ test('TC17 C9 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C9 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4342,7 +4496,7 @@ test('TC17 C10 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4361,6 +4515,7 @@ test('TC17 C10 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C10 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4371,7 +4526,7 @@ test('TC17 C11 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4390,6 +4545,7 @@ test('TC17 C11 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C11 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4400,7 +4556,7 @@ test('TC17 C12 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4419,6 +4575,7 @@ test('TC17 C12 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C12 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4429,7 +4586,7 @@ test('TC17 C13 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 11.2/Auto_GeStamp_TSCD_TC112_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4448,6 +4605,7 @@ test('TC17 C13 TypeCode 11.2   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC112_C13 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4458,7 +4616,7 @@ test('TC18 C1 TypeCode 12   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 12/Auto_GeStamp_TSCD_TC12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4477,6 +4635,7 @@ test('TC18 C1 TypeCode 12   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC12 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4487,7 +4646,7 @@ test('TC19 C1 TypeCode 13   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 13/Auto_GeStamp_TSCD_TC13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4506,6 +4665,7 @@ test('TC19 C1 TypeCode 13   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC12 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4518,7 +4678,7 @@ test('TC20 C1 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4537,6 +4697,7 @@ test('TC20 C1 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C1 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4547,7 +4708,7 @@ test('TC20 C2 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4566,6 +4727,7 @@ test('TC20 C2 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C2 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4576,7 +4738,7 @@ test('TC20 C3 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4595,6 +4757,7 @@ test('TC20 C3 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C3 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4605,7 +4768,7 @@ test('TC20 C4 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4624,6 +4787,7 @@ test('TC20 C4 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C4 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4634,7 +4798,7 @@ test('TC20 C5 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4653,6 +4817,7 @@ test('TC20 C5 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C5 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4663,7 +4828,7 @@ test('TC20 C6 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4682,6 +4847,7 @@ test('TC20 C6 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C6 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4692,7 +4858,7 @@ test('TC20 C7 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4711,6 +4877,7 @@ test('TC20 C7 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C7 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4721,7 +4888,7 @@ test('TC20 C8 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4740,6 +4907,7 @@ test('TC20 C8 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C8 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4748,7 +4916,7 @@ test('TC20 C9 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 14/Auto_GeStamp_TSCD_TC14_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4767,6 +4935,7 @@ test('TC20 C9 TypeCode 14   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC14_C9 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4775,7 +4944,7 @@ test('TC21 C1 TypeCode 15   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 15/Auto_GeStamp_TSCD_TC15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4794,6 +4963,7 @@ test('TC21 C1 TypeCode 15   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC15 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 
 });
 
@@ -4804,7 +4974,7 @@ test('TC22 C1 TypeCode 16   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 16/Auto_GeStamp_TSCD_TC16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4823,6 +4993,7 @@ test('TC22 C1 TypeCode 16   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC16 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4836,7 +5007,7 @@ test('TC23 C1 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4855,6 +5026,7 @@ test('TC23 C1 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C1 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4865,7 +5037,7 @@ test('TC23 C2 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4884,6 +5056,7 @@ test('TC23 C2 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C2 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4894,7 +5067,7 @@ test('TC23 C3 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4913,6 +5086,7 @@ test('TC23 C3 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C3 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4923,7 +5097,7 @@ test('TC23 C4 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4942,6 +5116,7 @@ test('TC23 C4 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C4 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4952,7 +5127,7 @@ test('TC23 C5 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -4971,6 +5146,7 @@ test('TC23 C5 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C5 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -4981,7 +5157,7 @@ test('TC23 C6 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5000,6 +5176,7 @@ test('TC23 C6 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C6 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5010,7 +5187,7 @@ test('TC23 C7 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5029,6 +5206,7 @@ test('TC23 C7 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C7 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5039,7 +5217,7 @@ test('TC23 C8 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5058,6 +5236,7 @@ test('TC23 C8 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C8 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5068,7 +5247,7 @@ test('TC23 C9 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5087,6 +5266,7 @@ test('TC23 C9 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C9 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5097,7 +5277,7 @@ test('TC23 C10 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5116,6 +5296,7 @@ test('TC23 C10 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C10 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5126,7 +5307,7 @@ test('TC23 C11 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5145,6 +5326,7 @@ test('TC23 C11 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C11 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5155,7 +5337,7 @@ test('TC23 C12 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5174,6 +5356,7 @@ test('TC23 C12 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C12 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5184,7 +5367,7 @@ test('TC23 C13 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5203,6 +5386,7 @@ test('TC23 C13 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C13 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5214,7 +5398,7 @@ test('TC23 C14 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5233,6 +5417,7 @@ test('TC23 C14 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C14 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5242,7 +5427,7 @@ test('TC23 C15 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 17/Auto_GeStamp_TSCD_TC17_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5261,6 +5446,7 @@ test('TC23 C15 TypeCode 17   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC17_C15 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5274,7 +5460,7 @@ test('TC24 C1 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5293,6 +5479,7 @@ test('TC24 C1 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C1 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5303,7 +5490,7 @@ test('TC24 C2 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5322,6 +5509,7 @@ test('TC24 C2 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C2 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5332,7 +5520,7 @@ test('TC24 C3 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5351,6 +5539,7 @@ test('TC24 C3 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C3 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5361,7 +5550,7 @@ test('TC24 C4 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5380,6 +5569,7 @@ test('TC24 C4 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C4 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5390,7 +5580,7 @@ test('TC24 C5 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5409,6 +5599,7 @@ test('TC24 C5 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C5 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5419,7 +5610,7 @@ test('TC24 C6 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5438,6 +5629,7 @@ test('TC24 C6 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C6 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5448,7 +5640,7 @@ test('TC24 C7 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5467,6 +5659,7 @@ test('TC24 C7 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C7 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5477,7 +5670,7 @@ test('TC24 C8 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5496,6 +5689,7 @@ test('TC24 C8 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C8 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5506,7 +5700,7 @@ test('TC24 C9 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5525,6 +5719,7 @@ test('TC24 C9 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C9 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5535,7 +5730,7 @@ test('TC24 C10 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5554,6 +5749,7 @@ test('TC24 C10 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C10 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5564,7 +5760,7 @@ test('TC24 C11 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5583,6 +5779,7 @@ test('TC24 C11 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C11 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5593,7 +5790,7 @@ test('TC24 C12 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5612,6 +5809,7 @@ test('TC24 C12 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C12 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5622,7 +5820,7 @@ test('TC24 C13 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 18/Auto_GeStamp_TSCD_TC18_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5641,6 +5839,7 @@ test('TC24 C13 TypeCode 18   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC18_C13 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5651,7 +5850,7 @@ test('TC25 C1 TypeCode 19   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 19/Auto_GeStamp_TSCD_TC19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5670,6 +5869,8 @@ test('TC25 C1 TypeCode 19   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC19 ' })).toBeHidden();
+    await page.waitForTimeout(500);
+    await page.waitForTimeout(1000);
 });
 
 
@@ -5681,7 +5882,7 @@ test('TC26 C1 TypeCode 20   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 20/Auto_GeStamp_TSCD_TC20.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5700,6 +5901,7 @@ test('TC26 C1 TypeCode 20   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC20 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5711,7 +5913,7 @@ test('TC27 C1 TypeCode 21   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 21/Auto_GeStamp_TSCD_TC21_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5730,6 +5932,7 @@ test('TC27 C1 TypeCode 21   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC21_C1 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5740,7 +5943,7 @@ test('TC27 C2 TypeCode 21   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 21/Auto_GeStamp_TSCD_TC21_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5759,6 +5962,7 @@ test('TC27 C2 TypeCode 21   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC21_C2 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5768,7 +5972,7 @@ test('TC28 C1 TypeCode 271   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 271/Auto_GeStamp_TSCD_TC271.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5787,6 +5991,7 @@ test('TC28 C1 TypeCode 271   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC271 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
 
 
@@ -5798,7 +6003,7 @@ test('TC29 C1 TypeCode 272   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.locator('#file').setInputFiles('Data Files/Calculate Duty/TypeCode 272/Auto_GeStamp_TSCD_TC272.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    await expect.soft(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
@@ -5817,4 +6022,5 @@ test('TC29 C1 TypeCode 272   ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await page.waitForTimeout(500);
     await expect.soft(page.getByRole('row', { name: 'Auto_GeStamp_TSCD_TC272 ' })).toBeHidden();
+    await page.waitForTimeout(500);
 });
