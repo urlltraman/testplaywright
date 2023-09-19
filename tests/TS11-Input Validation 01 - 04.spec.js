@@ -848,7 +848,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_InstAmount_C1' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/01. Input Contract Amount.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/01. Input Contract Amount.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C1 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -864,7 +864,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-1' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/02. Input 10 Digit Number .png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/02. Input 10 Digit Number .png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C2-1 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -880,7 +880,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-2' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/03. Input 11 Digit Number.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/03. Input 11 Digit Number.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C2-2 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -896,7 +896,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-3' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/04. Input 12 Digit Number.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/04. Input 12 Digit Number.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -906,7 +906,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/05. Case 2-3 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/05. Case 2-3 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C2-3').first().click();
@@ -914,7 +914,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/06. Case 2-3 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/06. Case 2-3 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C2-3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -930,7 +930,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_InstAmount_C3' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/07. Case 3.png', mask: [mask_locator4], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/07. Case 3.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -940,7 +940,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11]");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/08. Case 3 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/08. Case 3 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C3').first().click();
@@ -948,7 +948,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/09. Case 3 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/09. Case 3 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -964,7 +964,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_InstAmount_C4' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/10. Case 4.png', mask: [mask_locator5], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/10. Case 4.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -974,7 +974,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11]");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/11. Case 4 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/11. Case 4 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C4').first().click();
@@ -982,7 +982,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/12. Case 4 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/12. Case 4 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C4 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -998,7 +998,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_InstAmount_C5' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/13. Input TH.png', mask: [mask_locator6], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/13. Input TH.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1008,7 +1008,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/14. Case 5 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/14. Case 5 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C5').first().click();
@@ -1016,7 +1016,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/15. Case 5 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/15. Case 5 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1032,7 +1032,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_InstAmount_C6' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/16. Input EN.png', mask: [mask_locator7], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/16. Input EN.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1042,7 +1042,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/17. Case 6 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/17. Case 6 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C6').first().click();
@@ -1050,7 +1050,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/18. Case 6 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/18. Case 6 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C6 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1066,7 +1066,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_InstAmount_C7' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/19. Input Special Characters.png', mask: [mask_locator8], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/19. Input Special Characters.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1076,7 +1076,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/20. Case 7 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/20. Case 7 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C7').first().click();
@@ -1084,7 +1084,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' is an invalid number ข้อมูลบรรทัดที่ 1 column 'instAmount' typeCode is equal to 1, 2, 3, 4, 5, 6, 10, 14, 16, 18, 19, 20, 92, 112, or 283; therefore, instAmount must be more than 0.00. [R11] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/21. Case 7 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/21. Case 7 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C7 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1101,7 +1101,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_InstAmount_C8' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/22. Case 8.png', mask: [mask_locator9], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/22. Case 8.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C8 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1117,7 +1117,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_InstAmount_C9' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/23. Case 9 .png', mask: [mask_locator10], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/23. Case 9 .png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C9 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1146,7 +1146,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_InstAmount_C10' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/24. Case 10.png', mask: [mask_locator11], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/24. Case 10.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1156,7 +1156,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount'  is digit overflow ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/25. Case 10 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/25. Case 10 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C10').first().click();
@@ -1164,7 +1164,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount'  is digit overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/26. Case 10 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/26. Case 10 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C10 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1181,7 +1181,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator12 = await page.getByRole('row', { name: 'Auto_InstAmount_C11' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/27. Case 11.png', mask: [mask_locator12], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/27. Case 11.png', mask: [mask_locator12], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C11 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1197,7 +1197,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator13 = await page.getByRole('row', { name: 'Auto_InstAmount_C12' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/28. Case 12 .png', mask: [mask_locator13], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/28. Case 12 .png', mask: [mask_locator13], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_InstAmount_C12 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1213,7 +1213,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator14 = await page.getByRole('row', { name: 'Auto_InstAmount_C13' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/29. Case 13.png', mask: [mask_locator14], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/29. Case 13.png', mask: [mask_locator14], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1223,7 +1223,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount'  is digit overflow ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/30. Case 13 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/30. Case 13 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C13').first().click();
@@ -1231,7 +1231,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount'  is digit overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/31. Case 13 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/31. Case 13 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C13 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1248,7 +1248,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator15 = await page.getByRole('row', { name: 'Auto_InstAmount_C14' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/32. Case 14.png', mask: [mask_locator15], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/32. Case 14.png', mask: [mask_locator15], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1258,7 +1258,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/33. Case 14 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/33. Case 14 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C14').first().click();
@@ -1266,7 +1266,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/34. Case 14 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/34. Case 14 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C14 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1282,7 +1282,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator16 = await page.getByRole('row', { name: 'Auto_InstAmount_C15' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/35. Case 15 .png', mask: [mask_locator16], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/35. Case 15 .png', mask: [mask_locator16], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1292,7 +1292,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/36. Case 15 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/36. Case 15 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C15').first().click();
@@ -1300,7 +1300,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/37. Case 15 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/37. Case 15 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C15 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
@@ -1316,7 +1316,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator17 = await page.getByRole('row', { name: 'Auto_InstAmount_C16' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/38. Case 16.png', mask: [mask_locator17], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/38. Case 16.png', mask: [mask_locator17], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
@@ -1326,7 +1326,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/39. Case 16 Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/39. Case 16 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_InstAmount_C16').first().click();
@@ -1334,7 +1334,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'instAmount' length is overflow ข้อมูลบรรทัดที่ 1 column 'instAmount' is number overflow Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/40. Case 16 Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. Inst Amount/40. Case 16 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_InstAmount_C16 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
