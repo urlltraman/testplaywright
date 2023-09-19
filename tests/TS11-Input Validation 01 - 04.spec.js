@@ -25,7 +25,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_TypeCode_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/01. Input Type Code.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -42,7 +42,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_TypeCode_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/02. No Input Type Code.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -76,7 +76,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_TypeCode_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/05. Delete Column Type Code.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -111,7 +111,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_TypeCode_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/08. Input TH.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -127,7 +127,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_TypeCode_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/09. Input EN.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -143,7 +143,7 @@ test('TC01 type code  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_TypeCode_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/10. Input Special Characters.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -169,7 +169,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/01. Case 1-1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -202,7 +202,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/04. Case 1-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -235,7 +235,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/07. Case 1-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -268,7 +268,7 @@ test('TC02 recive date case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C1-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/10. Case 1-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -311,7 +311,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/13. Case 2-1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -327,7 +327,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/14. Case 2-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -360,7 +360,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/17. Case 2-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -393,7 +393,7 @@ test('TC02 recive date case 2  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C2-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/20. Case 2-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -436,7 +436,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/23. Case 3-1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -452,7 +452,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/24. Case 3-2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -485,7 +485,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/27. Case 3-3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -518,7 +518,7 @@ test('TC02 recive date case 3  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C3-4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/30. Case 3-4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -560,7 +560,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/33. Case 4.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -578,7 +578,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/34. Case 5.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -604,7 +604,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ReceiveDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/35. Case 6.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -637,7 +637,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/38. Case 7.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -670,7 +670,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/41. Case 8.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -703,7 +703,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/44. Case 9.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -737,7 +737,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/47. Case 10.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -771,7 +771,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/50. Case 11.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -805,7 +805,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ReceiveDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/53. Case 12.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -845,7 +845,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_InstAmount_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/01. Input Contract Amount.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -861,7 +861,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/02. Input 10 Digit Number .png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -877,7 +877,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/03. Input 11 Digit Number.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -893,7 +893,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_InstAmount_C2-3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/04. Input 12 Digit Number.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -927,7 +927,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_InstAmount_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/07. Case 3.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -961,7 +961,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_InstAmount_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/10. Case 4.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -995,7 +995,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_InstAmount_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/13. Input TH.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1029,7 +1029,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_InstAmount_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/16. Input EN.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1063,7 +1063,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_InstAmount_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/19. Input Special Characters.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -1098,7 +1098,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_InstAmount_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/22. Case 8.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -1114,7 +1114,7 @@ test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_InstAmount_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/23. Case 9 .png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -1143,7 +1143,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_InstAmount_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/24. Case 10.png', mask: [mask_locator11], maskColor: '#00FF00' });
@@ -1178,7 +1178,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator12 = await page.getByRole('row', { name: 'Auto_InstAmount_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/27. Case 11.png', mask: [mask_locator12], maskColor: '#00FF00' });
@@ -1194,7 +1194,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator13 = await page.getByRole('row', { name: 'Auto_InstAmount_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/28. Case 12 .png', mask: [mask_locator13], maskColor: '#00FF00' });
@@ -1210,7 +1210,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator14 = await page.getByRole('row', { name: 'Auto_InstAmount_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/29. Case 13.png', mask: [mask_locator14], maskColor: '#00FF00' });
@@ -1245,7 +1245,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator15 = await page.getByRole('row', { name: 'Auto_InstAmount_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/32. Case 14.png', mask: [mask_locator15], maskColor: '#00FF00' });
@@ -1279,7 +1279,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator16 = await page.getByRole('row', { name: 'Auto_InstAmount_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/35. Case 15 .png', mask: [mask_locator16], maskColor: '#00FF00' });
@@ -1313,7 +1313,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator17 = await page.getByRole('row', { name: 'Auto_InstAmount_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC03. inst Amount/38. Case 16.png', mask: [mask_locator17], maskColor: '#00FF00' });
@@ -1345,17 +1345,17 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
 });
 
 
-test('TC04 branch case 1  ', async ({ page }) => {
+test('TC04 tax payer branch case 1  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1366,13 +1366,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -1401,13 +1401,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1436,13 +1436,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1471,13 +1471,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -1506,13 +1506,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -1541,13 +1541,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1576,13 +1576,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1611,13 +1611,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -1646,13 +1646,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C10
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C10.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/26. Case 10.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -1681,13 +1681,13 @@ test('TC04 branch case 1  ', async ({ page }) => {
     // C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case1/Auto_Branch_Case1_C11.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case1/Auto_Branch_Case1_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 1/29. Case 11.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -1719,17 +1719,17 @@ test('TC04 branch case 1  ', async ({ page }) => {
 
 
 
-test('TC02 branch case 2  ', async ({ page }) => {
+test('TC04 tax payer branch case 2  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1740,13 +1740,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -1775,13 +1775,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1810,13 +1810,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1845,13 +1845,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -1880,13 +1880,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -1915,13 +1915,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1950,13 +1950,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1985,13 +1985,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2020,13 +2020,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C10
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C10.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/26. case 20.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -2055,13 +2055,13 @@ test('TC02 branch case 2  ', async ({ page }) => {
     // C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case2/Auto_Branch_Case2_C11.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case2/Auto_Branch_Case2_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/case 2/29. case 21.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -2095,17 +2095,17 @@ test('TC02 branch case 2  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 3  ', async ({ page }) => {
+test('TC04 tax payer branch case 3  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case3_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2116,13 +2116,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -2151,13 +2151,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2186,13 +2186,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2221,13 +2221,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2256,13 +2256,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2291,13 +2291,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/17. Case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2326,13 +2326,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/20. Case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -2361,13 +2361,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/23. Case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2396,13 +2396,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C10
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C10.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/26. case 20.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -2431,13 +2431,13 @@ test('TC04 branch case 3  ', async ({ page }) => {
     // C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case3/Auto_Branch_Case3_C11.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case3/Auto_Branch_Case3_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_Branch_Case3_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 3/29. case 21.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -2471,17 +2471,17 @@ test('TC04 branch case 3  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 4  ', async ({ page }) => {
+test('TC04 tax payer branch case 4  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case4_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2510,13 +2510,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -2527,13 +2527,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/05. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2544,13 +2544,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/06. case 1.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2579,13 +2579,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/09. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2596,13 +2596,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/10. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2613,13 +2613,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/11. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2648,13 +2648,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/14. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -2683,13 +2683,13 @@ test('TC04 branch case 4  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case4/Auto_Branch_Case4_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case4/Auto_Branch_Case4_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case4_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 4/17. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2723,17 +2723,17 @@ test('TC04 branch case 4  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 5  ', async ({ page }) => {
+test('TC04 tax payer branch case 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case5_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2762,13 +2762,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -2797,13 +2797,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2832,13 +2832,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2867,13 +2867,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2902,13 +2902,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2937,13 +2937,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2972,13 +2972,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -3007,13 +3007,13 @@ test('TC04 branch case 5  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case5/Auto_Branch_Case5_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case5/Auto_Branch_Case5_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case5_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 5/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -3048,17 +3048,17 @@ test('TC04 branch case 5  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 6  ', async ({ page }) => {
+test('TC04 tax payer branch case 6  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case6_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3087,13 +3087,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -3122,13 +3122,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -3157,13 +3157,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -3192,13 +3192,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -3227,13 +3227,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -3262,13 +3262,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -3297,13 +3297,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -3332,13 +3332,13 @@ test('TC04 branch case 6  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case6/Auto_Branch_Case6_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case6/Auto_Branch_Case6_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case6_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 6/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -3376,17 +3376,17 @@ test('TC04 branch case 6  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 7  ', async ({ page }) => {
+test('TC04 tax payer branch case 7  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case7_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3415,13 +3415,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -3450,13 +3450,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -3485,13 +3485,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -3520,13 +3520,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -3555,13 +3555,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -3590,13 +3590,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -3625,13 +3625,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -3660,13 +3660,13 @@ test('TC04 branch case 7  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case7/Auto_Branch_Case7_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case7/Auto_Branch_Case7_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case7_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 7/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -3699,17 +3699,17 @@ test('TC04 branch case 7  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 8  ', async ({ page }) => {
+test('TC04 tax payer branch case 8  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case8_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3738,13 +3738,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -3773,13 +3773,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -3808,13 +3808,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -3843,13 +3843,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -3878,13 +3878,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -3913,13 +3913,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -3948,13 +3948,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -3983,13 +3983,13 @@ test('TC04 branch case 8  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case8/Auto_Branch_Case8_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case8/Auto_Branch_Case8_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case8_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 8/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -4022,17 +4022,17 @@ test('TC04 branch case 8  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 9  ', async ({ page }) => {
+test('TC04 tax payer branch case 9  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case9_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4061,13 +4061,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -4096,13 +4096,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -4131,13 +4131,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -4166,13 +4166,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -4201,13 +4201,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -4236,13 +4236,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -4271,13 +4271,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -4306,13 +4306,13 @@ test('TC04 branch case 9  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case9/Auto_Branch_Case9_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case9/Auto_Branch_Case9_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case9_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 9/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -4346,17 +4346,17 @@ test('TC04 branch case 9  ', async ({ page }) => {
 
 
 
-test('TC04 branch case 10  ', async ({ page }) => {
+test('TC04 tax payer branch case 10  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C1.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_Branch_Case10_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/01. case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -4385,13 +4385,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C2
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C2.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/04. case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -4420,13 +4420,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C3
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C3.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/08. case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -4455,13 +4455,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C4
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C4.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/11. case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -4490,13 +4490,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C5
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C5.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/14. case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -4525,13 +4525,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C6.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/17. case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -4560,13 +4560,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C7
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C7.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/20. case 7.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -4595,13 +4595,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C8
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C8.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/23. case 8.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -4630,13 +4630,13 @@ test('TC04 branch case 10  ', async ({ page }) => {
     // C9
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. branch/Case10/Auto_Branch_Case10_C9.xlsx');
+    await page.locator('#file').setInputFiles('Data Files/Input Validation/04. taxpayerbranch/Case10/Auto_Branch_Case10_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
     await page.getByLabel('Upload Success').click();
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_Branch_Case10_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC04. Branch/Case 10/26. case 9.png', mask: [mask_locator8], maskColor: '#00FF00' });

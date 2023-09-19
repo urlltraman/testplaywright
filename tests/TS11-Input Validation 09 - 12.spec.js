@@ -25,7 +25,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -42,7 +42,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -59,7 +59,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -76,7 +76,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -110,7 +110,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/07. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -128,7 +128,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/08. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -146,7 +146,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/09. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -164,7 +164,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/10. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -198,7 +198,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/13. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -232,7 +232,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/16. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -266,7 +266,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/01. Case1/19. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
@@ -306,7 +306,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -323,7 +323,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -340,7 +340,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -357,7 +357,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -374,7 +374,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -392,7 +392,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/06. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -409,7 +409,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/07. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -426,7 +426,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/08. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -443,7 +443,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/09. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -460,7 +460,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/01 - 10/10. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -503,7 +503,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/01. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -537,7 +537,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/04. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -571,7 +571,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/07. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -605,7 +605,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/10. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -639,7 +639,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/13. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -673,7 +673,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/16. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -707,7 +707,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/19. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -741,7 +741,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/22. Case 25.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -776,7 +776,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/25. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -811,7 +811,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/11 - 20/28. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -850,7 +850,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/01. Case 21.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -884,7 +884,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/04. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -918,7 +918,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/07. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -952,7 +952,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C24' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/10. Case 24.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -986,7 +986,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C25' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/13. Case 25.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -1020,7 +1020,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C26' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/16. Case 26.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1054,7 +1054,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C27' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/19. Case 27.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1088,7 +1088,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C28' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/22. Case 28.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -1122,7 +1122,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C29' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/25. Case 29.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -1156,7 +1156,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C30' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/28. Case 30.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -1190,7 +1190,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C31' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC09. Contract No/02. Case2/21 - 31/31. Case 31.png', mask: [mask_locator11], maskColor: '#00FF00' });
@@ -1229,7 +1229,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_CreationDate_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1246,7 +1246,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_CreationDate_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1280,7 +1280,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_CreationDate_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/05. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1314,7 +1314,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_CreationDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/08. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -1348,7 +1348,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_CreationDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/11. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -1383,7 +1383,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_CreationDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/14. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1417,7 +1417,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_CreationDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/17. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1451,7 +1451,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_CreationDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/20. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -1485,7 +1485,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_CreationDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/23. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -1519,7 +1519,7 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_CreationDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/10. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -1559,7 +1559,7 @@ test('TC10 Creation Date  11 - 14  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_CreationDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/29. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1593,7 +1593,7 @@ test('TC10 Creation Date  11 - 14  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_CreationDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/32. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1627,7 +1627,7 @@ test('TC10 Creation Date  11 - 14  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_CreationDate_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/35. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1661,7 +1661,7 @@ test('TC10 Creation Date  11 - 14  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_CreationDate_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/38. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -1701,7 +1701,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_CreationDate_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/41. Case 15.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -1735,7 +1735,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_CreationDate_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/44. Case 16.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1769,7 +1769,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_CreationDate_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/47. Case 17.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1803,7 +1803,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_CreationDate_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/50. Case 18.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -1837,7 +1837,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_CreationDate_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/53. Case 19.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -1871,7 +1871,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_CreationDate_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/56. Case 20.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -1905,7 +1905,7 @@ test('TC10 Creation Date  15 - 21  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_CreationDate_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/59. Case 21.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -1944,7 +1944,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_EffectiveDate_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1961,7 +1961,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -1978,7 +1978,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -1994,7 +1994,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2028,7 +2028,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/07. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2063,7 +2063,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/10. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2097,7 +2097,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/13. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -2131,7 +2131,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/16. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2165,7 +2165,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/19. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -2199,7 +2199,7 @@ test('TC11 Effective Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/22. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -2242,7 +2242,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_EffectiveDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/25. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2276,7 +2276,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/28. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2310,7 +2310,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/31. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2344,7 +2344,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/34. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2378,7 +2378,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/37. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2412,7 +2412,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/40. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2446,7 +2446,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/43. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -2480,7 +2480,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/46. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2514,7 +2514,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/49. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -2548,7 +2548,7 @@ test('TC11 Effective Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/52. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -2589,7 +2589,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/55. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -2624,7 +2624,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/58. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2659,7 +2659,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/61. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2700,7 +2700,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ExpireDate_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -2717,7 +2717,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -2734,7 +2734,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -2750,7 +2750,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ExpireDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -2767,7 +2767,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ExpireDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -2802,7 +2802,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ExpireDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/08. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -2836,7 +2836,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ExpireDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/11. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -2870,7 +2870,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ExpireDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/14. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -2904,7 +2904,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ExpireDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/17. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -2938,7 +2938,7 @@ test('TC12 Expire Date  01 - 10  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ExpireDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/20. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -2978,7 +2978,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ExpireDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/23. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -3012,7 +3012,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/26. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -3046,7 +3046,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/29. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
@@ -3080,7 +3080,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ExpireDate_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/32. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
@@ -3114,7 +3114,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ExpireDate_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/35. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
@@ -3148,7 +3148,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ExpireDate_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/38. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
@@ -3182,7 +3182,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ExpireDate_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/41. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
@@ -3216,7 +3216,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ExpireDate_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/44. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
@@ -3250,7 +3250,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ExpireDate_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/47. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
@@ -3284,7 +3284,7 @@ test('TC12 Expire Date  11 - 20  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ExpireDate_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/50. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
@@ -3327,7 +3327,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ExpireDate_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/53. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
@@ -3361,7 +3361,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/56. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
@@ -3395,7 +3395,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/59. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
