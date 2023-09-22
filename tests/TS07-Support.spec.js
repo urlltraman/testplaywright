@@ -76,9 +76,8 @@ test('TC02 Log Audit Click Next And Previous Page ', async ({ page }) => {
 
 test('TC03 Search Log Audit Log Type ', async ({ page }) => {
 
-    await page.getByRole('tab', { name: 'Log Audit' }).click();
     await page.locator('#mat-select-value-7').click();
-    await page.getByRole('option', { name: 'None' }).click();
+    await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/01.Log Type/01.None.png'});
@@ -224,7 +223,7 @@ test('TC03 Search Log Audit Search ', async ({ page }) => {
 
 test('TC04 Log Input Click Next And Previous Page ', async ({ page }) => {
 
-    await page.getByRole('tab', { name: 'Log Input' }).click();
+    await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.getByLabel('Next').click();
     await page.locator('.p-10').hover();
@@ -251,7 +250,7 @@ test('TC04 Log Input Click Next And Previous Page ', async ({ page }) => {
 
 test('TC05 Search Log Input Channel ', async ({ page }) => {
 
-    await page.getByRole('tab', { name: 'Log Input' }).click();
+    await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.locator('#mat-select-value-9').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
@@ -279,7 +278,7 @@ test('TC05 Search Log Input Channel ', async ({ page }) => {
 
 test('TC05 Search Log Input Date From ', async ({ page }) => {
     
-    await page.getByRole('tab', { name: 'Log Input' }).click();
+    await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -304,7 +303,7 @@ test('TC05 Search Log Input Date From ', async ({ page }) => {
 
 
 test('TC05 Search Log Input Date To ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Log Input' }).click();
+    await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -331,7 +330,7 @@ test('TC05 Search Log Input Date To ', async ({ page }) => {
 
 
 test('TC05 Search Log Input Search ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Log Input' }).click();
+    await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.waitForTimeout(500);
     await page.getByLabel('Search').first().fill('test.gamekittisak@gmail.com');
     await page.getByRole('button', { name: 'Search' }).first().click();
@@ -360,7 +359,7 @@ test('TC05 Search Log Input Search ', async ({ page }) => {
 
 test('TC06 Log Submit Click Next And Previous Page ', async ({ page }) => {
 
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.getByLabel('Next').click();
     await page.locator('.p-10').hover();
@@ -388,7 +387,7 @@ test('TC06 Log Submit Click Next And Previous Page ', async ({ page }) => {
 
 test('TC07 Search Log Submit Channel ', async ({ page }) => {
 
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.locator('#mat-select-value-11').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
@@ -417,7 +416,7 @@ test('TC07 Search Log Submit Channel ', async ({ page }) => {
 
 test('TC07 Search Log Submit Date From ', async ({ page }) => {
     
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -442,7 +441,7 @@ test('TC07 Search Log Submit Date From ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Date To ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -470,7 +469,7 @@ test('TC07 Search Log Submit Date To ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Batch ID ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.waitForTimeout(1500);
     await page.getByLabel('Batch ID').first().fill('1028');
     await page.getByRole('button', { name: 'Search' }).first().click();
@@ -494,7 +493,7 @@ test('TC07 Search Log Submit Batch ID ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Search ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Log Submit' }).click();
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.waitForTimeout(500);
     await page.getByLabel('Search').first().fill('I07000');
     await page.getByRole('button', { name: 'Search' }).first().click();
