@@ -136,119 +136,119 @@ test('TC01 Administrator Add Basic ', async ({ page }) => {
 
 
 
-// test('TC01 Administrator Add User Completed ', async ({ page }) => {
+test('TC01 Administrator Add User Completed ', async ({ page }) => {
 
-//     await page.getByRole('button', { name: 'Add' }).click();
-//     await page.getByRole('button', { name: 'Basic' }).click();
-//     await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
-//     await page.locator('input[name="name"]').fill('Auto Add User');
-//     await page.locator('input[name="password"]').fill('ZXcv.!234');
-//     await page.locator('input[name="cPassword"]').fill('ZXcv.!234');
-//     await page.locator('select[name="role"]').selectOption('3');
-//     await page.getByRole('button', { name: 'Assign' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/15.Completed User Details.png' });
-//     await page.getByRole('button', { name: 'Save' }).click();
-//     await page.waitForTimeout(1500);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/16.All User.png' });
-
-
-// });
-
-// test('TC01 Administrator User Login ', async ({ page }) => {
-//     await page.getByText('logout').click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
-//     await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
-//     await page.locator('input[name="password"]').fill('ZXcv.!234');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
-//     await page.waitForTimeout(1800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/17.User Login.png' });
+    await page.getByRole('button', { name: 'Add' }).click();
+    await page.getByRole('button', { name: 'Basic' }).click();
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
+    await page.locator('input[name="name"]').fill('Auto Add User');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.locator('input[name="cPassword"]').fill('ZXcv.!234');
+    await page.locator('select[name="role"]').selectOption('3');
+    await page.getByRole('button', { name: 'Assign' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/15.Completed User Details.png' });
+    await page.getByRole('button', { name: 'Save' }).click();
+    await page.waitForTimeout(1500);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/16.All User.png' });
 
 
-// });
+});
+
+test('TC01 Administrator User Login ', async ({ page }) => {
+    await page.getByText('logout').click();
+    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+    await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.waitForTimeout(1800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/17.User Login.png' });
 
 
-
-
-// test('TC02 Edit User ', async ({ page }) => {
-
-//     await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').nth(1).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/01.Before Edit.png' });
-//     await page.locator('input[name="email"]').clear();
-//     await page.locator('input[name="email"]').fill('4kasittikemag@gmail.com');
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/02.Edit Email.png' });
-//     await page.locator('input[name="name"]').clear();
-//     await page.locator('input[name="name"]').fill('Auto Edit User');
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/03.Edit Name.png' });
-//     await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด Preparer' }).getByRole('button').click();
-//     await page.locator('select[name="company"]').selectOption('4');
-//     await page.locator('select[name="role"]').selectOption('7');
-//     await page.getByRole('button', { name: 'Assign' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/04.Change Assign.png' });
-//     await page.getByRole('button', { name: 'Cancel' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/05.After Click Cancel.png' });
-
-// });
-
-
-
-// test('TC02 Edit User Completed ', async ({ page }) => {
-
-//     await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').nth(1).click();
-//     await page.locator('input[name="name"]').fill('Auto Edit User');
-//     await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด Preparer' }).getByRole('button').click();
-//     await page.locator('select[name="company"]').selectOption('4');
-//     await page.locator('select[name="role"]').selectOption('7');
-//     await page.getByRole('button', { name: 'Assign' }).click();
-//     await page.getByRole('button', { name: 'Save' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/07.Edit Completed.png' });
-
-
-// });
+});
 
 
 
 
+test('TC02 Edit User ', async ({ page }) => {
+
+    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').nth(1).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/01.Before Edit.png' });
+    await page.locator('input[name="email"]').clear();
+    await page.locator('input[name="email"]').fill('4kasittikemag@gmail.com');
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/02.Edit Email.png' });
+    await page.locator('input[name="name"]').clear();
+    await page.locator('input[name="name"]').fill('Auto Edit User');
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/03.Edit Name.png' });
+    await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด Preparer' }).getByRole('button').click();
+    await page.locator('select[name="company"]').selectOption('3');
+    await page.locator('select[name="role"]').selectOption('7');
+    await page.getByRole('button', { name: 'Assign' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/04.Change Assign.png' });
+    await page.getByRole('button', { name: 'Cancel' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/05.After Click Cancel.png' });
+
+});
 
 
-// test('TC02 Edit User Login ', async ({ page }) => {
-//     await page.getByText('logout').click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
-//     await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
-//     await page.locator('input[name="password"]').fill('ZXcv.!234');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
-//     await page.waitForTimeout(1800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/08.Edit User Login.png' });
+
+test('TC02 Edit User Completed ', async ({ page }) => {
+
+    await page.getByRole('row', { name: 'Auto Add User test.gamekittisak4@gmail.com GGS' }).getByRole('button').nth(1).click();
+    await page.locator('input[name="name"]').fill('Auto Edit User');
+    await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด Preparer' }).getByRole('button').click();
+    await page.locator('select[name="company"]').selectOption('3');
+    await page.locator('select[name="role"]').selectOption('7');
+    await page.getByRole('button', { name: 'Assign' }).click();
+    await page.getByRole('button', { name: 'Save' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/07.Edit Completed.png' });
 
 
-// });
+});
 
 
 
 
-// test('TC03 Delete User ', async ({ page }) => {
 
-//     await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com NPD' }).getByRole('button').nth(2).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/01.Before Delete User Click Cancel.png' });
-//     await page.getByRole('button', { name: 'Cancel' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/02.After Delete User Click Cancel.png' });
-//     await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com NPD' }).getByRole('button').nth(2).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/03.Before Delete User Click Confirm.png' });
-//     await page.getByRole('button', { name: 'Confirm' }).click();
-//     await page.waitForTimeout(800);
-//     await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/04.Before Delete User Click Confirm.png' });
-// });
+
+test('TC02 Edit User Login ', async ({ page }) => {
+    await page.getByText('logout').click();
+    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+    await page.goto('http://gestamp.ddns.net/gestamp/#/batch');
+    await page.waitForTimeout(1800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/08.Edit User Login.png' });
+
+
+});
+
+
+
+
+test('TC03 Delete User ', async ({ page }) => {
+
+    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com GGT' }).getByRole('button').nth(2).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/01.Before Delete User Click Cancel.png' });
+    await page.getByRole('button', { name: 'Cancel' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/02.After Delete User Click Cancel.png' });
+    await page.getByRole('row', { name: 'Auto Edit User test.gamekittisak4@gmail.com GGT' }).getByRole('button').nth(2).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/03.Before Delete User Click Confirm.png' });
+    await page.getByRole('button', { name: 'Confirm' }).click();
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/04.Before Delete User Click Confirm.png' });
+});
 
 
 

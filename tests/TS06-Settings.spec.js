@@ -54,7 +54,7 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/04.Check Filing 4.png', fullPage: true });
     await page.locator('#mat-select-value-7').click();
-    await page.getByText('6').click();
+    await page.getByText('6', { exact: true }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/05.Check Filing 6.png', fullPage: true });
     await page.locator('#mat-select-value-7').click();
@@ -87,7 +87,7 @@ test('TC03 Check Status Interval Payment  ', async ({ page }) => {
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/10.Check Payment  4.png', fullPage: true });
     await page.locator('#mat-select-value-9').click();
-    await page.getByText('6').click();
+    await page.getByText('6', { exact: true }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/11.Check Payment  6.png', fullPage: true });
     await page.locator('#mat-select-value-9').click();
