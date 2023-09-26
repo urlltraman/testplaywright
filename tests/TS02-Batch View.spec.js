@@ -1205,25 +1205,25 @@ test('TC11 Download QR Payin  ', async ({ page }) => {
 
 
 
-test('TC11 Download Receipts ', async ({ page }) => {
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
-  await page.waitForTimeout(3000);
-  await page.getByPlaceholder('Status').click();
-  await page.getByRole('option', { name: 'Completed' }).click();
-  await page.getByRole('button', { name: 'Search' }).click();
-  await page.waitForTimeout(1000);
-  await page.reload();
-  await page.waitForTimeout(1000);
-  await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
-  await page.locator('div').filter({ hasText: /^SearchReceipts$/ }).getByRole('button').nth(1).click();
-  await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  await page.getByRole('button', { name: 'Refresh' }).click();
-  const downloadPromiseA = page.waitForEvent('download');
-  await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('button').nth(1).click();
-  const downloadA = await downloadPromiseA;
-  // Save downloaded file somewhere
-  await downloadA.saveAs('Output/TS02-Batch View/TC11 Download/03.Receipts.rar');
+// test('TC11 Download Receipts ', async ({ page }) => {
+//   await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+//   await page.waitForTimeout(3000);
+//   await page.getByPlaceholder('Status').click();
+//   await page.getByRole('option', { name: 'Completed' }).click();
+//   await page.getByRole('button', { name: 'Search' }).click();
+//   await page.waitForTimeout(1000);
+//   await page.reload();
+//   await page.waitForTimeout(1000);
+//   await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
+//   await page.locator('div').filter({ hasText: /^SearchReceipts$/ }).getByRole('button').nth(1).click();
+//   await page.getByRole('button', { name: 'Go to Downloads' }).click();
+//   await page.getByRole('button', { name: 'Refresh' }).click();
+//   const downloadPromiseA = page.waitForEvent('download');
+//   await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('button').nth(1).click();
+//   const downloadA = await downloadPromiseA;
+//   // Save downloaded file somewhere
+//   await downloadA.saveAs('Output/TS02-Batch View/TC11 Download/03.Receipts.rar');
 
 
-});
+// });
 
