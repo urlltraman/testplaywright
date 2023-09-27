@@ -1,15 +1,29 @@
-// @ts-check
+// // @ts-check
+// const { test, expect } = require('@playwright/test');
+
+// test.beforeEach(async ({ page }) => {
+//     // Runs before each test and signs in each page.
+
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+//     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//     await page.locator('input[name="password"]').fill('P@ssw0rd');
+//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//     await page.getByRole('link', { name: 'Support' }).click();
+//     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/support');
+// });
+
+
+
+
 const { test, expect } = require('@playwright/test');
+test.use({ storageState: 'playwright/.auth/T1.json' });
+
+
+
 
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
-
-    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-    await page.locator('input[name="password"]').fill('P@ssw0rd');
-    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByRole('link', { name: 'Support' }).click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/support');
+    await page.goto('http://gestamp.ddns.net/gestamp/#/support');
 });
 
 

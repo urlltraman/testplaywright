@@ -1,19 +1,28 @@
-// @ts-check
+// // @ts-check
+// const { test, expect } = require('@playwright/test');
+
+
+// test.beforeEach(async ({ page }) => {
+//     // Runs before each test and signs in each page.
+
+//     await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+//     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//     await page.locator('input[name="password"]').fill('P@ssw0rd');
+//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//     await page.getByRole('link', { name: 'Paper Stamp Duty' }).click();
+//     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/paperstamp');
+// });
+
 const { test, expect } = require('@playwright/test');
+test.use({ storageState: 'playwright/.auth/T1.json' });
+
+
 
 
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
-
-    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-    await page.locator('input[name="password"]').fill('P@ssw0rd');
-    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByRole('link', { name: 'Paper Stamp Duty' }).click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/paperstamp');
+    await page.goto('http://gestamp.ddns.net/gestamp/#/paperstamp');
 });
-
-
 
 
 test('TC01 Paper Stamp Duty ', async ({ page }) => {
