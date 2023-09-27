@@ -43,6 +43,7 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    { name: 'setup', testMatch: /.*\.setup\.ts/ },
     // {
     //   name: 'chromium',
     //   use: { ...devices['Desktop Chrome'] },
@@ -78,7 +79,7 @@ module.exports = defineConfig({
       name: 'Google Chrome',
       use: {
         ...devices['Desktop Chrome'], channel: 'chrome',
-        viewport: { width: 1440, height: 768 },
+        viewport: { width: 1440, height: 786 },
       },
     }
   ],
