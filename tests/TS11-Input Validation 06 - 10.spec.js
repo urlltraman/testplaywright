@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 
 
 
-test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
+test('TC06 Detail2 Type Code 6 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -101,6 +101,14 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail2_TC6_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC6_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+});
+
+
+
+
+
+    test('TC06 Detail2 Type Code 6 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -285,7 +293,7 @@ test('TC06 Detail2 Type Code 6  ', async ({ page }) => {
 
 
 
-test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
+test('TC06 Detail2 Type Code 8 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -371,6 +379,18 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail2_TC8_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC8_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+
+
+
+test('TC06 Detail2 Type Code 8 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -554,7 +574,7 @@ test('TC06 Detail2 Type Code 8  ', async ({ page }) => {
 
 
 
-test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
+test('TC06 Detail2 Type Code 18 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -640,6 +660,15 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail2_TC18_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC18_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+});
+
+
+
+
+
+test('TC06 Detail2 Type Code 18 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -823,7 +852,7 @@ test('TC06 Detail2 Type Code 18  ', async ({ page }) => {
 
 
 
-test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
+test('TC06 Detail2 Type Code 271 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -909,6 +938,16 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail2_TC271_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC271_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+});
+
+
+
+
+
+test('TC06 Detail2 Type Code 271 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1091,7 +1130,7 @@ test('TC06 Detail2 Type Code 271  ', async ({ page }) => {
 
 
 
-test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
+test('TC06 Detail2 Type Code 272 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1177,6 +1216,16 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail2_TC272_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail2_TC272_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+
+test('TC06 Detail2 Type Code 272 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1359,7 +1408,7 @@ test('TC06 Detail2 Type Code 272  ', async ({ page }) => {
 
 
 
-test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
+test('TC07 Detail3 Type Code 18 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1445,6 +1494,17 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail3_TC18_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC18_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+    
+});
+
+
+
+
+test('TC07 Detail3 Type Code 18 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1627,7 +1687,7 @@ test('TC07 Detail3 Type Code 18  ', async ({ page }) => {
 
 
 
-test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
+test('TC07 Detail3 Type Code 271 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1713,6 +1773,17 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail3_TC271_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC271_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+});
+
+
+
+
+test('TC07 Detail3 Type Code 271 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1897,7 +1968,7 @@ test('TC07 Detail3 Type Code 271  ', async ({ page }) => {
 
 
 
-test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
+test('TC07 Detail3 Type Code 272 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1983,6 +2054,20 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail3_TC272_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail3_TC272_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+    
+});
+
+
+
+
+
+
+test('TC07 Detail3 Type Code 272 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2165,7 +2250,7 @@ test('TC07 Detail3 Type Code 272  ', async ({ page }) => {
 
 
 
-test('TC08 Select Type 1 - 10  ', async ({ page }) => {
+test('TC08 Select Type 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2305,6 +2390,18 @@ test('TC08 Select Type 1 - 10  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_SelectType_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+    
+});
+
+
+
+
+test('TC08 Select Type 6 - 10  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2489,7 +2586,7 @@ test('TC08 Select Type 1 - 10  ', async ({ page }) => {
 
 
 
-test('TC08 Select Type 11 - 19  ', async ({ page }) => {
+test('TC08 Select Type 11 - 15  ', async ({ page }) => {
 
     //  C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
@@ -2666,6 +2763,20 @@ test('TC08 Select Type 11 - 19  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_SelectType_C15 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SelectType_C15  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+
+
+test('TC08 Select Type 16 - 19  ', async ({ page }) => {
     //  C16
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2812,7 +2923,7 @@ test('TC08 Select Type 11 - 19  ', async ({ page }) => {
 
 
 
-test('TC09 Contract No Case 1  ', async ({ page }) => {
+test('TC09 Contract No Case 1 1 - 5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2916,6 +3027,18 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case1_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case1_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+test('TC09 Contract No Case 1 6 - 11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3093,7 +3216,7 @@ test('TC09 Contract No Case 1  ', async ({ page }) => {
 
 
 
-test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
+test('TC09 Contract No Case 2  1 - 5  ', async ({ page }) => {
     // C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3180,6 +3303,12 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C5  ' })).toBeHidden();
     await page.waitForTimeout(1000);
+
+});
+
+
+
+test('TC09 Contract No Case 2  6 - 10  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3290,7 +3419,7 @@ test('TC09 Contract No Case 2  01 - 10  ', async ({ page }) => {
 
 
 
-test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
+test('TC09 Contract No Case 2  11 - 15  ', async ({ page }) => {
     //  C11
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3461,6 +3590,20 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C15 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C15  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+
+
+test('TC09 Contract No Case 2  16 - 20  ', async ({ page }) => {
     //  C16
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3563,7 +3706,6 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C18  ' })).toBeHidden();
-
     //  C19
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3637,7 +3779,7 @@ test('TC09 Contract No Case 2  11 - 20  ', async ({ page }) => {
 });
 
 
-test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
+test('TC09 Contract No Case 2  21 - 25  ', async ({ page }) => {
     //  C21
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3808,6 +3950,15 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_ContractNo_Case2_C25 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ContractNo_Case2_C25  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+});
+
+
+test('TC09 Contract No Case 2  26 - 30  ', async ({ page }) => {
     //  C26
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4016,7 +4167,7 @@ test('TC09 Contract No Case 2  21 - 30  ', async ({ page }) => {
 });
 
 
-test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
+test('TC10 Creation Date  1 - 5  ', async ({ page }) => {
     // C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4171,6 +4322,13 @@ test('TC10 Creation Date  01 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_CreationDate_C5  ' })).toBeHidden();
     await page.waitForTimeout(1000);
+
+
+
+});
+
+
+test('TC10 Creation Date  6 - 10  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();

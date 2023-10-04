@@ -28,12 +28,11 @@ test('TC01 type code  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_TypeCode_C1' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/01. Input Type Code.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('row', { name: 'Auto_TypeCode_C1 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C1  ' })).toBeHidden();
-
     //C2
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C2.xlsx');
@@ -45,29 +44,27 @@ test('TC01 type code  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_TypeCode_C2' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/02. No Input Type Code.png', mask: [mask_locator1], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/02. Case 2.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.reload();
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/03. Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/03. Case 2 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_TypeCode_C2').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' Import FixesExport FixesEdit");
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/04. Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/04. Case 02 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_TypeCode_C2 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C2  ' })).toBeHidden();
-
     //  C3
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C3.xlsx');
@@ -79,80 +76,127 @@ test('TC01 type code  ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_TypeCode_C3' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/05. Delete Column Type Code.png', mask: [mask_locator2], maskColor: '#00FF00' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/05. Case 3.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.reload();
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
         .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' ");
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/06. Click Status Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/06. Case 3 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
     await page.reload();
     await page.getByText('Auto_TypeCode_C3').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
         .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' Import FixesExport FixesEdit");
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/07. Error Msg.png' });
+    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/07. Case 3 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_TypeCode_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C3  ' })).toBeHidden();
-
-
-    //  C4
-    await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C4.xlsx');
-    await page.getByRole('button', { name: 'Upload' }).click();
-    await page.getByLabel('Upload Success').click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-    await page.getByRole('button', { name: 'Close' }).click();
-    await page.reload();
-    await page.waitForTimeout(1500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
-    let mask_locator3 = await page.getByRole('row', { name: 'Auto_TypeCode_C4' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/08. Input TH.png', mask: [mask_locator3], maskColor: '#00FF00' });
-    await page.waitForTimeout(1500);
-    await page.getByRole('row', { name: 'Auto_TypeCode_C4 ' }).first().getByText('delete').click();
-    await page.getByRole('button', { name: 'Confirm' }).click();
-    await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C4  ' })).toBeHidden();
-    //  C5
-    await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C5.xlsx');
-    await page.getByRole('button', { name: 'Upload' }).click();
-    await page.getByLabel('Upload Success').click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-    await page.getByRole('button', { name: 'Close' }).click();
-    await page.reload();
-    await page.waitForTimeout(1500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
-    let mask_locator4 = await page.getByRole('row', { name: 'Auto_TypeCode_C5' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/09. Input EN.png', mask: [mask_locator4], maskColor: '#00FF00' });
-    await page.waitForTimeout(1500);
-    await page.getByRole('row', { name: 'Auto_TypeCode_C5 ' }).first().getByText('delete').click();
-    await page.getByRole('button', { name: 'Confirm' }).click();
-    await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C5  ' })).toBeHidden();
-    //  C6
-    await page.getByRole('button', { name: 'Upload' }).first().click();
-    await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C6.xlsx');
-    await page.getByRole('button', { name: 'Upload' }).click();
-    await page.getByLabel('Upload Success').click();
-    await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
-    await page.getByRole('button', { name: 'Close' }).click();
-    await page.reload();
-    await page.waitForTimeout(1500);
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
-    let mask_locator5 = await page.getByRole('row', { name: 'Auto_TypeCode_C6' }).getByRole('cell').first();
-    await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/10. Input Special Characters.png', mask: [mask_locator5], maskColor: '#00FF00' });
-    await page.waitForTimeout(1500);
-    await page.getByRole('row', { name: 'Auto_TypeCode_C6 ' }).first().getByText('delete').click();
-    await page.getByRole('button', { name: 'Confirm' }).click();
-    await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C6  ' })).toBeHidden();
+    // //  C4
+    // await page.getByRole('button', { name: 'Upload' }).first().click();
+    // await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C4.xlsx');
+    // await page.getByRole('button', { name: 'Upload' }).click();
+    // await page.getByLabel('Upload Success').click();
+    // await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    // await page.getByRole('button', { name: 'Close' }).click();
+    // await page.reload();
+    // await page.waitForTimeout(1500);
+    // await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    // let mask_locator3 = await page.getByRole('row', { name: 'Auto_TypeCode_C4' }).getByRole('cell').first();
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/08. Case 4.png', mask: [mask_locator3], maskColor: '#00FF00' });
+    // await page.waitForTimeout(1500);
+    // await page.getByRole('button', { name: 'Search' }).first().click();
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    // await expect.soft(page.getByLabel('Message')).toBeVisible();
+    // await expect.soft(page.getByLabel('Message'))
+    //     .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' ");
+    // await page.waitForTimeout(500);
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/09. Case 4 Click Status Error Msg.png' });
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.getByText('Auto_TypeCode_C4').first().click();
+    // await expect.soft(page.locator('.card-error')).toBeVisible();
+    // await expect.soft(page.locator('.card-error'))
+    //     .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' Import FixesExport FixesEdit");
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/10. Case 4 Error Msg.png' });
+    // await page.locator('a').filter({ hasText: 'Batch' }).click();
+    // await page.getByRole('row', { name: 'Auto_TypeCode_C4 ' }).first().getByText('delete').click();
+    // await page.getByRole('button', { name: 'Confirm' }).click();
+    // await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C4  ' })).toBeHidden();
+    // //  C5
+    // await page.getByRole('button', { name: 'Upload' }).first().click();
+    // await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C5.xlsx');
+    // await page.getByRole('button', { name: 'Upload' }).click();
+    // await page.getByLabel('Upload Success').click();
+    // await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    // await page.getByRole('button', { name: 'Close' }).click();
+    // await page.reload();
+    // await page.waitForTimeout(1500);
+    // await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    // let mask_locator4 = await page.getByRole('row', { name: 'Auto_TypeCode_C5' }).getByRole('cell').first();
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/11. Case 5.png', mask: [mask_locator4], maskColor: '#00FF00' });
+    // await page.waitForTimeout(1500);
+    // await page.getByRole('button', { name: 'Search' }).first().click();
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    // await expect.soft(page.getByLabel('Message')).toBeVisible();
+    // await expect.soft(page.getByLabel('Message'))
+    //     .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' ");
+    // await page.waitForTimeout(500);
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/12. Case 5 Click Status Error Msg.png' });
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.getByText('Auto_TypeCode_C5').first().click();
+    // await expect.soft(page.locator('.card-error')).toBeVisible();
+    // await expect.soft(page.locator('.card-error'))
+    //     .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' Import FixesExport FixesEdit");
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/13. Case 5 Error Msg.png' });
+    // await page.locator('a').filter({ hasText: 'Batch' }).click();
+    // await page.getByRole('row', { name: 'Auto_TypeCode_C5 ' }).first().getByText('delete').click();
+    // await page.getByRole('button', { name: 'Confirm' }).click();
+    // await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C5  ' })).toBeHidden();
+    // //  C6
+    // await page.getByRole('button', { name: 'Upload' }).first().click();
+    // await page.locator('#file').setInputFiles('Data Files/Input Validation/01. typecode/Auto_TypeCode_C6.xlsx');
+    // await page.getByRole('button', { name: 'Upload' }).click();
+    // await page.getByLabel('Upload Success').click();
+    // await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+    // await page.getByRole('button', { name: 'Close' }).click();
+    // await page.reload();
+    // await page.waitForTimeout(1500);
+    // await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+    // let mask_locator5 = await page.getByRole('row', { name: 'Auto_TypeCode_C6' }).getByRole('cell').first();
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/14. Case 6.png', mask: [mask_locator5], maskColor: '#00FF00' });
+    // await page.waitForTimeout(1500);
+    // await page.getByRole('button', { name: 'Search' }).first().click();
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+    // await expect.soft(page.getByLabel('Message')).toBeVisible();
+    // await expect.soft(page.getByLabel('Message'))
+    //     .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' ");
+    // await page.waitForTimeout(500);
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/15. Case 6 Click Status Error Msg.png' });
+    // await page.waitForTimeout(500);
+    // await page.reload();
+    // await page.getByText('Auto_TypeCode_C6').first().click();
+    // await expect.soft(page.locator('.card-error')).toBeVisible();
+    // await expect.soft(page.locator('.card-error'))
+    //     .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'typeCode' is required ข้อมูลบรรทัดที่ 1 column 'typeCode' value must be one of '1,2,3,4,5,6,7,8,91,92,10,111,112,12,13,14,15,16,17,18,19,20,21,23,271,272,283' Import FixesExport FixesEdit");
+    // await page.screenshot({ path: 'Output/TS11-Input Validation/TC01. Type Code/16. Case 6 Error Msg.png' });
+    // await page.locator('a').filter({ hasText: 'Batch' }).click();
+    // await page.getByRole('row', { name: 'Auto_TypeCode_C6 ' }).first().getByText('delete').click();
+    // await page.getByRole('button', { name: 'Confirm' }).click();
+    // await expect.soft(page.getByRole('row', { name: 'Auto_TypeCode_C6  ' })).toBeHidden();
     await page.waitForTimeout(1000);
-
 });
 
 
@@ -594,7 +638,7 @@ test('TC02 recive date case 4 , 5  ', async ({ page }) => {
 
 
 
-test('TC02 recive date case 6 - 12  ', async ({ page }) => {
+test('TC02 recive date case 6 - 8  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -615,7 +659,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/36.Case 6 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -623,7 +667,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.getByText('Auto_ReceiveDate_C6').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/37. Case 6 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_ReceiveDate_C6 ' }).first().getByText('delete').click();
@@ -648,7 +692,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51]  ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/39. Case 7 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -656,7 +700,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.getByText('Auto_ReceiveDate_C7').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/40. Case 7 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_ReceiveDate_C7 ' }).first().getByText('delete').click();
@@ -681,7 +725,7 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
     await expect.soft(page.getByLabel('Message')).toBeVisible();
     await expect.soft(page.getByLabel('Message'))
-        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date format ");
+        .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51]  ");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/42. Case 8 Click Status Error Msg.png' });
     await page.waitForTimeout(500);
@@ -689,12 +733,19 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await page.getByText('Auto_ReceiveDate_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatImport FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'receiveDate' is an incorrect date formatข้อมูลบรรทัดที่ 1 column 'receiveDate' instInfo.receiveDate must not be before instInfo.creationDate. [E07360] ข้อมูลบรรทัดที่ 1 column 'receiveDate' creationDate must not be over than receiveDate. [R51] Import FixesExport FixesEdit");
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC02. Receive Date/43. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
     await page.getByRole('row', { name: 'Auto_ReceiveDate_C8 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C8  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
+
+
+
+
+test('TC02 recive date case 9 - 12  ', async ({ page }) => {
     //  C9
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/02. receivedate/Auto_ReceiveDate_C9.xlsx');
@@ -832,7 +883,6 @@ test('TC02 recive date case 6 - 12  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_ReceiveDate_C12  ' })).toBeHidden();
     await page.waitForTimeout(1000);
 });
-
 
 
 test('TC03 inst amount case 1 - 9  ', async ({ page }) => {
@@ -1345,7 +1395,7 @@ test('TC03 inst amount case 10 - 16 ', async ({ page }) => {
 });
 
 
-test('TC04 tax payer branch case 1  ', async ({ page }) => {
+test('TC04 tax payer branch case 1 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1503,6 +1553,11 @@ test('TC04 tax payer branch case 1  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case1_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case1_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
+
+
+test('TC04 tax payer branch case 1 C6 - C11  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1719,7 +1774,7 @@ test('TC04 tax payer branch case 1  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 2  ', async ({ page }) => {
+test('TC04 tax payer branch case 2 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -1877,6 +1932,12 @@ test('TC04 tax payer branch case 2  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case2_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case2_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+});
+
+
+
+test('TC04 tax payer branch case 2 C6 - C11  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2095,7 +2156,7 @@ test('TC04 tax payer branch case 2  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 3  ', async ({ page }) => {
+test('TC04 tax payer branch case 3 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2253,6 +2314,16 @@ test('TC04 tax payer branch case 3  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case3_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case3_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+});
+
+
+
+
+
+test('TC04 tax payer branch case 3 C6 - C11  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2471,7 +2542,7 @@ test('TC04 tax payer branch case 3  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 4  ', async ({ page }) => {
+test('TC04 tax payer branch case 4 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2593,6 +2664,16 @@ test('TC04 tax payer branch case 4  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case4_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case4_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+});
+
+
+
+
+
+test('TC04 tax payer branch case 4 C6 - C9  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2723,7 +2804,7 @@ test('TC04 tax payer branch case 4  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 5  ', async ({ page }) => {
+test('TC04 tax payer branch case 5 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -2899,6 +2980,20 @@ test('TC04 tax payer branch case 5  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case5_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case5_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+
+
+});
+
+
+
+
+
+test('TC04 tax payer branch case 5 C6 - C9  ', async ({ page }) => {
+
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3048,7 +3143,7 @@ test('TC04 tax payer branch case 5  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 6  ', async ({ page }) => {
+test('TC04 tax payer branch case 6 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3224,6 +3319,19 @@ test('TC04 tax payer branch case 6  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case6_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case6_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+
+});
+
+
+
+
+
+
+test('TC04 tax payer branch case 6 C6 - C9  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3376,7 +3484,7 @@ test('TC04 tax payer branch case 6  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 7  ', async ({ page }) => {
+test('TC04 tax payer branch case 7 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3552,6 +3660,20 @@ test('TC04 tax payer branch case 7  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case7_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case7_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+});
+
+
+
+
+
+
+
+
+
+test('TC04 tax payer branch case 7 C6 - C9  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3699,7 +3821,7 @@ test('TC04 tax payer branch case 7  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 8  ', async ({ page }) => {
+test('TC04 tax payer branch case 8 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -3875,6 +3997,18 @@ test('TC04 tax payer branch case 8  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case8_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case8_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+});
+
+
+
+
+test('TC04 tax payer branch case 8 C6 - C9  ', async ({ page }) => {
+
+
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4022,7 +4156,7 @@ test('TC04 tax payer branch case 8  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 9  ', async ({ page }) => {
+test('TC04 tax payer branch case 9 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4198,6 +4332,17 @@ test('TC04 tax payer branch case 9  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case9_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case9_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+
+});
+
+
+
+
+test('TC04 tax payer branch case 9 C6 - C9  ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4346,7 +4491,7 @@ test('TC04 tax payer branch case 9  ', async ({ page }) => {
 
 
 
-test('TC04 tax payer branch case 10  ', async ({ page }) => {
+test('TC04 tax payer branch case 10 C1 - C5   ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4522,6 +4667,18 @@ test('TC04 tax payer branch case 10  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Branch_Case10_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Branch_Case10_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+
+});
+
+
+
+
+
+test('TC04 tax payer branch case 10 C6 - C9   ', async ({ page }) => {
     // C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4669,7 +4826,7 @@ test('TC04 tax payer branch case 10  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 2 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4755,6 +4912,17 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC2_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC2_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1000);
+
+
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 2 C6 - C10  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -4921,7 +5089,7 @@ test('TC05 Detail1 Type Code 2  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 4 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5007,6 +5175,16 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC4_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC4_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+});
+
+
+
+
+
+test('TC05 Detail1 Type Code 4 C6 - C11 ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5190,7 +5368,7 @@ test('TC05 Detail1 Type Code 4  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 5 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5276,6 +5454,19 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC5_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC5_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+
+test('TC05 Detail1 Type Code 5 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5457,7 +5648,7 @@ test('TC05 Detail1 Type Code 5  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 6 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5543,6 +5734,16 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC6_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC6_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+test('TC05 Detail1 Type Code 6 C6 - C11  ', async ({ page }) => {
+
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5725,7 +5926,7 @@ test('TC05 Detail1 Type Code 6  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 7 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5811,6 +6012,18 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC7_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC7_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+    
+});
+
+
+
+
+test('TC05 Detail1 Type Code 7 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -5993,7 +6206,7 @@ test('TC05 Detail1 Type Code 7  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 8 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6079,6 +6292,15 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC8_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC8_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 8 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6263,7 +6485,7 @@ test('TC05 Detail1 Type Code 8  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 10 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6349,6 +6571,19 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC10_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC10_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+});
+
+
+
+
+
+
+test('TC05 Detail1 Type Code 10 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6532,7 +6767,7 @@ test('TC05 Detail1 Type Code 10  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 111 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6618,6 +6853,17 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC111_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC111_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+
+
+test('TC05 Detail1 Type Code 111 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6785,7 +7031,7 @@ test('TC05 Detail1 Type Code 111  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 16 C1 - C5   ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -6871,6 +7117,18 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC16_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC16_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+
+
+
+test('TC05 Detail1 Type Code 16 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7053,7 +7311,7 @@ test('TC05 Detail1 Type Code 16  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 18 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7139,6 +7397,18 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC18_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC18_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 18 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7201,7 +7471,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC18_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7236,7 +7506,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC18_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/10. Typecode 18/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7322,7 +7592,7 @@ test('TC05 Detail1 Type Code 18  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 19 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7408,6 +7678,18 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC19_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC19_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+    
+});
+
+
+
+
+
+test('TC05 Detail1 Type Code 19 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7470,7 +7752,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC19_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7505,7 +7787,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC19_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/11. Typecode 19/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7590,7 +7872,7 @@ test('TC05 Detail1 Type Code 19  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 20 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7676,6 +7958,17 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC20_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC20_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 20 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7738,7 +8031,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC20_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7773,7 +8066,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC20_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/12. Typecode 20/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -7858,7 +8151,7 @@ test('TC05 Detail1 Type Code 20  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 21 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -7944,6 +8237,17 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC21_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC21_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 21 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -8006,7 +8310,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC21_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -8041,7 +8345,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC21_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/13. Typecode 21/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -8126,7 +8430,7 @@ test('TC05 Detail1 Type Code 21  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 271 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -8212,6 +8516,18 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC271_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC271_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+
+
+});
+
+
+
+
+test('TC05 Detail1 Type Code 271 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -8274,7 +8590,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC271_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -8309,7 +8625,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC271_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/14. Typecode 271/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -8395,7 +8711,7 @@ test('TC05 Detail1 Type Code 271  ', async ({ page }) => {
 
 
 
-test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
+test('TC05 Detail1 Type Code 272 C1 - C5  ', async ({ page }) => {
     //  C1
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -8481,6 +8797,17 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByRole('row', { name: 'Auto_Detail1_TC272_C5 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_Detail1_TC272_C5  ' })).toBeHidden();
+    await page.waitForTimeout(1500);
+
+
+
+});
+
+
+
+
+
+test('TC05 Detail1 Type Code 272 C6 - C11  ', async ({ page }) => {
     //  C6
     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
@@ -8543,7 +8870,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC272_C8').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/10. Case 8 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
@@ -8578,7 +8905,7 @@ test('TC05 Detail1 Type Code 272  ', async ({ page }) => {
     await page.getByText('Auto_Detail1_TC272_C9').first().click();
     await expect.soft(page.locator('.card-error')).toBeVisible();
     await expect.soft(page.locator('.card-error'))
-        .toHaveText( "errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
+        .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'detail1' typeCode in (2,4,5,6,7,8,17,18,19,20,21,271,272,283) detail1 must not be empty. [R17] ข้อมูลบรรทัดที่ 1 column 'detail1' typeCode is equal to 4, 6, 7, 8, 10, 16, 18, 19, 20, 21, 271, 272, or 283; therefore, detail1 must not be empty. [R18] Import FixesExport FixesEdit");
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC05. Detail 1/15. Typecode 272/13. Case 9 Error Msg.png' });
     await page.locator('a').filter({ hasText: 'Batch' }).click();
