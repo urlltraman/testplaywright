@@ -1,0 +1,41 @@
+
+test('TC07 Search Log Submit Company', async ({ page }) => {
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
+    await page.waitForTimeout(500);
+    await page.locator('#mat-select-value-17').click();
+    await page.getByRole('option', { name: 'All' }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/01.All Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByRole('option', { name: 'Ginkgo Soft Co., Ltd.', exact: true }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/02.GGS Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('Test Company OrgTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/03.TCO Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('GinkgoTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/04.GGT Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('NATPHADA Co.Ltd').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/05.NPD Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('shelby company limited').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/06.SCL Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('Ginkgo Soft Co., Ltd. (Demo)').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/07.GDM Company.png'});
+
+});

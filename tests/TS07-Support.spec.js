@@ -4,12 +4,12 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+    await page.goto('https://gestamp.ddns.net/gestamp/auth/login');
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.getByRole('link', { name: 'Support' }).click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/support');
+    await page.waitForURL('https://gestamp.ddns.net/gestamp/support');
 });
 
 
@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/support');
+//     await page.goto('https://gestamp.ddns.net/gestamp/support');
 // });
 
 
@@ -65,7 +65,7 @@ test('TC01 Show Supprot ', async ({ page }) => {
 
 
 test('TC02 Log Audit Click Next And Previous Page ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Search' }).click();
     await page.getByLabel('Next').click();
     await page.locator('.p-10').hover();
@@ -89,7 +89,7 @@ test('TC02 Log Audit Click Next And Previous Page ', async ({ page }) => {
 
 
 test('TC03 Search Log Audit Log Type ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.locator('#mat-select-value-7').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
@@ -134,7 +134,7 @@ test('TC03 Search Log Audit Log Type ', async ({ page }) => {
 
 
 test('TC03 Search Log Audit Date From ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -158,7 +158,7 @@ test('TC03 Search Log Audit Date From ', async ({ page }) => {
 
 
 test('TC03 Search Log Audit Date To ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -180,25 +180,67 @@ test('TC03 Search Log Audit Date To ', async ({ page }) => {
 
 
 
+test('TC03 Search Log Audit Company ', async ({ page }) => {
+    await page.waitForTimeout(1000);
+    await page.locator('#mat-select-value-9').click();
+    await page.getByRole('option', { name: 'All' }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/01.All Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByRole('option', { name: 'Ginkgo Soft Co., Ltd.', exact: true }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/02.GGS Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByText('Test Company OrgTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/03.TCO Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByText('GinkgoTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/04.GGT Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByText('NATPHADA Co.Ltd').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/05.NPD Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByText('shelby company limited').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/06.SCL Company.png'});
+    await page.locator('#mat-select-value-9').click();
+    await page.getByText('Ginkgo Soft Co., Ltd. (Demo)').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Company/07.GDM Company.png'});
+
+});
+
+
+
 
 test('TC03 Search Log Audit Batch ID ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.locator('#mat-input-4').fill('1');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Batch ID/01.ID 1.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Batch ID/01.ID 1.png'});
     await page.locator('#mat-input-4').fill('147');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Batch ID/02.ID 147.png'});    
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Batch ID/02.ID 147.png'});    
     await page.locator('#mat-input-4').fill('987654321');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Batch ID/03.ID 987654321.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Batch ID/03.ID 987654321.png'});
     await page.locator('#mat-input-4').fill('-100');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/04.Batch ID/04.ID -100.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Batch ID/04.ID -100.png'});
 
 
 });
@@ -207,23 +249,23 @@ test('TC03 Search Log Audit Batch ID ', async ({ page }) => {
 
 
 test('TC03 Search Log Audit Search ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.locator('#mat-input-5').fill('test.gamekittisak@gmail.com');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Search/01.Search Email.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/06.Search/01.Search Email.png'});
     await page.locator('#mat-input-5').fill('Finish check payment');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Search/02.Search check payment.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/06.Search/02.Search check payment.png'});
     await page.locator('#mat-input-5').fill('Set permission');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Search/03.Search Set permission.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/06.Search/03.Search Set permission.png'});
     await page.locator('#mat-input-5').fill('Login google');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/05.Search/04.Search Login google.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC03 Search Log Audit/06.Search/04.Search Login google.png'});
     
     
 });
@@ -236,8 +278,9 @@ test('TC03 Search Log Audit Search ', async ({ page }) => {
 
 
 test('TC04 Log Input Click Next And Previous Page ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Input Log' }).click();
+    await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.getByLabel('Next').click();
     await page.locator('.p-10').hover();
@@ -263,24 +306,25 @@ test('TC04 Log Input Click Next And Previous Page ', async ({ page }) => {
 
 
 test('TC05 Search Log Input Channel ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Input Log' }).click();
-    await page.locator('#mat-select-value-9').click();
+    await page.waitForTimeout(1000);
+    await page.getByLabel('channel').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/01.Channel/01.All.png'});
-    await page.locator('#mat-select-value-9').click();
+    await page.getByLabel('channel').click();
     await page.getByRole('option', { name: 'Upload' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/01.Channel/02.Upload.png'});
-    await page.locator('#mat-select-value-9').click();
+    await page.getByLabel('channel').click();
     await page.getByRole('option', { name: 'APIs' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/01.Channel/03.APIs.png'});
-    await page.locator('#mat-select-value-9').click();
+    await page.getByLabel('channel').click();
     await page.getByRole('option', { name: 'Watcher' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
@@ -291,8 +335,9 @@ test('TC05 Search Log Input Channel ', async ({ page }) => {
 });
 
 test('TC05 Search Log Input Date From ', async ({ page }) => {
-    
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Input Log' }).click();
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -317,7 +362,9 @@ test('TC05 Search Log Input Date From ', async ({ page }) => {
 
 
 test('TC05 Search Log Input Date To ', async ({ page }) => {
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Input Log' }).click();
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -339,25 +386,66 @@ test('TC05 Search Log Input Date To ', async ({ page }) => {
 
 
 
+test('TC05 Search Log Input Company ', async ({ page }) => {
+    await page.waitForTimeout(1000);
+    await page.getByRole('tab', { name: 'Input Log' }).click();
+    await page.waitForTimeout(500);
+    await page.locator('#mat-select-value-13').click();
+    await page.getByRole('option', { name: 'All' }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/01.All Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByRole('option', { name: 'Ginkgo Soft Co., Ltd.', exact: true }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/02.GGS Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByText('Test Company OrgTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/03.TCO Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByText('GinkgoTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/04.GGT Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByText('NATPHADA Co.Ltd').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/05.NPD Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByText('shelby company limited').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/06.SCL Company.png'});
+    await page.locator('#mat-select-value-13').click();
+    await page.getByText('Ginkgo Soft Co., Ltd. (Demo)').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Company/07.GDM Company.png'});
 
+});
 
 
 
 test('TC05 Search Log Input Search ', async ({ page }) => {
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Input Log' }).click();
     await page.waitForTimeout(500);
     await page.getByLabel('Search').first().fill('test.gamekittisak@gmail.com');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Search/01.Search Email.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/05.Search/01.Search Email.png'});
     await page.getByLabel('Search').first().fill('GinkgoTest');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Search/02.Search Company.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/05.Search/02.Search Company.png'});
     await page.getByLabel('Search').first().fill('Auto');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/04.Search/03.Search Files Name.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC05 Search Log Input/05.Search/03.Search Files Name.png'});
 });
 
 
@@ -372,8 +460,9 @@ test('TC05 Search Log Input Search ', async ({ page }) => {
 
 
 test('TC06 Log Submit Click Next And Previous Page ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
+    await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.getByLabel('Next').click();
     await page.locator('.p-10').hover();
@@ -400,19 +489,20 @@ test('TC06 Log Submit Click Next And Previous Page ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Channel ', async ({ page }) => {
-
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
-    await page.locator('#mat-select-value-11').click();
+    await page.waitForTimeout(1000);
+    await page.locator('#mat-select-value-15').click();
     await page.getByRole('option', { name: 'All' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/01.Channel/01.All.png'});
-    await page.locator('#mat-select-value-11').click();
+    await page.locator('#mat-select-value-15').click();
     await page.getByRole('option', { name: 'Scheduled Submit' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/01.Channel/02.Scheduled Submit.png'});
-    await page.locator('#mat-select-value-11').click();
+    await page.locator('#mat-select-value-15').click();
     await page.getByRole('option', { name: 'Manual Submit' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(500);
@@ -429,8 +519,9 @@ test('TC07 Search Log Submit Channel ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Date From ', async ({ page }) => {
-    
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -455,7 +546,9 @@ test('TC07 Search Log Submit Date From ', async ({ page }) => {
 
 
 test('TC07 Search Log Submit Date To ', async ({ page }) => {
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
+    await page.waitForTimeout(1000);
     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -479,56 +572,99 @@ test('TC07 Search Log Submit Date To ', async ({ page }) => {
 
 
 
+test('TC07 Search Log Submit Company', async ({ page }) => {
+    await page.waitForTimeout(1000);
+    await page.getByRole('tab', { name: 'Submit Log' }).click();
+    await page.waitForTimeout(500);
+    await page.locator('#mat-select-value-17').click();
+    await page.getByRole('option', { name: 'All' }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/01.All Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByRole('option', { name: 'Ginkgo Soft Co., Ltd.', exact: true }).locator('span').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/02.GGS Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('Test Company OrgTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/03.TCO Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('GinkgoTest').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/04.GGT Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('NATPHADA Co.Ltd').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/05.NPD Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('shelby company limited').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/06.SCL Company.png'});
+    await page.locator('#mat-select-value-17').click();
+    await page.getByText('Ginkgo Soft Co., Ltd. (Demo)').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Company/07.GDM Company.png'});
+
+});
 
 
 
 test('TC07 Search Log Submit Batch ID ', async ({ page }) => {
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.waitForTimeout(1500);
     await page.getByLabel('Batch ID').first().fill('1028');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Batch ID/01.ID 1028.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Batch ID/01.ID 1028.png'});
     await page.getByLabel('Batch ID').first().fill('999');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Batch ID/02.ID 999.png'});    
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Batch ID/02.ID 999.png'});    
     await page.getByLabel('Batch ID').first().fill('987654321');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Batch ID/03.ID 987654321.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Batch ID/03.ID 987654321.png'});
     await page.getByLabel('Batch ID').first().fill('-100');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(1500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/04.Batch ID/04.ID -100.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Batch ID/04.ID -100.png'});
 
 
 });
 
 
 test('TC07 Search Log Submit Search ', async ({ page }) => {
+    await page.waitForTimeout(1000);
     await page.getByRole('tab', { name: 'Submit Log' }).click();
     await page.waitForTimeout(500);
     await page.getByLabel('Search').first().fill('I07000');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Search/01.Search Status RD.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/06.Search/01.Search Status RD.png'});
     await page.getByLabel('Search').first().fill('E07276');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Search/02.Search Status Error.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/06.Search/02.Search Status Error.png'});
     await page.getByLabel('Search').first().fill('ทำรายการเรียบร้อย');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Search/03.Search Response Message.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/06.Search/03.Search Response Message.png'});
     await page.getByLabel('Search').first().fill('API00000000000088231');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Search/04.Search API.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/06.Search/04.Search API.png'});
     await page.getByLabel('Search').first().fill('271');
     await page.getByRole('button', { name: 'Search' }).first().click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/05.Search/05.Search Type Code.png'});
+    await page.screenshot({ path: 'Output/TS07-Support/TC07 Search Log Submit/06.Search/05.Search Type Code.png'});
     
     
 });
@@ -540,7 +676,7 @@ test('TC07 Search Log Submit Search ', async ({ page }) => {
 
 
 // test('TC08 Log Emails Click Next And Previous Page ', async ({ page }) => {
-//     await page.getByRole('tab', { name: 'Log Emails' }).click();
+//     await page.getByRole('tab', { name: 'Emails Log' }).click();
 //     await page.getByRole('button', { name: 'Search' }).nth(1).click();
 //     await page.getByLabel('Next').click();
 //     await page.locator('.p-10').hover();
@@ -568,7 +704,7 @@ test('TC07 Search Log Submit Search ', async ({ page }) => {
 
 // test('TC09 Search Log Emails Date From ', async ({ page }) => {
 
-//     await page.getByRole('tab', { name: 'Log Emails' }).click();
+//     await page.getByRole('tab', { name: 'Emails Log' }).click();
 //     await page.locator('div').filter({ hasText: /^Date From$/ }).getByLabel('Open calendar').first().click();
 //     await page.getByLabel('Choose month and year').click();
 //     await page.getByLabel('2023').click();
@@ -593,7 +729,7 @@ test('TC07 Search Log Submit Search ', async ({ page }) => {
 
 
 // test('TC09 Search Log Emails Date To ', async ({ page }) => {
-//     await page.getByRole('tab', { name: 'Log Emails' }).click();
+//     await page.getByRole('tab', { name: 'Emails Log' }).click();
 //     await page.locator('div').filter({ hasText: /^Date To$/ }).getByLabel('Open calendar').first().click();
 //     await page.getByLabel('Choose month and year').click();
 //     await page.getByLabel('2023').click();
@@ -616,21 +752,22 @@ test('TC07 Search Log Submit Search ', async ({ page }) => {
 
 
 // test('TC09 Search Log Emails Batch ID ', async ({ page }) => {
-//     await page.getByRole('tab', { name: 'Log Emails' }).click();
-//     await page.locator('#mat-input-8').fill('1');
-//     await page.getByRole('button', { name: 'Search' }).nth(1).click();
+//     await page.getByRole('tab', { name: 'Emails Log' }).click();
+//     await page.waitForTimeout(500);
+//     await page.getByLabel('Batch Id').first().fill('1');
+//     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/03.Batch ID/01.ID 1.png'});
-//     await page.locator('#mat-input-8').fill('147');
-//     await page.getByRole('button', { name: 'Search' }).nth(1).click();
+//     await page.getByLabel('Batch Id').first().fill('147');
+//     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/03.Batch ID/02.ID 147.png'});    
-//     await page.locator('#mat-input-8').fill('987654321');
-//     await page.getByRole('button', { name: 'Search' }).nth(1).click();
+//     await page.getByLabel('Batch Id').first().fill('987654321');
+//     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/03.Batch ID/03.ID 987654321.png'});
-//     await page.locator('#mat-input-8').fill('-100');
-//     await page.getByRole('button', { name: 'Search' }).nth(1).click();
+//     await page.getByLabel('Batch Id').first().fill('-100');
+//     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/03.Batch ID/04.ID -100.png'});
 
@@ -641,23 +778,21 @@ test('TC07 Search Log Submit Search ', async ({ page }) => {
 
 
 // test('TC09 Search Log Emails Search ', async ({ page }) => {
-
-//     await page.locator('#mat-input-9').fill('test.gamekittisak@gmail.com');
+//     await page.getByRole('tab', { name: 'Emails Log' }).click();
+//     await page.getByLabel('Search').fill('test.gamekittisak@gmail.com');
 //     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/04.Search/01.Search Email.png'});
-//     await page.locator('#mat-input-9').fill('Finish check payment');
+//     await page.getByLabel('Search').fill('Finish check payment');
 //     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/04.Search/02.Search check payment.png'});
-//     await page.locator('#mat-input-9').fill('Set permission');
+//     await page.getByLabel('Search').fill('Set permission');
 //     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/04.Search/03.Search Set permission.png'});
-//     await page.locator('#mat-input-9').fill('Login google');
+//     await page.getByLabel('search').fill('Login google');
 //     await page.getByRole('button', { name: 'Search' }).click();
 //     await page.waitForTimeout(500);
 //     await page.screenshot({ path: 'Output/TS07-Support/TC09 Search Log Emails/04.Search/04.Search Login google.png'});
-    
-    
 // });

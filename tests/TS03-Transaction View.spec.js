@@ -4,12 +4,12 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
   // Runs before each test and signs in each page.
 
-  await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+  await page.goto('https://gestamp.ddns.net/gestamp/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await page.getByRole('link', { name: 'Transaction ' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/transactions');
+  await page.waitForURL('https://gestamp.ddns.net/gestamp/transactions');
 });
 
 
@@ -21,7 +21,7 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/transactions');
+//     await page.goto('https://gestamp.ddns.net/gestamp/transactions');
 // });
 
 
@@ -793,7 +793,7 @@ test('TC04 Export Receipts Single ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'You are going to download receipts' })).toHaveText('You are going to download receipts');
   await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
   await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/downloads')
+  await page.waitForURL('https://gestamp.ddns.net/gestamp/downloads')
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/11.Receipts Single Task Compressing.png' });
   await page.reload();
@@ -823,7 +823,7 @@ test('TC04 Export Receipts Multi ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'You are going to download receipts' })).toHaveText('You are going to download receipts');
   await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
   await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/downloads')
+  await page.waitForURL('https://gestamp.ddns.net/gestamp/downloads')
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/14.Receipts Multi Task Compressing.png' });
   await page.reload();
@@ -857,7 +857,7 @@ test('TC04 Export Receipts All ', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'You are going to download receipts' })).toHaveText('You are going to download receipts');
   await expect(page.getByRole('heading', { name: 'Ready to start..' })).toHaveText('Ready to start..');
   await page.getByRole('button', { name: 'Go to Downloads' }).click();
-  await page.waitForURL('http://gestamp.ddns.net/gestamp/#/downloads')
+  await page.waitForURL('https://gestamp.ddns.net/gestamp/downloads')
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC04 Export/17.Receipts 50 Task Compressing.png' });
   await page.waitForTimeout(15000);

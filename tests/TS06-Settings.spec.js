@@ -4,12 +4,12 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+    await page.goto('https://gestamp.ddns.net/gestamp/auth/login');
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.getByRole('link', { name: 'Settings' }).click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/settings');
+    await page.waitForURL('https://gestamp.ddns.net/gestamp/settings/configuration');
 });
 
 
@@ -22,7 +22,7 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/settings');
+//     await page.goto('https://gestamp.ddns.net/gestamp/settings/configuration');
 // });
 
 
@@ -41,7 +41,7 @@ test('TC01 Show Settings ', async ({ page }) => {
 
 
 test('TC02 Chang Batch Size ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Configuration' }).click();
+    await page.getByRole('link',{ name: 'Configuration' }).click();
     await page.getByRole('textbox').fill('2222');
     await page.screenshot({ path: 'Output/TS06-Settings/TC02 Chang Batch Size /01.2222.png', fullPage: true });
     await page.getByRole('textbox').fill('10');
@@ -55,7 +55,7 @@ test('TC02 Chang Batch Size ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval Filing ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Configuration' }).click();
+    await page.getByRole('link',{ name: 'Configuration' }).click();
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/01.Default Page.png', fullPage: true });
     await page.locator('#mat-select-value-7').click();
     await page.getByText('2', { exact: true }).click();
@@ -89,7 +89,7 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval Payment  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Configuration' }).click();
+    await page.getByRole('link',{ name: 'Configuration' }).click();
     await page.locator('#mat-select-value-9').click();
     await page.getByText('2', { exact: true }).click();
     await page.waitForTimeout(500);
@@ -121,7 +121,7 @@ test('TC03 Check Status Interval Payment  ', async ({ page }) => {
 
 
 test('TC03 Check Status Interval  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Configuration' }).click();
+    await page.getByRole('link',{ name: 'Configuration' }).click();
     await page.locator('#mat-select-value-7').click();
     await page.getByRole('option', { name: '12' }).locator('span').click();
     await page.locator('#mat-select-value-9').click();
@@ -137,7 +137,7 @@ test('TC03 Check Status Interval  ', async ({ page }) => {
 
 
 test('TC04 Permission  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Permission' }).click();
+    await page.getByRole('link',{ name: 'Permission' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC04 Permission/01.Default Page.png' });
 
@@ -145,11 +145,18 @@ test('TC04 Permission  ', async ({ page }) => {
 
 
 
-
-test('TC05 Holiday  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'Holiday' }).click();
+test('TC05 Organization  ', async ({ page }) => {
+    await page.getByRole('link', { name: 'Organization' }).click();
+    // await page.locator('#mat-tab-label-0-4').click();
+    // await page.locator('#mat-tab-label-2-0').click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC05 Holiday/01.Default Page.png' });
+    await page.screenshot({ path: 'Output/TS06-Settings/TC05 Organization/01.Default Page.png' });
+    await page.getByRole('tab',{ name: 'Company' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS06-Settings/TC05 Organization/02.Company.png' });
+    await page.getByRole('tab',{ name: 'Users' }).click();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS06-Settings/TC05 Organization/03.User.png' });
 
 });
 
@@ -157,9 +164,11 @@ test('TC05 Holiday  ', async ({ page }) => {
 
 
 
+
 test('TC06 Mail Server  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'E-Mail' }).click();
-    await page.getByRole('tab', { name: 'Mail Server' }).click();
+
+    await page.getByRole('link',{ name: 'E-Mail' }).click();
+    await page.getByRole('tab',{ name: 'Mail Server' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC06 Mail Server/01.Default Page.png' });
 
@@ -168,8 +177,9 @@ test('TC06 Mail Server  ', async ({ page }) => {
 
 
 test('TC07 Mail Scheduler  ', async ({ page }) => {
-    await page.getByRole('tab', { name: 'E-Mail' }).click();
-    await page.getByRole('tab', { name: 'Mail Scheduler' }).click();
+
+    await page.getByRole('link',{ name: 'E-Mail' }).click();
+    await page.getByRole('tab',{ name: 'Mail Scheduler' }).click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC07 Mail Scheduler /01.Default Page.png' });
 
@@ -177,19 +187,13 @@ test('TC07 Mail Scheduler  ', async ({ page }) => {
 
 
 
-test('TC08 Organization  ', async ({ page }) => {
-    await page.locator('#mat-tab-label-0-4').click();
-    await page.locator('#mat-tab-label-2-0').click();
+
+
+
+
+test('TC08 Holiday  ', async ({ page }) => {
+    await page.getByRole('link',{ name: 'Holiday' }).click();
     await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC08 Organization/01.Default Page.png' });
-    await page.getByRole('tab', { name: 'Company' }).click();
-    await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC08 Organization/02.Company.png' });
-    await page.getByRole('tab', { name: 'Users' }).click();
-    await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC08 Organization/03.User.png' });
+    await page.screenshot({ path: 'Output/TS06-Settings/TC08 Holiday/01.Default Page.png' });
 
 });
-
-
-

@@ -4,12 +4,12 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('http://gestamp.ddns.net/gestamp/#/auth/login');
+    await page.goto('https://gestamp.ddns.net/gestamp/auth/login');
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.locator('div').filter({ hasText: /^file_download$/ }).first().click();
-    await page.waitForURL('http://gestamp.ddns.net/gestamp/#/downloads');
+    await page.waitForURL('https://gestamp.ddns.net/gestamp/downloads');
 });
 
 
@@ -26,7 +26,7 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('http://gestamp.ddns.net/gestamp/#/downloads');
+//     await page.goto('https://gestamp.ddns.net/gestamp/downloads');
 // });
 
 
@@ -64,7 +64,7 @@ test('TC01 Show Download ', async ({ page }) => {
 
 // test('TC03 Refresh ', async ({ page }) => {
 //     await page.getByRole('link', { name: 'Batch ' }).click();
-//     await page.waitForURL('http://gestamp.ddns.net/gestamp/#/batch');
+//     await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
 //     await page.waitForTimeout(3000);
 //     await page.getByPlaceholder('Status').click();
 //     await page.getByRole('option', { name: 'Completed' }).click();
