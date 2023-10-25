@@ -9,6 +9,9 @@ test.beforeEach(async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.getByRole('button', { name: 'Accept' }).click();
+
+
 });
 
 
@@ -26,7 +29,6 @@ test.beforeEach(async ({ page }) => {
 
 
 test('TC01 Batch View ', async ({ page }) => {
-
 
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(3000);
@@ -58,15 +60,16 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
 
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(3000);
-  await page.getByPlaceholder('Status').click();
-  await page.getByRole('option', { name: 'All Status' }).click();
+  // await page.getByPlaceholder('Status').click();
+  // await page.getByLabel('All Status').getByText('All Status').click();
+  // await page.waitForTimeout(500);
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.reload();
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/01.All Status/01.All Status.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -75,9 +78,9 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/01.All Status/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -85,7 +88,7 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/01.All Status/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -94,14 +97,14 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/01.All Status/04.Date From And To.png' });
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -127,7 +130,7 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/02.Uploading/01.Uploading.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -136,9 +139,9 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/02.Uploading/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -146,7 +149,7 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/02.Uploading/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -154,14 +157,14 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/02.Uploading/04.Date From And To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -190,7 +193,7 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/03.Input Error/01.Input Error.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -199,9 +202,9 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/03.Input Error/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -209,7 +212,7 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/03.Input Error/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -222,14 +225,14 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -255,7 +258,7 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/04.Submit Error/01.Submit Error.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -264,9 +267,9 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/04.Submit Error/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -274,7 +277,7 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/04.Submit Error/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -285,14 +288,14 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -319,7 +322,7 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/05.Filing Error/01.Filing Error.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -328,9 +331,9 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/05.Filing Error/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -338,7 +341,7 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/05.Filing Error/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -348,14 +351,14 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -384,7 +387,7 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/06.Payment Error/01.Payment Errors.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -393,9 +396,9 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/06.Payment Error/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -403,7 +406,7 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/06.Payment Error/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -413,14 +416,14 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -450,7 +453,7 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/07.Receipt Error/01.Receipt Error.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -459,9 +462,9 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/07.Receipt Error/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -469,7 +472,7 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/07.Receipt Error/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -479,14 +482,14 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -516,7 +519,7 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/08.Preparing/01.Preparing.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -525,9 +528,9 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/08.Preparing/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -535,7 +538,7 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/08.Preparing/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -545,14 +548,14 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -582,7 +585,7 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/09.Rejected/01.Rejected.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -591,9 +594,9 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/09.Rejected/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -601,7 +604,7 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/09.Rejected/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -611,14 +614,14 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -648,7 +651,7 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/10.Reviewing/01.Reviewing.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -657,9 +660,9 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/10.Reviewing/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -667,7 +670,7 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/10.Reviewing/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -677,14 +680,14 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -715,7 +718,7 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/11.Submitted/01.Submitted.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -724,9 +727,9 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/11.Submitted/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -734,7 +737,7 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/11.Submitted/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -743,14 +746,14 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/11.Submitted/04.Date From And To.png' });
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -781,7 +784,7 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/12.Payment/01.Payment.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -790,9 +793,9 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/12.Payment/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -800,7 +803,7 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/12.Payment/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -809,14 +812,14 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/12.Payment/04.Date From And To.png' });
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -843,7 +846,7 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
 
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/13.Completed/01.Completed.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -852,9 +855,9 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/13.Completed/02.Date From.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
   await page.waitForTimeout(1000);
-  await page.locator('#kt_body').click();
+  await page.locator('.cdk-overlay-backdrop').click();
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -862,7 +865,7 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/13.Completed/03.Date To.png' });
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2023').click();
   await page.getByLabel('July 2023').click();
   await page.getByLabel('31 July 2023').click();
@@ -871,14 +874,14 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
   await page.screenshot({ path: 'Output/TS02-Batch View/TC02 Search Status/13.Completed/04.Date From And To.png' });
 
   await page.locator('div').filter({ hasText: /^Uploaded Date To$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.locator('div').filter({ hasText: /^Uploaded Date From$/ }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('Choose month and year').first().click();
   await page.getByLabel('2030').click();
   await page.getByLabel('July 2030').click();
   await page.getByLabel('31 July 2030').click();
@@ -965,10 +968,9 @@ test('TC04 Create Batch  ', async ({ page }) => {
 
 test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -981,6 +983,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await expect(page.getByRole('cell', { name: '\'ABC10003\' is Exist.' })).toHaveText("'ABC10003' is Exist.");
   await page.locator('[id="\\30 _1"]').fill('ZXCV1234');
   await page.getByRole('button', { name: 'Validate' }).click();
+  await page.waitForTimeout(1500);
   await page.getByRole('link', { name: 'Batch ' }).click();
   await page.waitForTimeout(1500);
   await page.reload();
@@ -1002,7 +1005,7 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
 
 test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
@@ -1034,10 +1037,9 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
 
 test('TC06 Delete Batch  ', async ({ page }) => {
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Delete.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -1046,6 +1048,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   let mask_locator = await page.getByRole('row', { name: 'Auto_Delete' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/01.Select Batch Delete.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
+  await page.getByRole('button', { name: 'Search' }).click();
   await page.getByRole('row', { name: 'Auto_Delete' }).first().getByRole('button').nth(1).click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_Delete  ' })).toBeHidden();
@@ -1063,10 +1066,9 @@ test('TC06 Delete Batch  ', async ({ page }) => {
 
 test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Reject.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
@@ -1093,10 +1095,10 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/06.After Reject.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
+  await page.getByRole('button', { name: 'Search' }).click();
   await page.getByRole('row', { name: 'Auto_Reject' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_Reject  ' })).toBeHidden();
-
   await page.waitForTimeout(1000);
 
 
@@ -1173,7 +1175,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 test('TC10 Export  ', async ({ page }) => {
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
-  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
@@ -1183,6 +1185,7 @@ test('TC10 Export  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC10 Export/01.Select Batch Export.png', mask: [mask_locator], maskColor: '#00FF00' });
+  await page.getByRole('button', { name: 'Search' }).click();
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByRole('button').nth(1).click();
   const download = await downloadPromise;
