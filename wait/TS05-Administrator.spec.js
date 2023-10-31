@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByRole('button', { name: 'Accept' }).click();
+    // await page.getByRole('button', { name: 'Accept' }).click();
     await page.getByRole('link', { name: 'Administrator' }).click();
     await page.waitForURL('https://gestamp.ddns.net/gestamp/admin');
 });

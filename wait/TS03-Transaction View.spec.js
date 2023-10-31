@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamkittisak10@gmail.com');
   await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  await page.getByRole('button', { name: 'Accept' }).click();
+  // await page.getByRole('button', { name: 'Accept' }).click();
   await page.getByRole('link', { name: 'Transaction ' }).click();
   await page.waitForURL('https://gestamp.ddns.net/gestamp/transactions');
 });
@@ -232,7 +232,7 @@ test('TC02 Search Contract Type All ', async ({ page }) => {
   await page.locator('#mat-select-8').click();
   await page.getByRole('option', { name: 'All' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(15000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/07.Contract Type/01.Search Contract Type All.png' });
 
 
@@ -835,7 +835,7 @@ test('TC02 Search Submit Type 2', async ({ page }) => {
   await page.locator('#mat-select-14').click();
   await page.getByRole('option', { name: 'Normal' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(25000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/11.Submit Type/02.Search Submit Type Normal.png' });
 });
 

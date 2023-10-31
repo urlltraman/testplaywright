@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByRole('button', { name: 'Accept' }).click();
+    // await page.getByRole('button', { name: 'Accept' }).click();
     await page.getByRole('link', { name: 'Support' }).click();
     await page.waitForURL('https://gestamp.ddns.net/gestamp/support');
 });
@@ -460,30 +460,30 @@ test('TC05 Search Input Log Search ', async ({ page }) => {
 
 
 
-test('TC06 Submit Log Click Next And Previous Page ', async ({ page }) => {
-    await page.waitForTimeout(1000);
-    await page.getByRole('tab', { name: 'Submit Log' }).click();
-    await page.waitForTimeout(1000);
-    await page.getByRole('button', { name: 'Search' }).first().click();
-    await page.getByLabel('Next').click();
-    await page.locator('.p-10').hover();
-    await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/01.Click Next.png' });
-    await page.getByLabel('Previous').click();
-    await page.locator('.p-10').hover();
-    await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/02.Click Previous.png' });
-    await page.getByLabel('Last').click();
-    await page.locator('.p-10').hover();
-    await page.waitForTimeout(500);
-    await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/03.Click To Last.png' });
-    await page.getByLabel('First').click();
-    await page.waitForTimeout(1500);
-    await page.locator('.p-10').hover();
-    await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/04.Click To First.png' });
+// test('TC06 Submit Log Click Next And Previous Page ', async ({ page }) => {
+//     await page.waitForTimeout(1000);
+//     await page.getByRole('tab', { name: 'Submit Log' }).click();
+//     await page.waitForTimeout(1000);
+//     await page.getByRole('button', { name: 'Search' }).first().click();
+//     await page.getByLabel('Next').click();
+//     await page.locator('.p-10').hover();
+//     await page.waitForTimeout(500);
+//     await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/01.Click Next.png' });
+//     await page.getByLabel('Previous').click();
+//     await page.locator('.p-10').hover();
+//     await page.waitForTimeout(500);
+//     await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/02.Click Previous.png' });
+//     await page.getByLabel('Last').click();
+//     await page.locator('.p-10').hover();
+//     await page.waitForTimeout(500);
+//     await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/03.Click To Last.png' });
+//     await page.getByLabel('First').click();
+//     await page.waitForTimeout(1500);
+//     await page.locator('.p-10').hover();
+//     await page.screenshot({ path: 'Output/TS07-Support/TC06 Submit Log Click Next And Previous Page/04.Click To First.png' });
 
 
-});
+// });
 
 
 

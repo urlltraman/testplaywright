@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  await page.getByRole('button', { name: 'Accept' }).click();
+  // await page.getByRole('button', { name: 'Accept' }).click();
 
 
 });
@@ -981,15 +981,15 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
   await page.getByText('Auto_Type1_Edit ').first().click();
   await page.getByRole('button', { name: 'Edit' }).click();
   await expect(page.getByRole('cell', { name: '\'ABC10003\' is Exist.' })).toHaveText("'ABC10003' is Exist.");
-  await page.locator('[id="\\30 _1"]').fill('ZXCV1234');
+  await page.locator('[id="\\30 _1"]').fill('ZXCV-ss1234');
   await page.getByRole('button', { name: 'Validate' }).click();
-  await page.waitForTimeout(1500);
+  await page.waitForTimeout(6000);
   await page.getByRole('link', { name: 'Batch ' }).click();
   await page.waitForTimeout(1500);
-  await page.reload();
-  await page.waitForTimeout(1500);
+  await page.getByRole('button', { name: 'Search' }).click();
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/02.Edit Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
+  await page.getByRole('link', { name: 'Batch ' }).click();
   await page.getByRole('row', { name: 'Auto_Type1_Edit ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_Type1_Edit  ' })).toBeHidden();
@@ -1074,6 +1074,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.reload();
   await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
   await page.waitForTimeout(1500);
+  await page.getByRole('button', { name: 'Search' }).click();
   let mask_locator = await page.getByRole('row', { name: 'Auto_Reject' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.getByText('Auto_Reject ').first().click();

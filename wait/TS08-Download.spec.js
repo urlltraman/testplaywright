@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByRole('button', { name: 'Accept' }).click();
+    // await page.getByRole('button', { name: 'Accept' }).click();
     await page.locator('div').filter({ hasText: /^file_download$/ }).first().click();
     await page.waitForURL('https://gestamp.ddns.net/gestamp/downloads');
 });
@@ -78,7 +78,7 @@ test('TC03 Refresh ', async ({ page }) => {
     await page.screenshot({ path: 'Output/TS08-Download/TC03 Refresh/01.Select Download.png' });
     await page.locator('div').filter({ hasText: /^SearchReceipts$/ }).getByRole('button').nth(1).click();
     await page.getByRole('button', { name: 'Go to Downloads' }).click();
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(5000);
     await page.reload();
     await page.waitForTimeout(1500);
     let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
