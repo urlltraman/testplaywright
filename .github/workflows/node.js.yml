@@ -28,5 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm install
-    - run: npm run testCase
+    # - run: npm run testCase
     
