@@ -5,9 +5,9 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
   // Runs before each test and signs in each page.
 
-  await page.goto('https://gestamp.ddns.net/auth/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
+  await page.goto('https://app.gestampduty.com/auth/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await page.getByRole('button', { name: 'Accept' }).click();
 
@@ -23,35 +23,45 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('https://gestamp.ddns.net/batch');
+//     await page.goto('https://app.gestampduty.com/batch');
 // });
 
 
 
 test('TC01 Batch View ', async ({ page }) => {
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/01.Batch View.png' });
-  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
-  await page.getByRole('option', { name: '20' }).first().click();
+  await page.locator('select').selectOption('10');
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/02.Rows per page 20.png' });
-  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
-  await page.getByRole('option', { name: '50' }).click();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/02.Rows per page 10.png' });
+  await page.locator('select').selectOption('15');
   await page.waitForTimeout(1200);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/03.Rows per page 50.png' });
-  await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-  await page.getByRole('option', { name: '100' }).click();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/03.Rows per page 15.png' });
+  await page.locator('select').selectOption('20');
   await page.waitForTimeout(1200);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/04.Rows per page 100.png' });
-  await page.locator('div').filter({ hasText: /^100$/ }).nth(2).click();
-  await page.getByRole('option', { name: '200' }).click();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/04.Rows per page 20.png' });
+  await page.locator('select').selectOption('50');
   await page.waitForTimeout(1200);
   await page.getByText('Rows per page').hover();
-  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/05.Rows per page 200.png' });
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/05.Rows per page 50.png' });
+  await page.locator('select').selectOption('100');
+  await page.waitForTimeout(1200);
+  await page.getByText('Rows per page').hover();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/06.Rows per page 100.png' });
+  await page.waitForTimeout(1000);
+  await page.locator('select').selectOption('150');
+  await page.waitForTimeout(1200);
+  await page.getByText('Rows per page').hover();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/07.Rows per page 150.png' });
+  await page.waitForTimeout(1000);
+  await page.locator('select').selectOption('200');
+  await page.waitForTimeout(1200);
+  await page.getByText('Rows per page').hover();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/08.Rows per page 200.png' });
   await page.waitForTimeout(1000);
 });
 
@@ -59,7 +69,7 @@ test('TC01 Batch View ', async ({ page }) => {
 test('TC02 Search Status : All Status  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   // await page.getByPlaceholder('Status').click();
   // await page.getByLabel('All Status').getByText('All Status').click();
@@ -122,7 +132,7 @@ test('TC02 Search Status : All Status  ', async ({ page }) => {
 test('TC02 Search Status : Uploading  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Uploading' }).click();
@@ -185,7 +195,7 @@ test('TC02 Search Status : Uploading  ', async ({ page }) => {
 test('TC02 Search Status : Input Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Input Error' }).click();
@@ -245,7 +255,7 @@ test('TC02 Search Status : Input Error  ', async ({ page }) => {
 test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submit Error' }).click();
@@ -306,7 +316,7 @@ test('TC02 Search Status : Submit Error  ', async ({ page }) => {
 test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Filing Error' }).click();
@@ -366,7 +376,7 @@ test('TC02 Search Status : Filing Error  ', async ({ page }) => {
 test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment Error' }).click();
@@ -427,7 +437,7 @@ test('TC02 Search Status : Payment Error  ', async ({ page }) => {
 test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Receipt Error' }).click();
@@ -492,7 +502,7 @@ test('TC02 Search Status : Receipt Error  ', async ({ page }) => {
 test('TC02 Search Status : Preparing  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Preparing' }).click();
@@ -554,7 +564,7 @@ test('TC02 Search Status : Preparing  ', async ({ page }) => {
 test('TC02 Search Status : Rejected  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Rejected' }).click();
@@ -615,7 +625,7 @@ test('TC02 Search Status : Rejected  ', async ({ page }) => {
 test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Reviewing' }).click();
@@ -681,7 +691,7 @@ test('TC02 Search Status : Reviewing  ', async ({ page }) => {
 test('TC02 Search Status : Submitted  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Submitted' }).click();
@@ -743,7 +753,7 @@ test('TC02 Search Status : Submitted  ', async ({ page }) => {
 test('TC02 Search Status : Payment  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment', exact: true }).click();
@@ -804,7 +814,7 @@ test('TC02 Search Status : Payment  ', async ({ page }) => {
 test('TC02 Search Status : Completed  ', async ({ page }) => {
 
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();
@@ -863,16 +873,15 @@ test('TC02 Search Status : Completed  ', async ({ page }) => {
 
 test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(5000);
-  await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
-  await page.getByRole('option', { name: '100' }).click();
-  await page.getByLabel('Next page').click();
-  await page.getByLabel('Next page').click();
+  // await page.locator('select').selectOption('50');
+  await page.getByLabel('Next').click();
+  // await page.getByLabel('Next').click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC03 Click Next And Previews Page/01.Click Next Page.png' });
-  await page.getByLabel('Previous page').click();
+  await page.getByLabel('Previous').click();
   await page.waitForTimeout(800);
   await page.getByText('Rows per page').hover();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC03 Click Next And Previews Page/02.Click Previous Page.png' });
@@ -883,15 +892,16 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
 test('TC04 Create Batch  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_1_Record.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
+  await page.waitForTimeout(1000);
   await page.reload();
   await page.waitForTimeout(1500);
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   let mask_locator = await page.getByRole('row', { name: 'Auto_1_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/01.Upload 1 Record.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
@@ -912,9 +922,10 @@ test('TC04 Create Batch  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
+  await page.waitForTimeout(1000);
   await page.reload();
   await page.waitForTimeout(1500);
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Many_Record' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC04 Create Batch/03.Upload Many Record.png', mask: [mask_locator1], maskColor: '#00FF00' });
   await page.getByText('Auto_Type1_Many_Record ').first().click();
@@ -935,14 +946,14 @@ test('TC04 Create Batch  ', async ({ page }) => {
 
 
 test('TC05 Edit Batch On Web  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/01.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -972,14 +983,14 @@ test('TC05 Edit Batch On Web  ', async ({ page }) => {
 
 
 test('TC05 Edit Batch Import Files  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/03.Batch Error.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -987,7 +998,7 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
   await page.getByRole('button', { name: 'Import Fixes' }).click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Import.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   let mask_locator1 = await page.getByRole('row', { name: 'Auto_Type1_Import' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC05 Edit Batch/04.Import Batch Success.png', mask: [mask_locator1], maskColor: '#00FF01' });
@@ -1004,14 +1015,14 @@ test('TC05 Edit Batch Import Files  ', async ({ page }) => {
 
 
 test('TC06 Delete Batch  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Delete.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Delete' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/01.Select Batch Delete.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1022,7 +1033,7 @@ test('TC06 Delete Batch  ', async ({ page }) => {
   await expect.soft(page.getByRole('row', { name: 'Auto_Delete  ' })).toBeHidden();
   await page.waitForTimeout(1000);
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC06 Delete Batch/02.After Delete.png' });
   await page.waitForTimeout(1000);
@@ -1034,14 +1045,14 @@ test('TC06 Delete Batch  ', async ({ page }) => {
 
 
 test('TC07 Reject Batch  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Reject.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   await page.getByRole('button', { name: 'Search' }).click();
   let mask_locator = await page.getByRole('row', { name: 'Auto_Reject' }).getByRole('cell').first();
@@ -1053,7 +1064,12 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/03.Click Confirm.png', fullPage: true });
   await page.getByRole('button', { name: 'Confirm' }).click();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.getByText('logout').click();
+  await page.goto('https://app.gestampduty.com/auth/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak1@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.getByText('Auto_Reject ').first().click();
@@ -1061,7 +1077,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/05.Click Reject.png', fullPage: true });
   await page.getByRole('button', { name: 'Reject' }).click();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC07 Reject Batch/06.After Reject.png', mask: [mask_locator], maskColor: '#00FF00' });
   await page.waitForTimeout(1500);
@@ -1077,7 +1093,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 // test('TC08 Submit Batch  ', async ({ page }) => {
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_1_Record.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1086,7 +1102,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
 //   await page.waitForTimeout(1500);
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_1_Record' }).getByRole('cell').first();
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).first().click();
@@ -1096,7 +1112,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/03.Click Confirm.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   await page.waitForTimeout(1500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_Type1_1_Record' }).first().click();
@@ -1104,7 +1120,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/05.Click Submit.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   await page.waitForTimeout(4500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC08 Submit Batch/06.After Submit.png', mask: [mask_locator], maskColor: '#00FF00' });
 
@@ -1113,7 +1129,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 // test('TC09 Schedule Submit Batch  ', async ({ page }) => {
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   await page.getByRole('button', { name: 'Upload' }).click();
 //   await page.locator('#file').setInputFiles('Data Files/test/Auto_ Schedule Submit.xlsx');
 //   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1122,7 +1138,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.getByRole('button', { name: 'Close' }).click();
 //   await page.reload();
 //   await page.waitForTimeout(1500);
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   let mask_locator = await page.getByRole('row', { name: 'Auto_ Schedule Submit' }).getByRole('cell').first();
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/01.Create Batch Success.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_ Schedule Submit' }).first().click();
@@ -1132,7 +1148,7 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 //   await page.waitForTimeout(1000);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/03.Click Confirm.png' });
 //   await page.getByRole('button', { name: 'Confirm' }).click();
-//   await page.waitForURL('https://gestamp.ddns.net/batch');
+//   await page.waitForURL('https://app.gestampduty.com/batch');
 //   await page.waitForTimeout(1500);
 //   await page.screenshot({ path: 'Output/TS02-Batch View/TC09 Schedule Submit/04.After Confirm.png', mask: [mask_locator], maskColor: '#00FF00' });
 //   await page.getByRole('cell', { name: 'Auto_ Schedule Submit' }).first().click();
@@ -1144,14 +1160,14 @@ test('TC07 Reject Batch  ', async ({ page }) => {
 
 
 test('TC10 Export  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.getByRole('button', { name: 'Upload' }).first().click();
   await page.locator('#file').setInputFiles('Data Files/test/Auto_Type1_Edit.xlsx');
   await page.getByRole('button', { name: 'Upload' }).click();
   await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
   await page.getByRole('button', { name: 'Close' }).click();
   await page.reload();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(1500);
   let mask_locator = await page.getByRole('row', { name: 'Auto_Type1_Edit' }).getByRole('cell').first();
   await page.screenshot({ path: 'Output/TS02-Batch View/TC10 Export/01.Select Batch Export.png', mask: [mask_locator], maskColor: '#00FF00' });
@@ -1175,7 +1191,7 @@ test('TC10 Export  ', async ({ page }) => {
 
 
 test('TC11 Download QR Payin  ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Payment', exact: true }).click();
@@ -1203,7 +1219,7 @@ test('TC11 Download QR Payin  ', async ({ page }) => {
 
 
 test('TC11 Download Receipts ', async ({ page }) => {
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.getByPlaceholder('Status').click();
   await page.getByRole('option', { name: 'Completed' }).click();
@@ -1224,3 +1240,30 @@ test('TC11 Download Receipts ', async ({ page }) => {
 
 });
 
+test('TC12 Click Learn More ', async ({ page }) => {
+
+  await page.waitForURL('https://app.gestampduty.com/batch');
+  await page.waitForTimeout(3000);
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: 'Learn More' }).click();
+  const page1 = await page1Promise;
+  await page1.waitForURL('https://www.gestampduty.com/docs/batch/');
+  await expect(page1.getByText('Home Docs Overview Batch Batch การจัดการข้อมูลนำเข้าของระบบ # ผู้ใช้สามารถนำไฟล์')).toBeEnabled();
+  await page.waitForTimeout(1000);
+  await page1.screenshot({ path: 'Output/TS02-Batch View/TC12 Click Learn More/01.Click Learn More.png' });
+
+});
+
+test('TC13 Click Up To ', async ({ page }) => {
+
+  await page.waitForURL('https://app.gestampduty.com/batch');
+  await page.waitForTimeout(3000);
+  await page.keyboard.press('End');
+  await page.waitForTimeout(3000);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC13 Click Up To/01.Before Click.png' });
+  await page.getByRole('img', { name: 'Stockholm-icons / Navigation / Up-2' }).click();
+  await page.waitForTimeout(3000);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC13 Click Up To/02.After Click.png' });
+
+
+});

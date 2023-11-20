@@ -5,13 +5,13 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('https://gestamp.ddns.net/auth/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-    await page.locator('input[name="password"]').fill('P@ssw0rd');
+    await page.goto('https://app.gestampduty.com/auth/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak1@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
     await page.getByRole('link', { name: 'Paper Stamp Duty' }).click();
-    await page.waitForURL('https://gestamp.ddns.net/paperstamp');
+    await page.waitForURL('https://app.gestampduty.com/paperstamp');
 });
 
 // const { test, expect } = require('@playwright/test');
@@ -22,41 +22,41 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('https://gestamp.ddns.net/paperstamp');
+//     await page.goto('https://app.gestampduty.com/paperstamp');
 // });
 
 
 test('TC01 Paper Stamp Duty ', async ({ page }) => {
     await page.waitForTimeout(1500);
     await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/01.Paper Stamp Duty.png' });
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
-    await page.waitForTimeout(800);
+    await page.locator('select').selectOption('10');
+    await page.waitForTimeout(2800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/02.Rows per page 20.png' });
-    await page.locator('div').filter({ hasText: /^20$/ }).nth(2).click();
-    await page.getByRole('option', { name: '50' }).click();
-    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/02.Rows per page 10.png' });
+    await page.locator('select').selectOption('15');
+    await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/03.Rows per page 50.png' });
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '100' }).click();
-    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/03.Rows per page 15.png' });
+    await page.locator('select').selectOption('50');
+    await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/04.Rows per page 100.png' });
-    await page.locator('div').filter({ hasText: /^100$/ }).nth(2).click();
-    await page.getByRole('option', { name: '200' }).click();
-    await page.waitForTimeout(800);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/04.Rows per page 50.png' });
+    await page.locator('select').selectOption('100');
+    await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/05.Rows per page 200.png' });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/05.Rows per page 100.png' });
+    await page.locator('select').selectOption('200');
+    await page.waitForTimeout(1800);
+    await page.getByText('Rows per page').hover();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC01 Paper Stamp Duty/06.Rows per page 200.png' });
+    await page.waitForTimeout(1000);
 
 });
 
 
 test('TC02 Search Data Version ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByLabel('Latest').click();
     await page.getByRole('option', { name: 'Latest' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
@@ -73,8 +73,7 @@ test('TC02 Search Data Version ', async ({ page }) => {
 
 test('TC02 Search Uploaded Date From ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByLabel('Open calendar').first().click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -90,8 +89,7 @@ test('TC02 Search Uploaded Date From ', async ({ page }) => {
 
 test('TC02 Search Uploaded Date To ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByLabel('Open calendar').nth(1).click();
     await page.getByLabel('Choose month and year').click();
     await page.getByLabel('2023').click();
@@ -109,8 +107,7 @@ test('TC02 Search Uploaded Date To ', async ({ page }) => {
 
 test('TC02 Search Contract No ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByLabel('Contract No.').fill('2269639948');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
@@ -121,8 +118,7 @@ test('TC02 Search Contract No ', async ({ page }) => {
 
 test('TC02 Search Full  ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByLabel('Latest').click();
     await page.getByRole('option', { name: 'Latest' }).click();
     await page.getByRole('button', { name: 'Search' }).click();
@@ -148,8 +144,7 @@ test('TC02 Search Full  ', async ({ page }) => {
 
 test('TC02 Search No Input ', async ({ page }) => {
 
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
+    await page.locator('select').selectOption('15');
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(800);
     await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC02 Search/07.Search No Input.png' });
@@ -163,50 +158,58 @@ test('TC02 Search No Input ', async ({ page }) => {
 test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
     await page.getByRole('button', { name: 'Search' }).click();
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '20' }).first().click();
-    await page.getByLabel('Next page').click();
-    await page.getByLabel('Next page').click();
+    await page.locator('select').selectOption('10');
+    // await page.getByLabel('Next').click();
+    await page.getByLabel('Next').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/01.20 Records Next Page.png' });
-    await page.getByLabel('Previous page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/01.10 Records Next Page.png' });
+    await page.getByLabel('Previous').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/02.20 Records Next Previous.png' });
-    await page.locator('div').filter({ hasText: /^20$/ }).first().click();
-    await page.getByRole('option', { name: '50' }).click();
-    await page.getByLabel('Next page').click();
-    await page.getByLabel('Next page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/02.10 Records Next Previous.png' });
+    await page.locator('select').selectOption('15');
+    await page.getByLabel('Next').click();
+    // await page.getByLabel('Next').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/03.50 Records Next Page.png' });
-    await page.getByLabel('Previous page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/03.15 Records Next Page.png' });
+    await page.getByLabel('Previous').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/04.50 Records Next Previous.png' });
-    await page.locator('div').filter({ hasText: /^50$/ }).nth(2).click();
-    await page.getByRole('option', { name: '100' }).click();
-    await page.getByLabel('Next page').click();
-    await page.getByLabel('Next page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/04.15 Records Next Previous.png' });
+    await page.locator('select').selectOption('50');
+    // await page.getByLabel('Next').click();
+    await page.getByLabel('Next').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/05.100 Records Next Page.png' });
-    await page.getByLabel('Previous page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/05.50 Records Next Page.png' });
+    await page.getByLabel('Previous').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/06.100 Records Next Previous.png' });
-    await page.locator('div').filter({ hasText: /^100$/ }).nth(2).click();
-    await page.getByRole('option', { name: '200' }).click();
-    await page.getByLabel('Next page').click();
-    await page.getByLabel('Next page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/06.50 Records Next Previous.png' });
+    await page.locator('select').selectOption('100');
+    await page.getByLabel('Next').click();
+    // await page.getByLabel('Next').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/07.200 Records Next Page.png' });
-    await page.getByLabel('Previous page').click();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/07.100 Records Next Page.png' });
+    await page.getByLabel('Previous').click();
     await page.waitForTimeout(1800);
     await page.getByText('Rows per page').hover();
-    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/08.200 Records Next Previous.png' });
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/08.100 Records Next Previous.png' });
+    await page.locator('select').selectOption('200');
+    await page.getByLabel('Next').click();
+    // await page.getByLabel('Next').click();
+    await page.waitForTimeout(1800);
+    await page.getByText('Rows per page').hover();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/09.200 Records Next Page.png' });
+    await page.getByLabel('Previous').click();
+    await page.waitForTimeout(1800);
+    await page.getByText('Rows per page').hover();
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC03 Click Next And Previous Page/10.200 Records Next Previous.png' });
+    await page.waitForTimeout(1800);
+
 
 });
 
@@ -274,3 +277,34 @@ test('TC07 Delete Template ', async ({ page }) => {
 
 
 
+
+
+test('TC08 Click Learn More ', async ({ page }) => {
+
+    await page.waitForURL('https://app.gestampduty.com/paperstamp');
+    await page.waitForTimeout(3000);
+    const page1Promise = page.waitForEvent('popup');
+    await page.getByRole('link', { name: 'Learn More' }).click();
+    const page1 = await page1Promise;
+    await page1.waitForURL('https://www.gestampduty.com/docs/paper-stamp-duty/');
+    await expect(page1.getByText('Home Docs Input Data Paper Stamp Duty Paper Stamp Duty ผู้ใช้งานสามารถนำข้อมูลกา')).toBeEnabled();
+    await page.waitForTimeout(1000);
+    await page1.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC08 Click Learn More/01.Click Learn More.png' });
+    await page.waitForTimeout(1000);
+
+  });
+
+
+  test('TC09 Click Up To ', async ({ page }) => {
+    await page.waitForTimeout(3000);
+    await page.keyboard.press('End');
+    await page.waitForTimeout(3000);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC09 Click Up To/01.Before Click.png' });
+    await page.getByRole('img', { name: 'Stockholm-icons / Navigation / Up-2' }).click();
+    await page.waitForTimeout(3000);
+    await page.screenshot({ path: 'Output/TS04-Paper Stamp Duty/TC09 Click Up To/02.After Click.png' });
+    await page.waitForTimeout(1000);
+
+  
+  });
+  

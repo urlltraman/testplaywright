@@ -5,9 +5,9 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('https://gestamp.ddns.net/gestamp/auth/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-    await page.locator('input[name="password"]').fill('P@ssw0rd');
+    await page.goto('https://app.gestampduty.com/auth/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
 });
@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
 
 test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     // C1
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -27,7 +27,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_EffectiveDate_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -35,7 +35,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -44,7 +44,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -52,7 +52,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C2  ' })).toBeHidden();
     //  C3  
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -61,14 +61,14 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.getByRole('row', { name: 'Auto_EffectiveDate_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -77,7 +77,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -102,7 +102,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -111,7 +111,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/07. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -148,7 +148,7 @@ test('TC11 Effective Date  1 - 5  ', async ({ page }) => {
 
 test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     //  C6
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -157,7 +157,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/10. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -182,7 +182,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -191,7 +191,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/13. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -216,7 +216,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -225,7 +225,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/16. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -250,7 +250,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -259,7 +259,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/19. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -284,7 +284,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -293,7 +293,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/22. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -327,7 +327,7 @@ test('TC11 Effective Date  6 - 10  ', async ({ page }) => {
 
 test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     //  C11
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -336,7 +336,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_EffectiveDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/25. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -361,7 +361,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C11  ' })).toBeHidden();
     //  C12
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -370,7 +370,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/28. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -395,7 +395,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C12  ' })).toBeHidden();
     //  C13
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -404,7 +404,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/31. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -429,7 +429,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C13  ' })).toBeHidden();
     //  C14
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -438,7 +438,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/34. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -463,7 +463,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C14  ' })).toBeHidden();
     //  C15
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -472,7 +472,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/37. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -511,7 +511,7 @@ test('TC11 Effective Date  11 - 15  ', async ({ page }) => {
 
 test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     //  C16
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -520,7 +520,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/40. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -545,7 +545,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C16  ' })).toBeHidden();
     //  C17
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C17.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -554,7 +554,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/43. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -579,7 +579,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C17  ' })).toBeHidden();
     //  C18
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C18.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -588,7 +588,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/46. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -613,7 +613,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C18  ' })).toBeHidden();
     //  C19
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -622,7 +622,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/49. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -647,7 +647,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C19  ' })).toBeHidden();
     //  C20
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C20.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -656,7 +656,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/52. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -688,7 +688,7 @@ test('TC11 Effective Date  16 - 20  ', async ({ page }) => {
 test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     
     //  C21
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C21.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -697,7 +697,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/55. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -723,7 +723,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C21  ' })).toBeHidden();
     
     //  C22
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C22.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -732,7 +732,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/58. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -758,7 +758,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_EffectiveDate_C22  ' })).toBeHidden();
     
     //  C23
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/11. effectivedate/Auto_EffectiveDate_C23.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -767,7 +767,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_EffectiveDate_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/61. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -799,7 +799,7 @@ test('TC11 Effective Date  21 - 23  ', async ({ page }) => {
 
 test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     // C1
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -808,7 +808,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ExpireDate_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -816,7 +816,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -825,7 +825,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -833,7 +833,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C2  ' })).toBeHidden();
     //  C3  
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -842,14 +842,14 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.getByRole('row', { name: 'Auto_ExpireDate_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -858,7 +858,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ExpireDate_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -866,7 +866,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -875,7 +875,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ExpireDate_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -910,7 +910,7 @@ test('TC12 Expire Date  1 - 5  ', async ({ page }) => {
 
 test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     //  C6
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -919,7 +919,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ExpireDate_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/08. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -944,7 +944,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -953,7 +953,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ExpireDate_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/11. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -978,7 +978,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -987,7 +987,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ExpireDate_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/14. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1012,7 +1012,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1021,7 +1021,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ExpireDate_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/17. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1046,7 +1046,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1055,7 +1055,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ExpireDate_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC12. Expire Date/20. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1086,7 +1086,7 @@ test('TC12 Expire Date  6 - 10  ', async ({ page }) => {
 
 test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     //  C11
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1095,7 +1095,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_ExpireDate_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/23. Case 11.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1120,7 +1120,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C11  ' })).toBeHidden();
     //  C12
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1129,7 +1129,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/26. Case 12.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1154,7 +1154,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C12  ' })).toBeHidden();
     //  C13
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1163,7 +1163,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/29. Case 13.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1188,7 +1188,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C13  ' })).toBeHidden();
     //  C14
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1197,7 +1197,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_ExpireDate_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/32. Case 14.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1222,7 +1222,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C14  ' })).toBeHidden();
     //  C15
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1231,7 +1231,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_ExpireDate_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/35. Case 15.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1266,7 +1266,7 @@ test('TC12 Expire Date  11 - 15  ', async ({ page }) => {
 
 test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     //  C16
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1275,7 +1275,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_ExpireDate_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/38. Case 16.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1300,7 +1300,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C16  ' })).toBeHidden();
     //  C17
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C17.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1309,7 +1309,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_ExpireDate_C17' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/41. Case 17.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1334,7 +1334,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C17  ' })).toBeHidden();
     //  C18
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C18.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1343,7 +1343,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_ExpireDate_C18' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/44. Case 18.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1368,7 +1368,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C18  ' })).toBeHidden();
     //  C19
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C19.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1377,7 +1377,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_ExpireDate_C19' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/47. Case 19.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1402,7 +1402,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C19  ' })).toBeHidden();
     //  C20
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C20.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1411,7 +1411,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_ExpireDate_C20' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/50. Case 20.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1445,7 +1445,7 @@ test('TC12 Expire Date  16 - 20  ', async ({ page }) => {
 
 test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     //  C21
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C21.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1454,7 +1454,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_ExpireDate_C21' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/53. Case 21.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1479,7 +1479,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C21  ' })).toBeHidden();
     //  C22
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C22.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1488,7 +1488,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_ExpireDate_C22' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/56. Case 22.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1513,7 +1513,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_ExpireDate_C22  ' })).toBeHidden();
     //  C23
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/12. expiredate/Auto_ExpireDate_C23.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1522,7 +1522,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_ExpireDate_C23' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC11. Effective Date/59. Case 23.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1554,7 +1554,7 @@ test('TC12 Expire Date  21 - 23  ', async ({ page }) => {
 
 test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     // C1
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1563,7 +1563,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_SendFormType_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1571,7 +1571,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1580,7 +1580,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_SendFormType_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1588,7 +1588,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C2  ' })).toBeHidden();
     //  C3  
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1597,14 +1597,14 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_SendFormType_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.getByRole('row', { name: 'Auto_SendFormType_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1613,7 +1613,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_SendFormType_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1638,7 +1638,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C4  ' })).toBeHidden();
     //  C5
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1647,7 +1647,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_SendFormType_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/07. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1683,7 +1683,7 @@ test('TC13 Send Form Type 1 - 5  ', async ({ page }) => {
 
 test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     //  C6
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1692,7 +1692,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_SendFormType_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/10. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1717,7 +1717,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1726,7 +1726,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_SendFormType_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/13. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1751,7 +1751,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1760,7 +1760,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_SendFormType_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/16. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1785,7 +1785,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C8  ' })).toBeHidden();
     //  C9
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1794,7 +1794,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_SendFormType_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/19. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1819,7 +1819,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1828,7 +1828,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator10 = await page.getByRole('row', { name: 'Auto_SendFormType_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/22. Case 10.png', mask: [mask_locator10], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1853,7 +1853,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_SendFormType_C10  ' })).toBeHidden();
     // C11
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/13. sendformtype/Auto_SendFormType_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1862,7 +1862,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator11 = await page.getByRole('row', { name: 'Auto_SendFormType_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC13. Send Form Type/25. Case 11.png', mask: [mask_locator11], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1894,7 +1894,7 @@ test('TC13 Send Form Type 6 - 10  ', async ({ page }) => {
 
 test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     // C1
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1903,7 +1903,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_DupNumber_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/01. Case 1.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1911,7 +1911,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1920,7 +1920,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_DupNumber_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1928,7 +1928,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C2  ' })).toBeHidden();
     //  C3  
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1937,14 +1937,14 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_DupNumber_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/03. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.getByRole('row', { name: 'Auto_DupNumber_C3 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C3  ' })).toBeHidden();
     //  C4
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1953,7 +1953,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_DupNumber_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/04. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -1972,7 +1972,7 @@ test('TC14 Dup Number 1 - 4 ', async ({ page }) => {
 
 test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     //  C5
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -1981,7 +1981,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_DupNumber_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/05. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2007,7 +2007,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C5  ' })).toBeHidden();
     await page.waitForTimeout(1000);
     //  C6
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2016,7 +2016,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_DupNumber_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/08. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2041,7 +2041,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C6  ' })).toBeHidden();
     //  C7
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2050,7 +2050,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_DupNumber_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/11. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2075,7 +2075,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C7  ' })).toBeHidden();
     //  C8
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2084,7 +2084,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_DupNumber_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/14. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2115,7 +2115,7 @@ test('TC14 Dup Number 5 - 8 ', async ({ page }) => {
 
 test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     // C9
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2124,7 +2124,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator = await page.getByRole('row', { name: 'Auto_DupNumber_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/17. Case 9.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2132,7 +2132,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C9  ' })).toBeHidden();
     // C10
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C10.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2141,7 +2141,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_DupNumber_C10' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/18. Case 10.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2149,7 +2149,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C10  ' })).toBeHidden();
     //  C11  
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C11.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2158,14 +2158,14 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_DupNumber_C11' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/19. Case 11.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.getByRole('row', { name: 'Auto_DupNumber_C11 ' }).first().getByText('delete').click();
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C11  ' })).toBeHidden();
     //  C12
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C12.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2174,7 +2174,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_DupNumber_C12' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/20. Case 12.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2210,7 +2210,7 @@ test('TC14 Dup Number 9 - 12 ', async ({ page }) => {
 
 test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     //  C13
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C13.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2219,7 +2219,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_DupNumber_C13' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/23. Case 13.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2245,7 +2245,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C13  ' })).toBeHidden();
     await page.waitForTimeout(1000);
     //  C14
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C14.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2254,7 +2254,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_DupNumber_C14' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/26. Case 14.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2279,7 +2279,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C14  ' })).toBeHidden();
     //  C15
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C15.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2288,7 +2288,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_DupNumber_C15' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/29. Case 15.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2313,7 +2313,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_DupNumber_C15  ' })).toBeHidden();
     //  C16
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/14. dupnumber/Auto_DupNumber_C16.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2322,7 +2322,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_DupNumber_C16' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC14. Dup Number/32. Case 16.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2353,7 +2353,7 @@ test('TC14 Dup Number 13 - 16 ', async ({ page }) => {
 
 test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     // C1
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C1.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2362,7 +2362,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator1 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C1' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/01. Case 1.png', mask: [mask_locator1], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2370,7 +2370,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C1  ' })).toBeHidden();
     // C2
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C2.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2379,7 +2379,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator2 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C2' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/02. Case 2.png', mask: [mask_locator2], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2404,7 +2404,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C2  ' })).toBeHidden();
     // C3
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C3.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2413,7 +2413,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator3 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C3' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/05. Case 3.png', mask: [mask_locator3], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2438,7 +2438,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C3  ' })).toBeHidden();
     // C4
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C4.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2447,7 +2447,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator4 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C4' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/08. Case 4.png', mask: [mask_locator4], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2472,7 +2472,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C4  ' })).toBeHidden();
     // C5
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C5.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2481,7 +2481,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator5 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C5' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/11. Case 5.png', mask: [mask_locator5], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2516,7 +2516,7 @@ test('TC15 Tax Payer ID 1 - 5  ', async ({ page }) => {
 
 test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     // C6
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C6.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2525,7 +2525,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator6 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C6' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/14. Case 6.png', mask: [mask_locator6], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2550,7 +2550,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C6  ' })).toBeHidden();
     // C7
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C7.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2559,7 +2559,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator7 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C7' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/17. Case 7.png', mask: [mask_locator7], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2584,7 +2584,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C7  ' })).toBeHidden();
     // C8
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C8.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2593,7 +2593,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator8 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C8' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/20. Case 8.png', mask: [mask_locator8], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);
@@ -2618,7 +2618,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Confirm' }).click();
     await expect.soft(page.getByRole('row', { name: 'Auto_TaxPayerID_C8  ' })).toBeHidden();
     // C9
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     await page.getByRole('button', { name: 'Upload' }).first().click();
     await page.locator('#file').setInputFiles('Data Files/Input Validation/15. taxpayerid/Auto_TaxPayerID_C9.xlsx');
     await page.getByRole('button', { name: 'Upload' }).click();
@@ -2627,7 +2627,7 @@ test('TC15 Tax Payer ID 6 - 10  ', async ({ page }) => {
     await page.getByRole('button', { name: 'Close' }).click();
     await page.reload();
     await page.waitForTimeout(1500);
-    await page.waitForURL('https://gestamp.ddns.net/gestamp/batch');
+    await page.waitForURL('https://app.gestampduty.com/batch');
     let mask_locator9 = await page.getByRole('row', { name: 'Auto_TaxPayerID_C9' }).getByRole('cell').first();
     await page.screenshot({ path: 'Output/TS11-Input Validation/TC15. Tax Payer ID/22. Case 9.png', mask: [mask_locator9], maskColor: '#00FF00' });
     await page.waitForTimeout(1500);

@@ -4,13 +4,13 @@ const { test, expect } = require('@playwright/test');
 test.beforeEach(async ({ page }) => {
     // Runs before each test and signs in each page.
 
-    await page.goto('https://gestamp.ddns.net/auth/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+    await page.goto('https://app.gestampduty.com/auth/login');
+    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
     await page.getByRole('link', { name: 'Settings' }).click();
-    await page.waitForURL('https://gestamp.ddns.net/settings/configuration');
+    await page.waitForURL('https://app.gestampduty.com/settings/configuration');
 });
 
 
@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
 
 // test.beforeEach(async ({ page }) => {
 //     // Runs before each test and signs in each page.
-//     await page.goto('https://gestamp.ddns.net/settings/configuration');
+//     await page.goto('https://app.gestampduty.com/settings/configuration');
 // });
 
 

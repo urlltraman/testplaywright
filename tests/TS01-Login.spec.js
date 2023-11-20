@@ -3,22 +3,22 @@ const { test, expect } = require('@playwright/test');
 
 test('TC01 Login Success ', async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.goto('https://app.gestampduty.com/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   await page.screenshot({ path: 'Output/TS01-Login/TC01 Login Success/01.Login Success.png', fullPage: true });
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  await page.waitForURL('https://gestamp.ddns.net/batch');
+  await page.waitForURL('https://app.gestampduty.com/batch');
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS01-Login/TC01 Login Success/02.Login Success.png', fullPage: true });
 });
 
 test('TC02 Invalid Username' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.goto('https://app.gestampduty.com/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   // await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
@@ -29,9 +29,9 @@ test('TC02 Invalid Username' ,async ({ page }) => {
 
 test('TC03 Invalid Username Switch Upper Down' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.goto('https://app.gestampduty.com/auth/login');
   await page.locator('input[name="email"]').fill('TEST.GAMEKITTISAK@GMAIL.COM');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
@@ -44,8 +44,8 @@ test('TC03 Invalid Username Switch Upper Down' ,async ({ page }) => {
 
 test('TC04 No Username' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
+  await page.goto('https://app.gestampduty.com/auth/login');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
@@ -56,8 +56,8 @@ test('TC04 No Username' ,async ({ page }) => {
 
 test('TC05 Invalid Password' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
+  await page.goto('https://app.gestampduty.com/auth/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   await page.locator('input[name="password"]').fill('qwerty123');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   // await page.getByRole('button', { name: 'Sign In', exact: true }).click();
@@ -70,9 +70,9 @@ test('TC05 Invalid Password' ,async ({ page }) => {
 
 test('TC06 Invalid Password Switch Upper Down' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.goto('https://app.gestampduty.com/auth/login');
   await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
-  await page.locator('input[name="password"]').fill('p@SSW0RD');
+  await page.locator('input[name="password"]').fill('zxCV.!234');
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   // await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
@@ -85,8 +85,8 @@ test('TC06 Invalid Password Switch Upper Down' ,async ({ page }) => {
 
 test('TC07 No Password' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisakgmail.com');
+  await page.goto('https://app.gestampduty.com/auth/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
   // await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   // await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
@@ -97,7 +97,7 @@ test('TC07 No Password' ,async ({ page }) => {
 
 test('TC08 No Username Password' ,async ({ page }) => {
   
-  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.goto('https://app.gestampduty.com/auth/login');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   await page.locator('span').filter({ hasText: 'visibility_off' }).click();
   await expect(page.locator('div').filter({ hasText: /^You are unauthorized$/ }).first()).toHaveText('You are unauthorized');
