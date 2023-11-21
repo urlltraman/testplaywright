@@ -2,18 +2,32 @@
 const { test, expect } = require('@playwright/test');
 
 
+// test.beforeEach(async ({ page }) => {
+//   // Runs before each test and signs in each page.
+
+//   await page.goto('https://app.gestampduty.com/auth/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+//   await page.locator('input[name="password"]').fill('ZXcv.!234');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   // await page.getByRole('button', { name: 'Accept' }).click();
+
+
+// });
+
+
+
+
 test.beforeEach(async ({ page }) => {
   // Runs before each test and signs in each page.
 
-  await page.goto('https://app.gestampduty.com/auth/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
-  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.goto('https://gestamp.ddns.net/auth/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+  await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await page.getByRole('button', { name: 'Accept' }).click();
 
 
 });
-
 
 // const { test, expect } = require('@playwright/test');
 // test.use({ storageState: 'playwright/.auth/T1.json' });
