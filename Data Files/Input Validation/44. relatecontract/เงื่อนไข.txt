@@ -1,0 +1,36 @@
+[|บริษัท|ทดสอบ|อัตโนมัติ|0|O]
+name = ทดสอบ
+1 - 9 relate contract มีค่า
+1. TC2
+2. TC8
+3. TC91
+4. TC10
+5. TC111
+6. TC12
+7. TC16
+8. TC17
+9. TC271
+
+10 - 18 relate contract ไม่มีค่าและ input error 
+10. TC2
+11. TC8
+12. TC91
+13. TC10
+14. TC111
+15. TC12
+16. TC16
+17. TC17
+18. TC271
+
+19-21 relate contract มีค่า
+19. TC4
+20. TC5
+21 TC7
+22 - 24 relate contract ไม่มีค่า
+22. TC4
+23. TC5
+24. TC7
+25. เกิน 13 ตัว
+26. ไม่มีอยู่จริง     [xxxxxxxxxxxxx|xxxxx|xxxxxx|xxxxx|x|x]
+
+[|บริษัท|ทดสอบ|อัตโนมัติ|0|O]

@@ -19,3 +19,5 @@
 19.Format YY-M-DD
 20.Format YY-MM-D
 21.Format YY-M-D
+22.ย้อนหลังเกิน 15 วัน
+ข้อมูลบรรทัดที่ 1 column 'receiveDate' invalid overdueFlagข้อมูลบรรทัดที่ 1 column 'creationDate' overdueFlag is empty; therefore creationDate must be a date up to 15 days back. [R53.1]
