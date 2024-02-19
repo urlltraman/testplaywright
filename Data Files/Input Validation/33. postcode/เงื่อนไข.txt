@@ -1,8 +1,0 @@
-1. ถูกต้อง
-2. ไม่ระบุ 
-3. ลบ 
-4.  เกิน 5   ข้อมูลบรรทัดที่ 1 column 'postCode' length is overflow
-5.  เกิน 20  ข้อมูลบรรทัดที่ 1 column 'postCode' length is overflow
-6. ไทย
-7. อังกฤษ
-8. พิเศษ

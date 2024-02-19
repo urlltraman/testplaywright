@@ -1,9 +1,0 @@
-1.ทดลองไม่ใส่ข้อมูล DataDate และ email ใส่ข้อมูล
-2.ทดลองไม่ใส่ข้อมูล email แต่ DataDate ใส่ข้อมูล
-3.ทดลองไม่ใส่ข้อมูลทั้ง email DataDate
-4.ทดลองใส่ข้อมูลทั้ง email DataDate
-5. local-part@domain ข้อมูลบรรทัดที่ 1 column 'email' is an invalid email format
-6.jsmith@[192.168.1.2] 
-7.jsmith@example.com. 
-8. jsm ith@example.com
-9.jsmith@exam ple.com
