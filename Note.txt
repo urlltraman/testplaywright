@@ -1,0 +1,14 @@
+เวลาลบ batch 
+1. กรณี upload สำเร็จ ใช้ 
+await page.getByRole('row', { name: 'Game Kittisak' }).getByRole('button').nth(1).click();
+
+2. กรณี Input Error มี 2 ปุ่ม ใช้
+await page.getByRole('row', { name: 'Game Kittisak' }).getByRole('button').nth(2).click();
+
+3. กรณี Payment Error มี 3 ปุ่ม ใช้
+await page.getByRole('row', { name: 'Game Kittisak' }).getByRole('button').nth(3).click();
+
+http://gestamp.ddns.net/gestamp/batch
+
+
+2269668410

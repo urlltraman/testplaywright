@@ -1,0 +1,16 @@
+ID C1 ไม่กรอก
+ID C2 เกิน 50 ตัว
+ID C2 ตัวพิเศษ
+
+
+ContractNo C1 ไม่กรอก
+ContractNo C2 ตัวอักษร
+ContractNo C3 ตัวพิเศษ
+ContractNo C4 เกิน 50 ตัว
+
+CreationDate C1 ไม่กรอก
+CreationDate C2 เกิน 50 ตัว
+CreationDate C3 กรอกวันที่ผิด Format เช่น 23/03/2345
+CreationDate C4 กรอกตัวเลข
+CreationDate C5 กรอกตัวอักษร
+CreationDate C6 กรอกตัวอักขระพิเศษ

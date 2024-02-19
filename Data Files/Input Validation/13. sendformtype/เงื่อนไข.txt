@@ -1,0 +1,16 @@
+ข้อมูลบรรทัดที่ 1 column 'sendFormType' value must be one of 'new_entry,increase_limit,additional'
+max 50
+1.new_entry
+2.increase_limit
+3.additional
+4.0
+5.1
+6. 49
+7. 50
+8. 51
+9. 100
+10. ไม่ระบุ
+11. ลบ
+12.นำเข้า 2 records ที่มี sendFormType ไม่เหมือนกัน
+13.กรณีกรอก increase_limit แล้ว contractNo ไม่ตรงกับเลข paper stamp
+14.กรณีกรอก additional แล้วไม่กรอก filingNo

@@ -1,0 +1,13 @@
+C1  Maxlen BeanchNo = 5 Maxlen BeanchType = 1
+1.BeanchNo = 0 BeanchType = O
+2.BeanchNo = 0 BeanchType = V
+3.BeanchNo = 0 BeanchType = S
+4.BeanchNo = 0 BeanchType = ไม่ใส่
+5.BeanchNo = 0 BeanchType = ลบ
+6.BeanchNo = 0 BeanchType = ไทย
+7.BeanchNo = 0 BeanchType = อังกฤษ
+8.BeanchNo = 0 BeanchType = พิเศษ
+9.BeanchNo = 0 BeanchType = OO Maxlen
+10.BeanchNo = 0 BeanchType = VV Maxlen
+11.BeanchNo = 0 BeanchType = SS Maxlen
+

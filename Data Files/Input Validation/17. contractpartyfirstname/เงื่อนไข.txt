@@ -1,0 +1,23 @@
+1. ชื่อไทย
+2.ชื่ออังกฤษ
+3. ชื่อไทย + อังกฤษ
+4.พิเศษ
+5.ตัวเลข
+6. 70
+7. 71
+8. 100
+9. ไม่ระบุ
+10. ลบ
+R60 
+11. typeCode 91 relateionship 4 มี
+12. typeCode 12 relateionship 2 มี 
+13. typeCode 13 relateionship 1 มี 
+14. typeCode 15 relateionship 1 มี 
+15. typeCode 91 relateionship 4 ลบออก 
+16. typeCode 12 relateionship 2 ลบออก  
+17. typeCode 13 relateionship 1 ลบออก  
+18. typeCode 15 relateionship 1 ลบออก 
+
+
+
+

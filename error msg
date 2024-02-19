@@ -1,0 +1,17 @@
+await page.getByRole('button', { name: 'Search' }).first().click();
+await page.waitForTimeout(500);
+await page.locator('button').filter({ hasText: 'Input Error' }).first().click();
+await expect.soft(page.getByLabel('Message')).toBeVisible();
+await expect.soft(page.getByLabel('Message'))
+    .toHaveText("Messageข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format ");
+await page.waitForTimeout(500);
+await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/09. Case 4 Click Status Error Msg.png' });
+await page.waitForTimeout(500);
+await page.reload();
+await page.getByText('Auto_CreationDate_C4').first().click();
+await expect.soft(page.locator('.card-error')).toBeVisible();
+await expect.soft(page.locator('.card-error'))
+    .toHaveText("errorInput Errorข้อมูลบรรทัดที่ 1 column 'creationDate' is an incorrect date format Import FixesExport FixesEdit");
+await page.waitForTimeout(500);
+await page.screenshot({ path: 'Output/TS11-Input Validation/TC10. Creation Date/10. Case 4 Error Msg.png' });
+await page.locator('a').filter({ hasText: 'Batch' }).click();
