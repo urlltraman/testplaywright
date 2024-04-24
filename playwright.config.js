@@ -34,8 +34,8 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     // /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://gestamp.ddns.net/',
-    // baseURL: 'https://uatapp.gestampduty.com/',
+    // baseURL: 'https://gestamp.ddns.net/',
+    baseURL: 'https://uatapp.gestampduty.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
