@@ -884,6 +884,13 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
   await page.waitForTimeout(5000);
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').first().click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('July 2023').click();
+  await page.getByLabel('31 July 2023').click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(5000);
   // await page.locator('select').selectOption('50');
   await page.getByLabel('Next').click();
   // await page.getByLabel('Next').click();
@@ -1292,6 +1299,13 @@ test('TC13 Click Up To ', async ({ page }) => {
 
 
   await page.waitForTimeout(3000);
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').first().click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('July 2023').click();
+  await page.getByLabel('31 July 2023').click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(3000);
   await page.keyboard.press('End');
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC13 Click Up To/01.Before Click.png' });
@@ -1496,3 +1510,237 @@ test('TC14 Sorting Tools Uploader ', async ({ page }) => {
 
 
 // });
+
+
+
+
+
+
+test('TC15 Files Support CSV  ', async ({ page }) => {
+  await page.waitForURL('/batch');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.locator('#file').setInputFiles('Data Files/test/Auto_FileSupportCSV.csv');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByLabel('Upload Success').click();
+  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await page.waitForTimeout(2500);
+  await page.getByText('Search').click();
+  await page.waitForURL('/batch');
+  await page.getByText('Search').click();
+  let mask_locator = await page.getByRole('row', { name: 'Auto_FileSupportCSV' }).getByRole('cell').first();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/01. CSV/01.Upload Success.png', mask: [mask_locator], maskColor: '#00FF00' });
+  await page.getByText('Auto_FileSupportCSV ').first().click();
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/01. CSV/02.Upload Details.png', fullPage: true });
+  await page.getByText('Submit For Review').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(5000);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(1500);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportCSV ').first().click();
+  await page.locator('button').filter({ hasText: /^Submit$/ }).click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(10000);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportCSV ').first().click();
+  await page.waitForTimeout(15000);
+  await page.reload();
+  await page.goto('/batch');
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportCSV ').first().click();
+  await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: 'QR' }).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('link', { name: 'Download' }).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Output/TS02-Batch View/TC15 Files Support/01. CSV/04.qrPayment.jpg');
+  await page.reload();
+  await page.waitForTimeout(1500);
+  await page.goto('/batch');
+  await page.getByText('Auto_FileSupportCSV ').first().click();
+  // download 2
+  const downloadPromiseA = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Pay-in' }).click();
+  const downloadA = await downloadPromiseA;
+  // Save downloaded file somewhere
+  await downloadA.saveAs('Output/TS02-Batch View/TC15 Files Support/01. CSV/05.payInSlipFile.pdf');
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/01. CSV/03.API.png', fullPage: true });
+  await page.waitForTimeout(1500);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.getByRole('row', { name: 'Auto_FileSupportCSV ' }).first().getByText('delete').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportCSV  ' })).toBeHidden();
+
+});
+
+
+
+
+test('TC15 Files Support JSON  ', async ({ page }) => {
+  await page.waitForURL('/batch');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.locator('#file').setInputFiles('Data Files/test/Auto_FileSupportJSON.json');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByLabel('Upload Success').click();
+  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await page.waitForTimeout(2500);
+  await page.getByText('Search').click();
+  await page.waitForURL('/batch');
+  await page.getByText('Search').click();
+  let mask_locator = await page.getByRole('row', { name: 'Auto_FileSupportJSON' }).getByRole('cell').first();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/02. JSON/01.Upload Success.png', mask: [mask_locator], maskColor: '#00FF00' });
+  await page.getByText('Auto_FileSupportJSON ').first().click();
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/02. JSON/02.Upload Details.png', fullPage: true });
+  await page.getByText('Submit For Review').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(5000);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(1500);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportJSON ').first().click();
+  await page.locator('button').filter({ hasText: /^Submit$/ }).click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(10000);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportJSON ').first().click();
+  await page.waitForTimeout(15000);
+  await page.reload();
+  await page.goto('/batch');
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportJSON ').first().click();
+  await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: 'QR' }).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('link', { name: 'Download' }).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Output/TS02-Batch View/TC15 Files Support/02. JSON/04.qrPayment.jpg');
+  await page.reload();
+  await page.waitForTimeout(1500);
+  await page.goto('/batch');
+  await page.getByText('Auto_FileSupportJSON ').first().click();
+  // download 2
+  const downloadPromiseA = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Pay-in' }).click();
+  const downloadA = await downloadPromiseA;
+  // Save downloaded file somewhere
+  await downloadA.saveAs('Output/TS02-Batch View/TC15 Files Support/02. JSON/05.payInSlipFile.pdf');
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/02. JSON/03.API.png', fullPage: true });
+  await page.waitForTimeout(1500);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.getByRole('row', { name: 'Auto_FileSupportJSON ' }).first().getByText('delete').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportJSON  ' })).toBeHidden();
+
+});
+
+
+
+
+
+test('TC15 Files Support XLSX  ', async ({ page }) => {
+  await page.waitForURL('/batch');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.locator('#file').setInputFiles('Data Files/test/Auto_FileSupportXLSX.xlsx');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.getByLabel('Upload Success').click();
+  await expect(page.getByRole('heading', { name: 'Upload Success' })).toHaveText('Upload Success');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await page.waitForTimeout(2500);
+  await page.getByText('Search').click();
+  await page.waitForURL('/batch');
+  await page.getByText('Search').click();
+  let mask_locator = await page.getByRole('row', { name: 'Auto_FileSupportXLSX' }).getByRole('cell').first();
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/03. XLSX/01.Upload Success.png', mask: [mask_locator], maskColor: '#00FF00' });
+  await page.getByText('Auto_FileSupportXLSX ').first().click();
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/03. XLSX/02.Upload Details.png', fullPage: true });
+  await page.getByText('Submit For Review').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForTimeout(5000);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(1500);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportXLSX ').first().click();
+  await page.locator('button').filter({ hasText: /^Submit$/ }).click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await page.waitForURL('/batch');
+  await page.waitForTimeout(10000);
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportXLSX ').first().click();
+  await page.waitForTimeout(15000);
+  await page.reload();
+  await page.goto('/batch');
+  await page.getByText('Search').click();
+  await page.getByText('Auto_FileSupportXLSX ').first().click();
+  await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: 'QR' }).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('link', { name: 'Download' }).click();
+  const download = await downloadPromise;
+  // Save downloaded file somewhere
+  await download.saveAs('Output/TS02-Batch View/TC15 Files Support/03. XLSX/04.qrPayment.jpg');
+  await page.reload();
+  await page.waitForTimeout(1500);
+  await page.goto('/batch');
+  await page.getByText('Auto_FileSupportXLSX ').first().click();
+  // download 2
+  const downloadPromiseA = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Pay-in' }).click();
+  const downloadA = await downloadPromiseA;
+  // Save downloaded file somewhere
+  await downloadA.saveAs('Output/TS02-Batch View/TC15 Files Support/03. XLSX/05.payInSlipFile.pdf');
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/03. XLSX/03.API.png', fullPage: true });
+  await page.waitForTimeout(1500);
+  await page.locator('a').filter({ hasText: 'Batch' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.getByRole('row', { name: 'Auto_FileSupportXLSX ' }).first().getByText('delete').click();
+  await page.getByRole('button', { name: 'Confirm' }).click();
+  await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportXLSX  ' })).toBeHidden();
+
+});
+
+
+
+
+
+test('TC15 Files Support TXT  ', async ({ page }) => {
+  await page.waitForURL('/batch');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.locator('#file').setInputFiles('Data Files/test/Auto_FileSupportTXT.txt');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await expect.soft(page.getByRole('heading', { name: 'Upload Fail' })).toHaveText('Upload Fail');
+  await expect.soft(page.getByText('Please upload only .csv,.xlsx or .json file')).toHaveText('Please upload only .csv,.xlsx or .json file');
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/04. TXT/01. Not Support File TXT.png'});
+  await page.getByRole('button', { name: 'Close' }).click();
+  
+
+});
+
+
+test('TC15 Files Support DOCX  ', async ({ page }) => {
+  await page.waitForURL('/batch');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await page.locator('#file').setInputFiles('Data Files/test/Auto_FileSupportDOCX.docx');
+  await page.getByRole('button', { name: 'Upload' }).click();
+  await expect.soft(page.getByRole('heading', { name: 'Upload Fail' })).toHaveText('Upload Fail');
+  await expect.soft(page.getByText('Please upload only .csv,.xlsx or .json file')).toHaveText('Please upload only .csv,.xlsx or .json file');
+  await page.waitForTimeout(1500);
+  await page.screenshot({ path: 'Output/TS02-Batch View/TC15 Files Support/05. DOCX/01. Not Support File DOCX.png'});
+  await page.getByRole('button', { name: 'Close' }).click();
+  
+
+});

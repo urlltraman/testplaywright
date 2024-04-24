@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
     await page.getByRole('link', { name: 'Paper Stamp Duty' }).click();
-    await page.waitForURL('https://gestamp.ddns.net/paperstamp');
+    await page.waitForURL('/paperstamp');
 });
 
 

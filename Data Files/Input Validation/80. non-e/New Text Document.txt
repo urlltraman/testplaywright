@@ -1,0 +1,2 @@
+1. select type = 1  contract no. = มีค่า >> ต้องสามารถนำส่งข้อมูลได้
+2. select type = 1 contract no. = ค่าว่าง >> ต้อง error"

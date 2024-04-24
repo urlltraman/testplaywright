@@ -3,6 +3,8 @@
 3.  70 ตัว Kyrgyzstan 
 4. ไม่ระบุ 
 5.ลบ 
-6.พิเศษ x ข้อมูลบรรทัดที่ 1 column 'subdistrict' invalid character. 
-7.ตัวเลข x ข้อมูลบรรทัดที่ 1 column 'subdistrict' invalid character. 
-8. 71 ตัว 
+6.ตัวเลข 
+7. ไทย + ตัวเลข
+8.อังกฤษ + ตัวเลข
+9. พิเศษx ข้อมูลบรรทัดที่ 1 column 'subdistrict' invalid character. 
+10.71 ตัว 

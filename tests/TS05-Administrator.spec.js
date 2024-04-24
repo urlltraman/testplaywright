@@ -104,16 +104,16 @@ test('TC01 Administrator Add User Completed ', async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
   await page.locator('input[name="name"]').fill('Auto Add User');
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/09.Completed User Details.png' });
+  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/08.Completed User Details.png' });
   await page.getByRole('tab', { name: 'Roles' }).click();
   await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('cell').nth(1).click();
   await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('button').click();
   await page.getByRole('menuitem', { name: 'Preparer' }).click();
   await page.waitForTimeout(800);
-  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/08.Completed User Details.png' });
+  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/09.Completed User Details.png' });
   await page.getByRole('button', { name: 'Save' }).click();
   await page.waitForTimeout(15000);
-  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/09.All User.png' });
+  await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/10.All User.png' });
   await page.reload()
   await page.waitForTimeout(1000);
 
@@ -127,7 +127,7 @@ test('TC01 Administrator Add User Completed ', async ({ page }) => {
 test('TC02 Edit User ', async ({ page }) => {
   await page.getByRole('link', { name: 'User Accounts' }).click();
   await page.getByRole('combobox').selectOption('50');
-  await page.waitForTimeout(800);
+  await page.waitForTimeout(1800);
   await page.getByRole('row', { name: 'Au*****er te*****om GGT' }).getByRole('button').first().click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/01.Before Edit.png' });
@@ -152,6 +152,7 @@ test('TC02 Edit User ', async ({ page }) => {
 test('TC02 Edit User Completed ', async ({ page }) => {
   await page.getByRole('link', { name: 'User Accounts' }).click();
   await page.getByRole('combobox').selectOption('50');
+  await page.waitForTimeout(1800);
   await page.getByRole('row', { name: 'Au*****er te*****om GGT' }).getByRole('button').first().click();
   await page.locator('input[name="name"]').fill('Auto Edit User');
   await page.waitForTimeout(1800);

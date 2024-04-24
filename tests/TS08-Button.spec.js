@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 // test.beforeEach(async ({ page }) => {
 //     // Runs Uat
 
-    
+
 //     await page.goto('/login');
 //     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
 //     await page.locator('input[name="password"]').fill('P@ssw0rd');
@@ -43,6 +43,7 @@ test('TC02 Monthly Usage 3 Months ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Monthly Usage' }).click();
     await page.getByText('Last 3 MonthsPeriod Month').click();
     await page.getByRole('option', { name: 'Last 3 Months' }).locator('span').click();
     await page.waitForTimeout(3000);
@@ -71,6 +72,8 @@ test('TC02 Monthly Usage 6 Months ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Monthly Usage' }).click();
+
     await page.getByText('Last 3 MonthsPeriod Month').click();
     await page.getByText('Last 6 Months').click();
     await page.waitForTimeout(3000);
@@ -99,6 +102,8 @@ test('TC02 Monthly Usage 12 Months ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Monthly Usage' }).click();
+
     await page.getByText('Last 3 MonthsPeriod Month').click();
     await page.getByText('Last 12 Months').click();
     await page.waitForTimeout(3000);
@@ -125,10 +130,10 @@ test('TC03 Monthly Account ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
-    await page.getByRole('link', { name: 'Monthly Transaction for Accounting' }).click();
+    await page.getByRole('link', { name: 'Monthly Transactions for Accounting' }).click();
     await page.getByText('Last 2 MonthsPeriod Month').click();
     await page.getByText('Last 1 Month').click();
-    await page.getByRole('button', { name: '2024-02' }).click();
+    await page.getByRole('button', { name: '2024-04' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
@@ -136,41 +141,41 @@ test('TC03 Monthly Account ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByText('Last 1 MonthPeriod Month').click();
     await page.getByRole('option', { name: 'Last 2 Months' }).locator('span').click();
-    await page.getByRole('button', { name: '2024-01' }).click();
+    await page.getByRole('button', { name: '2024-03' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
     await page.screenshot({ path: 'Output/TS08-Button/TC03 Monthly Account/02.Last 2 Months.png' });
     await page.getByText('Last 2 MonthsPeriod Month').click();
     await page.getByText('Last 3 Month').click();
-    await page.getByRole('button', { name: '2023-12' }).click();
+    await page.getByRole('button', { name: '2024-02' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
     await page.screenshot({ path: 'Output/TS08-Button/TC03 Monthly Account/03.Last 3 Months.png' });
     await page.getByText('Last 3 MonthsPeriod Month').click();
     await page.getByText('Last 4 Month').click();
-    await page.getByRole('button', { name: '2023-11' }).click();
+    await page.getByRole('button', { name: '2024-01' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
     await page.screenshot({ path: 'Output/TS08-Button/TC03 Monthly Account/04.Last 4 Months.png' });
     await page.getByText('Last 4 MonthsPeriod Month').click();
     await page.getByText('Last 6 Month').click();
-    await page.getByRole('button', { name: '2023-10' }).click();
-    await page.getByRole('button', { name: '2023-09' }).click();
+    await page.getByRole('button', { name: '2023-12' }).click();
+    await page.getByRole('button', { name: '2023-11' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
     await page.screenshot({ path: 'Output/TS08-Button/TC03 Monthly Account/05.Last 6 Months.png' });
     await page.getByText('Last 6 MonthsPeriod Month').click();
     await page.getByText('Last 12 Month').click();
+    await page.getByRole('button', { name: '2023-10' }).click();
+    await page.getByRole('button', { name: '2023-09' }).click();
     await page.getByRole('button', { name: '2023-08' }).click();
     await page.getByRole('button', { name: '2023-07' }).click();
     await page.getByRole('button', { name: '2023-06' }).click();
     await page.getByRole('button', { name: '2023-05' }).click();
-    await page.getByRole('button', { name: '2023-04' }).click();
-    await page.getByRole('button', { name: '2023-03' }).click();
     await page.waitForTimeout(3000);
     await page.keyboard.press('End');
     await page.waitForTimeout(3000);
@@ -183,9 +188,11 @@ test('TC03 Report Account ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
-    await page.getByRole('link', { name: 'Monthly Transaction for Accounting' }).click();
+    await page.getByRole('link', { name: 'Monthly Transactions for Accounting' }).click();
     await page.getByText('Last 2 MonthsPeriod Month').click();
     await page.getByText('Last 12 Month').click();
+    await page.getByRole('button', { name: '2024-04' }).click();
+    await page.getByRole('button', { name: '2024-03' }).click();
     await page.getByRole('button', { name: '2024-02' }).click();
     await page.getByRole('button', { name: '2024-01' }).click();
     await page.getByRole('button', { name: '2023-12' }).click();
@@ -196,91 +203,89 @@ test('TC03 Report Account ', async ({ page }) => {
     await page.getByRole('button', { name: '2023-07' }).click();
     await page.getByRole('button', { name: '2023-06' }).click();
     await page.getByRole('button', { name: '2023-05' }).click();
-    await page.getByRole('button', { name: '2023-04' }).click();
-    await page.getByRole('button', { name: '2023-03' }).click();
     await page.waitForTimeout(3000);
     const downloadPromise1 = page.waitForEvent('download');
-    await page.getByLabel('2024-02').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2024-04').getByRole('button', { name: 'Export' }).click();
     const download1 = await downloadPromise1;
     // Save downloaded file somewhere
-    await download1.saveAs('Output/TS08-Button/TC03 Monthly Account/07.Report Account Month 02.xlsx');
+    await download1.saveAs('Output/TS08-Button/TC03 Monthly Account/07.Report Account Month 03.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise2 = page.waitForEvent('download');
-    await page.getByLabel('2024-01').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2024-03').getByRole('button', { name: 'Export' }).click();
     const download2 = await downloadPromise2;
     // Save downloaded file somewhere
-    await download2.saveAs('Output/TS08-Button/TC03 Monthly Account/08.Report Account Month 01.xlsx');
+    await download2.saveAs('Output/TS08-Button/TC03 Monthly Account/08.Report Account Month 02.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise3 = page.waitForEvent('download');
-    await page.getByLabel('2023-12').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2024-02').getByRole('button', { name: 'Export' }).click();
     const download3 = await downloadPromise3;
     // Save downloaded file somewhere
-    await download3.saveAs('Output/TS08-Button/TC03 Monthly Account/09.Report Account Month 12.xlsx');
+    await download3.saveAs('Output/TS08-Button/TC03 Monthly Account/09.Report Account Month 01.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise4 = page.waitForEvent('download');
-    await page.getByLabel('2023-11').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2024-01').getByRole('button', { name: 'Export' }).click();
     const download4 = await downloadPromise4;
     // Save downloaded file somewhere
-    await download4.saveAs('Output/TS08-Button/TC03 Monthly Account/10.Report Account Month 11.xlsx');
+    await download4.saveAs('Output/TS08-Button/TC03 Monthly Account/10.Report Account Month 12.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise5 = page.waitForEvent('download');
-    await page.getByLabel('2023-10').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-12').getByRole('button', { name: 'Export' }).click();
     const download5 = await downloadPromise5;
     // Save downloaded file somewhere
-    await download5.saveAs('Output/TS08-Button/TC03 Monthly Account/11.Report Account Month 10.xlsx');
+    await download5.saveAs('Output/TS08-Button/TC03 Monthly Account/11.Report Account Month 11.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise6 = page.waitForEvent('download');
-    await page.getByLabel('2023-09').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-11').getByRole('button', { name: 'Export' }).click();
     const download6 = await downloadPromise6;
     // Save downloaded file somewhere
-    await download6.saveAs('Output/TS08-Button/TC03 Monthly Account/12.Report Account Month 09.xlsx');
+    await download6.saveAs('Output/TS08-Button/TC03 Monthly Account/12.Report Account Month 10.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise7 = page.waitForEvent('download');
-    await page.getByLabel('2023-08').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-10').getByRole('button', { name: 'Export' }).click();
     const download7 = await downloadPromise7;
     // Save downloaded file somewhere
-    await download7.saveAs('Output/TS08-Button/TC03 Monthly Account/13.Report Account Month 08.xlsx');
+    await download7.saveAs('Output/TS08-Button/TC03 Monthly Account/13.Report Account Month 09.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise8 = page.waitForEvent('download');
-    await page.getByLabel('2023-07').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-09').getByRole('button', { name: 'Export' }).click();
     const download8 = await downloadPromise8;
     // Save downloaded file somewhere
-    await download8.saveAs('Output/TS08-Button/TC03 Monthly Account/14.Report Account Month 07.xlsx');
+    await download8.saveAs('Output/TS08-Button/TC03 Monthly Account/14.Report Account Month 08.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise9 = page.waitForEvent('download');
-    await page.getByLabel('2023-06').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-08').getByRole('button', { name: 'Export' }).click();
     const download9 = await downloadPromise9;
     // Save downloaded file somewhere
-    await download9.saveAs('Output/TS08-Button/TC03 Monthly Account/15.Report Account Month 06.xlsx');
+    await download9.saveAs('Output/TS08-Button/TC03 Monthly Account/15.Report Account Month 07.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise10 = page.waitForEvent('download');
-    await page.getByLabel('2023-05').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-07').getByRole('button', { name: 'Export' }).click();
     const download10 = await downloadPromise10;
     // Save downloaded file somewhere
-    await download10.saveAs('Output/TS08-Button/TC03 Monthly Account/16.Report Account Month 05.xlsx');
+    await download10.saveAs('Output/TS08-Button/TC03 Monthly Account/16.Report Account Month 06.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise11 = page.waitForEvent('download');
-    await page.getByLabel('2023-04').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-06').getByRole('button', { name: 'Export' }).click();
     const download11 = await downloadPromise11;
     // Save downloaded file somewhere
-    await download11.saveAs('Output/TS08-Button/TC03 Monthly Account/17.Report Account Month 04.xlsx');
+    await download11.saveAs('Output/TS08-Button/TC03 Monthly Account/17.Report Account Month 05.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise12 = page.waitForEvent('download');
-    await page.getByLabel('2023-03').getByRole('button', { name: 'Export' }).click();
+    await page.getByLabel('2023-05').getByRole('button', { name: 'Export' }).click();
     const download12 = await downloadPromise12;
     // Save downloaded file somewhere
-    await download12.saveAs('Output/TS08-Button/TC03 Monthly Account/18.Report Account Month 03.xlsx');
+    await download12.saveAs('Output/TS08-Button/TC03 Monthly Account/18.Report Account Month 04.xlsx');
     await page.waitForTimeout(1000);
 
     const downloadPromise13 = page.waitForEvent('download');
@@ -326,68 +331,85 @@ test('TC04 Show Holiday ', async ({ page }) => {
 
 
 
-// test('TC04 Show Download ', async ({ page }) => {
+test('TC04 Show Download ', async ({ page }) => {
 
-//     await page.waitForTimeout(1000);
-//     await page.locator('a').filter({ hasText: 'file_download' }).click();
-//     await page.screenshot({ path: 'Output/TS08-Button/TC04 Show Download/01.Download.png', fullPage: true });
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'file_download' }).click();
+    await page.screenshot({ path: 'Output/TS08-Button/TC04 Show Download/01.Download.png', fullPage: true });
 
-// });
-
-
-
-
-// // test('TC05 Click Next And Previous Page ', async ({ page }) => {
-
-
-// //     await page.getByLabel('Next').click();
-// //     await page.locator('.p-10').hover();
-// //     await page.waitForTimeout(500);
-// //     await page.screenshot({ path: 'Output/TS08-Button/TC05 Click Next And Previous Page/01.Click Next.png' });
-// //     await page.getByLabel('Previous').click();
-// //     await page.locator('.p-10').hover();
-// //     await page.waitForTimeout(500);
-// //     await page.screenshot({ path: 'Output/TS08-Button/TC05 Click Next And Previous Page/02.Click Previous.png' });
-
-
-
-// // });
+});
 
 
 
 
+test('TC05 Click Next And Previous Page ', async ({ page }) => {
 
-// test('TC06 Refresh ', async ({ page }) => {
-//     await page.getByRole('link', { name: 'Batch ' }).click();
-//     await page.waitForURL('https://gestamp.ddns.net/batch');
-//     await page.waitForTimeout(3000);
-//     await page.getByPlaceholder('Status').click();
-//     await page.getByRole('option', { name: 'Completed' }).click();
-//     await page.getByRole('button', { name: 'Search' }).click();
-//     await page.waitForTimeout(1000);
-//     await page.reload();
-//     await page.waitForTimeout(1000);
-//     await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
-//     await page.waitForTimeout(1500);
-//     await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/01.Select Download.png' });
-//     await page.locator('div').filter({ hasText: /^SearchReceipts$/ }).getByRole('button').nth(1).click();
-//     await page.getByRole('button', { name: 'Go to Downloads' }).click();
-//     await page.waitForTimeout(5000);
-//     await page.reload();
-//     await page.waitForTimeout(1500);
-//     let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
-//     await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/02.Before Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
-//     await page.getByRole('button', { name: 'Refresh' }).click();
-//     const downloadPromiseA = page.waitForEvent('download');
-//     await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
-//     const downloadA = await downloadPromiseA;
-//     // Save downloaded file somewhere
-//     await downloadA.saveAs('Output/TS08-Button/TC06 Refresh/04.Download Receipts.rar');
-//     await page.waitForTimeout(500);
-//     await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/03.After Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+    await page.getByLabel('Choose month and year').first().click();
+    await page.getByLabel('2023').click();
+    await page.getByLabel('July 2023').click();
+    await page.getByLabel('31 July 2023').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(2500);
+    await page.getByLabel('Next').click();
+    await page.locator('.p-10').hover();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS08-Button/TC05 Click Next And Previous Page/01.Click Next.png' });
+    await page.getByLabel('Previous').click();
+    await page.locator('.p-10').hover();
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS08-Button/TC05 Click Next And Previous Page/02.Click Previous.png' });
 
 
-// });
+
+});
+
+
+
+
+
+test('TC06 Refresh ', async ({ page }) => {
+    await page.getByRole('link', { name: 'Batch ' }).click();
+    await page.waitForURL('https://gestamp.ddns.net/batch');
+    await page.waitForTimeout(3000);
+    await page.getByRole('button', { name: 'Filter' }).click();
+    await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
+    await page.getByRole('menuitem', { name: 'Completed' }).click();
+    await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+    await page.getByLabel('Choose month and year').first().click();
+    await page.getByLabel('2023').click();
+    await page.getByLabel('December 2023').click();
+    await page.getByLabel('26 December 2023').click();
+    await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date To' }).getByLabel('Open calendar').click();
+    await page.getByLabel('Choose month and year').first().click();
+    await page.getByLabel('2024').click();
+    await page.getByLabel('December 2024').click();
+    await page.getByLabel('26 December 2024').click();
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.waitForTimeout(1000);
+    await page.reload();
+    await page.waitForTimeout(1000);
+    await page.locator('.mat-checkbox-inner-container').first().click();
+    await page.waitForTimeout(1500);
+    await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/01.Select Download.png' });
+    await page.getByRole('button', { name: 'Receipts' }).first().click();
+    await page.getByRole('button', { name: 'Go to Downloads' }).click();
+    await page.waitForTimeout(5000);
+    await page.reload();
+    await page.waitForTimeout(1500);
+    let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
+    await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/02.Before Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
+    await page.getByRole('button', { name: 'Refresh' }).click();
+    const downloadPromiseA = page.waitForEvent('download');
+    await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
+    const downloadA = await downloadPromiseA;
+    // Save downloaded file somewhere
+    await downloadA.saveAs('Output/TS08-Button/TC06 Refresh/04.Download Receipts.rar');
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/03.After Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
+
+
+});
 
 
 
@@ -478,7 +500,7 @@ test('TC07 User ', async ({ page }) => {
 // });
 
 
-test('TC09 Click Link ', async ({ page }) => {
+test('TC08 Click Link ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
     const page1Promise = page.waitForEvent('popup');
@@ -487,7 +509,7 @@ test('TC09 Click Link ', async ({ page }) => {
     await page1.waitForURL('https://ginkgosoft.co.th/');
     await expect(page1.locator('#content div').filter({ hasText: 'Our Best Services เราคือผู้เชี่ยวชาญทางด้าน Digital Transformation, Paperless So' }).nth(2)).toBeEnabled();
     await page.waitForTimeout(1000);
-    await page1.screenshot({ path: 'Output/TS08-Button/09 Click Link/01.Click Ginkgo Soft.png' });
+    await page1.screenshot({ path: 'Output/TS08-Button/TC08 Click Link/01.Click Ginkgo Soft.png' });
     await page.waitForTimeout(1000);
     const page2Promise = page.waitForEvent('popup');
     await page.getByRole('link', { name: 'Privacy Policy' }).click();
@@ -495,27 +517,358 @@ test('TC09 Click Link ', async ({ page }) => {
     await page2.waitForURL('https://www.gestampduty.com/privacy-policy/');
     await expect(page2.getByText('นโยบายความเป็นส่วนตัวข้อมูลส่วนบุคคล สำหรับผลิตภัณฑ์ GeStamp Duty Last Updated: ')).toBeEnabled();
     await page.waitForTimeout(5000);
-    await page2.screenshot({ path: 'Output/TS08-Button/09 Click Link/02.Click Privacy Policy.png' });
+    await page2.screenshot({ path: 'Output/TS08-Button/TC08 Click Link/02.Click Privacy Policy.png' });
 
 });
 
 
 
 
-test('TC10 Logout ', async ({ page }) => {
+test('TC09 Logout ', async ({ page }) => {
 
     await page.waitForTimeout(1000);
-    await page.screenshot({ path: 'Output/TS08-Button/TC10 Logout/01.Before Click Logout.png' });
+    await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/01.Before Click Logout.png' });
     await page.waitForTimeout(1000);
     await page.getByText('logout').click();
-    await page.screenshot({ path: 'Output/TS08-Button/TC10 Logout/02.After Click Logout.png' });
-    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-    await page.locator('input[name="password"]').fill('P@ssw0rd');
+    await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/02.After Click Logout.png' });
+    await page.locator('input[name="email"]').fill('test.gamekittisak3@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByText('personkittisak.p@ginkgosoft.co.thGinkgo Soft Co., Ltd.').click();
-    await page.screenshot({ path: 'Output/TS08-Button/TC10 Logout/03.Before Click Logout User Details.png' });
+    await page.getByText('persontest.gamekittisak3@gmail.comGinkgoTest').click();
+    await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/03.Before Click Logout User Details.png' });
     await page.locator('#kt_header').getByText('Log Out').click();
     await page.waitForTimeout(1000);
-    await page.screenshot({ path: 'Output/TS08-Button/TC10 Logout/04.After Click Logout User Details.png' });
+    await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/04.After Click Logout User Details.png' });
 
 });
+
+
+
+
+test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Monthly Transactions', exact: true }).click();
+    await page.getByText('2024-03Select Month').click();
+    await page.getByRole('option', { name: '2024-03' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/01. 1st Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2024-03Select Month').click();
+    await page.getByRole('option', { name: '2024-02' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/02. 2nd Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2024-02Select Month').click();
+    await page.getByRole('option', { name: '2024-01' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/03. 3rd Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2024-01Select Month').click();
+    await page.getByRole('option', { name: '2023-12' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/04. 4th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-12Select Month').click();
+    await page.getByRole('option', { name: '2023-11' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/05. 5th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-11Select Month').click();
+    await page.getByRole('option', { name: '2023-10' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/06. 6th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+
+});
+
+
+
+test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Monthly Transactions', exact: true }).click();
+    await page.getByText('2024-03Select Month').click();
+    await page.getByRole('option', { name: '2023-09' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/07. 7th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-09Select Month').click();
+    await page.getByRole('option', { name: '2023-08' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/08. 8th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-08Select Month').click();
+    await page.getByRole('option', { name: '2023-07' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/09. 9th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-07Select Month').click();
+    await page.getByRole('option', { name: '2023-06' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/10. 10th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-06Select Month').click();
+    await page.getByRole('option', { name: '2023-05' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/11. 11th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+    await page.getByText('2023-05Select Month').click();
+    await page.getByRole('option', { name: '2023-04' }).locator('span').click();
+    await page.waitForTimeout(1000);
+    await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
+    await page.waitForTimeout(500);
+    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/12. 12th Months.png', fullPage: true });
+    await page.waitForTimeout(2000);
+
+});
+
+
+
+
+test('TC11 Dashboard  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Dashboard' }).click();
+    await page.waitForTimeout(1000);
+    await page.getByLabel('Open calendar').click();
+    await page.getByLabel('1 January 2024', { exact: true }).click();
+    await page.waitForTimeout(1000);
+    await page.getByLabel('31 January 2024').click();
+    await page.waitForTimeout(10000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/01. Dashboard.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Complete vs Incomplete Transactions').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/02. Incomplete Transactions.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Monthly e-Stamp duty amount').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/03. Monthly e-Stamp duty amount.png' });
+    await page.waitForTimeout(1000);
+    await page.locator('foreignobject').filter({ hasText: '1627.(ก)2' }).hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/04. Paid transaction by Type Code.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('New EntryAdditionalIncrease Limit').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/05. Paid transaction by Send form type.png' });
+    await page.waitForTimeout(1000);
+
+
+    
+
+});
+
+
+
+
+test('TC12 Click Dashboard YTD  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Dashboard' }).click();
+    await page.getByRole('button', { name: 'YTD' }).click();
+    await page.waitForTimeout(10000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/01. Dashboard.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Complete vs Incomplete Transactions').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/02. Incomplete Transactions.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Monthly e-Stamp duty amount').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/03. Monthly e-Stamp duty amount.png' });
+    await page.waitForTimeout(1000);
+    await page.locator('foreignobject').filter({ hasText: '1627.(ก)2' }).hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/04. Paid transaction by Type Code.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('New EntryAdditionalIncrease Limit').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/05. Paid transaction by Send form type.png' });
+    await page.waitForTimeout(1000);
+
+
+    
+
+});
+
+
+test('TC12 Click Dashboard LM  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Dashboard' }).click();
+    await page.getByRole('button', { name: 'LM' }).click();
+    await page.waitForTimeout(10000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/01. Dashboard.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Complete vs Incomplete Transactions').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/02. Incomplete Transactions.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Monthly e-Stamp duty amount').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/03. Monthly e-Stamp duty amount.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Completed duty amount by Type Code').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/04. Paid transaction by Type Code.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Completed duty amount by Send form type').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/05. Paid transaction by Send form type.png' });
+    await page.waitForTimeout(1000);
+
+
+    
+
+});
+
+
+
+test('TC12 Click Dashboard MTD  ', async ({ page }) => {
+
+    await page.waitForTimeout(1000);
+    await page.locator('a').filter({ hasText: 'dashboard' }).click();
+    await page.getByRole('link', { name: 'Dashboard' }).click();
+    await page.getByRole('button', { name: 'MTD' }).click();
+    await page.waitForTimeout(10000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/03. MTD/01. Dashboard.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Complete vs Incomplete Transactions').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/03. MTD/02. Incomplete Transactions.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Monthly e-Stamp duty amount').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/03. MTD/03. Monthly e-Stamp duty amount.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Completed duty amount by Type Code').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/03. MTD/04. Completed duty amount by Type Code.png' });
+    await page.waitForTimeout(1000);
+    await page.getByText('Completed duty amount by Send form type').hover();
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    await page.locator('#kt_body').press('ArrowDown');
+    // await page.getByText('New EntryAdditionalIncrease Limit').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/03. MTD/05. Completed duty amount by Send form type.png' });
+    await page.waitForTimeout(1000);
+
+
+
+    
+
+});
+
+
+

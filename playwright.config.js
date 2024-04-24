@@ -33,7 +33,7 @@ module.exports = defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    // /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://gestamp.ddns.net/',
     // baseURL: 'https://uatapp.gestampduty.com/',
 
@@ -80,7 +80,7 @@ module.exports = defineConfig({
       name: 'Google Chrome',
       use: {
         ...devices['Desktop Chrome'], channel: 'chrome',
-        viewport: { width: 1600, height: 900 },
+        viewport: { width: 1440, height: 786 },
         ignoreHTTPSErrors: true,
         
       },

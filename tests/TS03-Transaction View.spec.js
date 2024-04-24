@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await page.getByRole('button', { name: 'Accept' }).click();
   await page.getByRole('link', { name: 'Transaction ' }).click();
-  await page.waitForURL('https://gestamp.ddns.net/transactions');
+  await page.waitForURL('/transactions');
 });
 
 
@@ -77,32 +77,32 @@ test('TC01 Transaction View ', async ({ page }) => {
 
 
 
-test('TC02 Search Status : Uploading', async ({ page }) => {
+// test('TC02 Search Status : Uploading', async ({ page }) => {
 
-  // status
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
-  await page.getByRole('menuitem', { name: 'Uploading' }).click();
-  await page.getByRole('button', { name: 'Search' }).first().click();
-  await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/01.Search Uploading.png' });
-  await page.waitForTimeout(1000);
+//   // status
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
+//   await page.getByRole('menuitem', { name: 'Uploading' }).click();
+//   await page.getByRole('button', { name: 'Search' }).first().click();
+//   await page.waitForTimeout(10000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/01.Search Uploading.png' });
+//   await page.waitForTimeout(1000);
 
-});
+// });
 
 
-test('TC02 Search Status : Input Error', async ({ page }) => {
+// test('TC02 Search Status : Input Error', async ({ page }) => {
 
-  // status
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
-  await page.getByRole('menuitem', { name: 'Input Error' }).click();
-    await page.getByRole('button', { name: 'Search' }).first().click();
-  await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/02.Search Input Error.png' });
-  await page.waitForTimeout(1000);
+//   // status
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
+//   await page.getByRole('menuitem', { name: 'Input Error' }).click();
+//     await page.getByRole('button', { name: 'Search' }).first().click();
+//   await page.waitForTimeout(10000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/02.Search Input Error.png' });
+//   await page.waitForTimeout(1000);
 
-});
+// });
 
 
 
@@ -115,7 +115,7 @@ test('TC02 Search Status : Submit Error', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Submit Error' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/03.Search Submit Error.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/01.Search Submit Error.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -129,7 +129,7 @@ test('TC02 Search Status : Filing Error', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Filing Error' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/04.Search Filing Error.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/02.Search Filing Error.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -142,7 +142,7 @@ test('TC02 Search Status : Payment Error', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Payment Error' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/05.Search Payment Error.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/03.Search Payment Error.png' });
   await page.waitForTimeout(1000);
 
 
@@ -155,7 +155,7 @@ test('TC02 Search Status : Receipt Error', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Receipt Error' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/06.Search Receipt Error.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/04.Search Receipt Error.png' });
   await page.waitForTimeout(1000);
 
 
@@ -168,7 +168,7 @@ test('TC02 Search Status : Preparing', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Preparing' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/07.Search Preparing.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/05.Search Preparing.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -182,7 +182,7 @@ test('TC02 Search Status : Rejected', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Rejected' }).click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/08.Search Rejected.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/06.Search Rejected.png' });
   await page.waitForTimeout(1000);
 
 
@@ -195,7 +195,7 @@ test('TC02 Search Status : Reviewing', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Reviewing' }).click();
   await page.waitForTimeout(10000);
   await page.getByRole('button', { name: 'Search' }).first().click();
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/09.Search Reviewing.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/07.Search Reviewing.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -208,7 +208,7 @@ test('TC02 Search Status : Submitted', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Submitted' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/10.Search Submitted.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/08.Search Submitted.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -221,7 +221,7 @@ test('TC02 Search Status : Payment', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Payment', exact: true }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/11.Search Payment.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/09.Search Payment.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -233,7 +233,7 @@ test('TC02 Search Status : Completed', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/12.Search Completed.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/01.Status/10.Search Completed.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -741,7 +741,10 @@ test('TC02 Search Batch ID', async ({ page }) => {
   await page.getByRole('button', { name: 'Close' }).click();
   await expect.soft(page.getByText('E-Document No.02100000000000Auto45_2120240201QRPay-inContract No.Auto45_21Create')).toBeHidden();
   await page.waitForTimeout(1000);
-
+  // await page.getByLabel('Batch ID').fill('!@#$%');
+  // await page.getByRole('button', { name: 'Search' }).first().click();
+  // await page.waitForTimeout(5000);
+  // await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06. Batch ID/03. Invalid Batch ID.png' });
 
 
 });
@@ -918,6 +921,8 @@ test('TC02 Search Party First Name', async ({ page }) => {
 
   await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
+  await page.waitForTimeout(1000);
+
   await page.reload();
   await page.goto('/transactions');
   await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
@@ -936,6 +941,7 @@ test('TC02 Search Party First Name', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
+  await page.waitForTimeout(1000);
   await page.reload();
 
 
@@ -946,6 +952,8 @@ test('TC02 Search Party Last Name', async ({ page }) => {
 
   await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
+  await page.waitForTimeout(1000);
+
   await page.reload();
   await page.goto('/transactions');
   await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
@@ -964,6 +972,7 @@ test('TC02 Search Party Last Name', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
+  await page.waitForTimeout(1000);
   await page.reload();
 
 
@@ -1017,6 +1026,832 @@ test('TC02 Sorting Tools ', async ({ page }) => {
 
 
 });
+
+
+
+
+test('TC02 Search Type Code 1', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '1 : เช่าที่ดิน โรงเรือน สิ่งปลูกสร้างอย่างอื่น หรือแพ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/01. Type Code 1.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 2', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '2 : โอนใบหุ้น ใบหุ้นกู้ พันธบัตร ใบรับรองหนี้ฯ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/02. Type Code 2.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+test('TC02 Search Type Code 3', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '3 : เช่าซื้อทรัพย์สิน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/03. Type Code 3.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 4', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '4 : จ้างทำของ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/04. Type Code 4.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 5', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '5 : กู้ยืมเงิน หรือการตกลงให้เบิกเงินเกินบัญชีจากธนาคาร' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/05. Type Code 5.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 6', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '6 : กรมธรรม์ประกันภัย' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/06. Type Code 6.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 7', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '7 : ใบมอบอำนาจ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/07. Type Code 7.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 8', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '8 : ใบมอบฉันทะสำหรับให้ลงมติ ในที่ประชุมของบริษัท' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/08. Type Code 8.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 9.1', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '9.(1) : ตั๋วแลกเงิน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/09. Type Code 9.1.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 9.2', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '9.(2) : ตั๋วสัญญาใช้เงิน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/10. Type Code 9.2.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+test('TC02 Search Type Code 10', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '10 : บิลออฟเลดิง (ใบตราส่งสินค้า)' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/11. Type Code 10.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+
+
+test('TC02 Search Type Code 11.1', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '11.(1) : ใบหุ้น ใบหุ้นกู้หรือใบรับรองหนี้ฯ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/12. Type Code 11.1.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 11.2', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '11.(2) : พันธบัตรของรัฐบาลใด ๆ ที่ขายในประเทศไทย' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/13. Type Code 11.2.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 12', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '12 : เช็ค' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/14. Type Code 12.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 13', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '13 : ใบรับฝากเงิน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/15. Type Code 13.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 14', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '14 : เลตเตอร์ออฟเครดิต' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/16. Type Code 14.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 15', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '15 : เช็คสำหรับผู้เดินทาง' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/17. Type Code 15.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 16', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '16 : ใบรับของ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/18. Type Code 16.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 17', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '17 : ค้ำประกัน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/19. Type Code 17.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+test('TC02 Search Type Code 18', async ({ page }) => {
+
+  
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '18 : จำนำ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/20. Type Code 18.png' });
+  await page.waitForTimeout(1000);
+ 
+
+
+});
+
+
+
+test('TC02 Search Type Code 19', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '19 : ใบรับของคลังสินค้า' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/21. Type Code 19.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+test('TC02 Search Type Code 20', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '20 : คำสั่งให้ส่งมอบของ' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/22. Type Code 20.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+test('TC02 Search Type Code 21', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '21 : ตัวแทน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/23. Type Code 21.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+test('TC02 Search Type Code 23', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '23 : คู่ฉบับหรือคู่ฉีกแห่งตราสาร' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/24. Type Code 23.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+test('TC02 Search Type Code 27.1', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '27.(ก) : หนังสือสัญญาจัดตั้งห้างหุ้นส่วน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/25. Type Code 27.1.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+test('TC02 Search Type Code 27.2', async ({ page }) => {
+
+
+  await page.waitForTimeout(1000);
+  await page.goto('/transactions');
+  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByLabel('Choose month and year').click();
+  await page.getByLabel('2023').click();
+  await page.getByLabel('August 2023').click();
+  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Type Code' }).hover();
+  await page.getByRole('menuitem', { name: '27.(ข) : หนังสือสัญญาที่แก้ไขสัญญาจัดตั้งห้างหุ้นส่วน' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/18. Type Code/26. Type Code 27.2.png' });
+  await page.waitForTimeout(1000);
+
+
+
+});
+
+
+
+
+
+test('TC02 Search Creation Date : Today', async ({ page }) => {
+  
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Today' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/01.Today.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+
+
+
+test('TC02 Search Creation Date : This Week', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'This Week' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/02.This Week.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : This Month', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'This Month' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/03.This Month.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 7 Days', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 7 Days' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/04.7 day.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 15 Days', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 15 Days' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/05.15 day.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 1 Months', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 1 Month' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/06.1 M.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 2 Months', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 2 Months' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/07.2 M.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 3 Months', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 3 Months' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/08.3 M.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Creation Date : Last 6 Months', async ({ page }) => {
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Creation Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 6 Months' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/19. Creation Date/09.6 M.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+
+
+test('TC02 Search Send Form Type : New Entry', async ({ page }) => {
+  
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Send Form Type' }).hover();
+  await page.getByRole('menuitem', { name: 'New Entry' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/20. Send Form Type/01. New Entry.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+
+
+test('TC02 Search Send Form Type : Increase Limit', async ({ page }) => {
+  
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Send Form Type' }).hover();
+  await page.getByRole('menuitem', { name: 'Increase Limit' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/20. Send Form Type/02. Increase Limit.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
+test('TC02 Search Send Form Type : Additional', async ({ page }) => {
+  
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+  await page.getByRole('menuitem', { name: 'Send Form Type' }).hover();
+  await page.getByRole('menuitem', { name: 'Additional' }).click();
+  await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(10000);
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/20. Send Form Type/03. Additional.png' });
+  await page.waitForTimeout(1000);
+
+});
+
+
 
 
 

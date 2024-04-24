@@ -1,6 +1,0 @@
-GSD_TS_0114 ไม่ต้องนำเข้า entityID
-GSD_TS_0115 ไม่ต้องนำเข้า senderRole
-
-ไม่ต้องนำเข้า formType
-
-2 5 6 8
