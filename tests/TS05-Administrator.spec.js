@@ -1,31 +1,31 @@
 
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//     // Runs Uat
-
-//     await page.goto('/login');
-//     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//     await page.locator('input[name="password"]').fill('P@ssw0rd');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     // await page.getByRole('button', { name: 'Accept' }).click();
-//     await page.getByRole('link', { name: 'Administrator' }).click();
-//      await page.waitForURL('admin/company');
-// });
-
-
-
 test.beforeEach(async ({ page }) => {
-  // Runs Dev
+  // Runs Uat
 
   await page.goto('/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+  await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await page.getByRole('button', { name: 'Accept' }).click();
   await page.getByRole('link', { name: 'Administrator' }).click();
   await page.waitForURL('admin/company');
 });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//   // Runs Dev
+
+//   await page.goto('/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//   await page.locator('input[name="password"]').fill('P@ssw0rd');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   // await page.getByRole('button', { name: 'Accept' }).click();
+//   await page.getByRole('link', { name: 'Administrator' }).click();
+//   await page.waitForURL('admin/company');
+// });
 
 
 
@@ -67,9 +67,9 @@ test('TC01 Administrator Add Basic ', async ({ page }) => {
   await page.getByRole('button', { name: 'Add' }).click();
   await page.locator('select[name="formAuthMethod"]').selectOption('Basic');
   await page.getByRole('tab', { name: 'Roles' }).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('cell').nth(1).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('button').click();
-  await page.getByRole('menuitem', { name: 'SuperUser' }).click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('cell').nth(1).click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('button').click();
+  await page.getByRole('menuitem', { name: 'Approver' }).click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/05.Add Role.png' });
   await page.waitForTimeout(800);
@@ -79,8 +79,8 @@ test('TC01 Administrator Add Basic ', async ({ page }) => {
   await page.locator('input[name="email"]').fill('test.gamekittisak4@gmail.com');
   await page.locator('input[name="name"]').fill('Auto Add User');
   await page.getByRole('tab', { name: 'Roles' }).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('cell').nth(1).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('cell').nth(1).click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('button').click();
   await page.getByText('Approver').click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/06.Input Full Click Cancel.png' });
@@ -106,8 +106,8 @@ test('TC01 Administrator Add User Completed ', async ({ page }) => {
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/08.Completed User Details.png' });
   await page.getByRole('tab', { name: 'Roles' }).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('cell').nth(1).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('cell').nth(1).click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) -' }).getByRole('button').click();
   await page.getByRole('menuitem', { name: 'Preparer' }).click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC01 Administrator/09.Completed User Details.png' });
@@ -128,7 +128,7 @@ test('TC02 Edit User ', async ({ page }) => {
   await page.getByRole('link', { name: 'User Accounts' }).click();
   await page.getByRole('combobox').selectOption('50');
   await page.waitForTimeout(1800);
-  await page.getByRole('row', { name: 'Au*****er te*****om GGT' }).getByRole('button').first().click();
+  await page.getByRole('row', { name: 'Au*****er te*****om GDM' }).getByRole('button').first().first().click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/01.Before Edit.png' });
   await page.locator('input[name="name"]').clear();
@@ -153,22 +153,21 @@ test('TC02 Edit User Completed ', async ({ page }) => {
   await page.getByRole('link', { name: 'User Accounts' }).click();
   await page.getByRole('combobox').selectOption('50');
   await page.waitForTimeout(1800);
-  await page.getByRole('row', { name: 'Au*****er te*****om GGT' }).getByRole('button').first().click();
+  await page.getByRole('row', { name: 'Au*****er te*****om GDM' }).getByRole('button').first().first().click();
   await page.locator('input[name="name"]').fill('Auto Edit User');
   await page.waitForTimeout(1800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/05.Edit General.png' });
   await page.getByRole('tab', { name: 'Roles' }).click();
-  await page.getByRole('row', { name: 'GinkgoTest กิงโกะเทส Preparer' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo) Preparer' }).getByRole('button').click();
   await page.locator('#mat-menu-panel-5').getByText('-').click();
-  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo)' }).getByRole('cell').nth(1).click();
-  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. (Demo) บริษัท กิงโกะ ซอฟต์ จำกัด (Demo)' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด' }).getByRole('cell').nth(1).click();
+  await page.getByRole('row', { name: 'Ginkgo Soft Co., Ltd. บริษัท กิงโกะ ซอฟต์ จำกัด' }).getByRole('button').click();
   await page.getByText('Approver').click();
   await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/06.Edit Role.png' });
   await page.getByRole('button', { name: 'Save' }).click();
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC02 Edit User/05.Edit Completed.png' });
-
-
+  
 });
 
 
@@ -194,13 +193,13 @@ test('TC02 Edit User Completed ', async ({ page }) => {
 test('TC03 Delete User ', async ({ page }) => {
   await page.getByRole('link', { name: 'User Accounts' }).click();
   await page.getByRole('combobox').selectOption('50');
-  await page.getByRole('row', { name: 'Au*****er te*****om GDM' }).getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Au*****er te*****om GGS' }).getByRole('button').nth(1).click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/01.Before Delete User Click Cancel.png' });
   await page.getByRole('button', { name: 'Cancel' }).click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/02.After Delete User Click Cancel.png' });
-  await page.getByRole('row', { name: 'Au*****er te*****om GDM' }).getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'Au*****er te*****om GGS' }).getByRole('button').nth(1).click();
   await page.waitForTimeout(800);
   await page.screenshot({ path: 'Output/TS05-Administrator/TC03 Delete User/03.Before Delete User Click Confirm.png' });
   await page.getByRole('button', { name: 'Confirm' }).click();

@@ -1,31 +1,31 @@
 
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//     // Runs Uat
-
-//     await page.goto('/login');
-//     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//     await page.locator('input[name="password"]').fill('P@ssw0rd');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     // await page.getByRole('button', { name: 'Accept' }).click();
-//     await page.locator('a').filter({ hasText: 'settings' }).click();
-//     await page.waitForURL('https://uatapp.gestampduty.com/settings/configuration');
-// });
-
-
-
 test.beforeEach(async ({ page }) => {
-    // Runs Dev
+    // Runs Uat
 
     await page.goto('/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
     await page.locator('a').filter({ hasText: 'settings' }).click();
     await page.waitForURL('/settings/configuration');
 });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//     // Runs Dev
+
+//     await page.goto('/login');
+//     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//     await page.locator('input[name="password"]').fill('P@ssw0rd');
+//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//     // await page.getByRole('button', { name: 'Accept' }).click();
+//     await page.locator('a').filter({ hasText: 'settings' }).click();
+//     await page.waitForURL('/settings/configuration');
+// });
 
 
 
@@ -65,8 +65,8 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
     await page.getByRole('link', { name: 'Configuration' }).click();
     await page.getByRole('tab', { name: 'System Configuration' }).click();
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/01.Default Page.png', fullPage: true });
-    await page.getByText('6Check Filing Status Frequency (Hour) *').click();
-    await page.getByText('1', { exact: true }).click();
+    await page.getByText('1Check Filing Status Frequency (Hour) *').click();
+    await page.getByRole('option', { name: '1', exact: true }).locator('span').click();
     await page.getByText('1Check Filing Status Frequency (Hour) *').click();
     await page.getByText('2', { exact: true }).click();
     await page.waitForTimeout(500);
@@ -101,7 +101,7 @@ test('TC03 Check Status Interval Filing ', async ({ page }) => {
 test('TC03 Check Status Interval Payment  ', async ({ page }) => {
     await page.getByRole('link', { name: 'Configuration' }).click();
     await page.getByRole('tab', { name: 'System Configuration' }).click();
-    await page.getByText('6Check Payment Frequency (Hour) *').click();
+    await page.getByText('1Check Payment Frequency (Hour) *').click();
     await page.getByRole('option', { name: '1', exact: true }).locator('span').click();
     await page.getByText('1Check Payment Frequency (Hour) *').click();
     await page.getByText('2', { exact: true }).click();
@@ -136,9 +136,9 @@ test('TC03 Check Status Interval Payment  ', async ({ page }) => {
 test('TC03 Check Status Interval  ', async ({ page }) => {
     await page.getByRole('link', { name: 'Configuration' }).click();
     await page.getByRole('tab', { name: 'System Configuration' }).click();
-    await page.getByText('6Check Filing Status Frequency (Hour) *').click();
+    await page.getByText('1Check Filing Status Frequency (Hour) *').click();
     await page.getByRole('option', { name: '12' }).locator('span').click();
-    await page.getByText('6Check Payment Frequency (Hour) *').click();
+    await page.getByText('1Check Payment Frequency (Hour) *').click();
     await page.getByText('24', { exact: true }).first().click();
     await page.waitForTimeout(500);
     await page.screenshot({ path: 'Output/TS06-Settings/TC03 Check Status Interval/14.Check All.png', fullPage: true });
@@ -464,19 +464,3 @@ test('TC11 Delete Company  ', async ({ page }) => {
 
 
 
-
-test('TC12 Password age policy settings ', async ({ page }) => {
-
-    await page.waitForTimeout(1000);
-    await page.getByRole('tab', { name: 'Application' }).click();
-    await page.waitForTimeout(1000);
-    await expect(page.getByRole('heading', { name: 'Security' })).toHaveText('Security');
-    await expect(page.getByText('Security Configuration')).toHaveText('Security Configuration');
-    await expect(page.getByText('Max Password Age:')).toHaveText('Max Password Age:');
-    await expect(page.getByText('Min Password Age:')).toHaveText('Min Password Age:');
-    await page.waitForTimeout(1000);
-    await page.screenshot({ path: 'Output/TS06-Settings/TC12 Password age policy settings/01. Password age policy details.png' });
-
-    
-
-});

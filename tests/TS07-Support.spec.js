@@ -1,32 +1,32 @@
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//     // Runs Uat
-
-//     await page.goto('/login');
-//     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//     await page.locator('input[name="password"]').fill('P@ssw0rd');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     // await page.getByRole('button', { name: 'Accept' }).click();
-//     await page.locator('a').filter({ hasText: 'support' }).click();
-    
-
-
-// });
-
-
-
 test.beforeEach(async ({ page }) => {
-    // Runs Dev
+    // Runs Uat
 
     await page.goto('/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
     await page.locator('a').filter({ hasText: 'support' }).click();
+    
+
 
 });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//     // Runs Dev
+
+//     await page.goto('/login');
+//     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//     await page.locator('input[name="password"]').fill('P@ssw0rd');
+//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//     // await page.getByRole('button', { name: 'Accept' }).click();
+//     await page.locator('a').filter({ hasText: 'support' }).click();
+
+// });
 
 
 

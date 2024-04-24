@@ -1,33 +1,36 @@
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//     // Runs Uat
-
-//     await page.goto('/login');
-//     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//     await page.locator('input[name="password"]').fill('P@ssw0rd');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     // await page.getByRole('button', { name: 'Accept' }).click();
-
-//   });
-
-
-
 test.beforeEach(async ({ page }) => {
-  // Runs Dev
+    // Runs Uat
 
-  await page.goto('/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
-  await page.locator('input[name="password"]').fill('P@ssw0rd');
-  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-  // await page.getByRole('button', { name: 'Accept' }).click();
+    await page.goto('/login');
+    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
+    await page.locator('input[name="password"]').fill('P@ssw0rd');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+    // await page.getByRole('button', { name: 'Accept' }).click();
 
-});
+  });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//   // Runs Dev
+
+//   await page.goto('/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//   await page.locator('input[name="password"]').fill('P@ssw0rd');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   // await page.getByRole('button', { name: 'Accept' }).click();
+
+// });
 
 
 test('TC01 Batch View ', async ({ page }) => {
 
-
+  await page.getByRole('button', { name: 'Filter' }).click();
+  await page.getByRole('menuitem', { name: 'Uploaded Date' }).hover();
+  await page.getByRole('menuitem', { name: 'Last 3 Months' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(3000);
   await page.screenshot({ path: 'Output/TS02-Batch View/TC01 Batch View/01.Batch View.png' });
   await page.locator('select').selectOption('10');
@@ -1248,24 +1251,24 @@ test('TC11 Download QR Payin  ', async ({ page }) => {
 test('TC11 Download Receipts ', async ({ page }) => {
 
   await page.waitForTimeout(3000);
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').first().click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('December 2023').click();
-  await page.getByLabel('26 December 2023').click();
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date To' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').first().click();
-  await page.getByLabel('2024').click();
-  await page.getByLabel('December 2024').click();
-  await page.getByLabel('26 December 2024').click();
+  await page.waitForTimeout(1000);
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.getByRole('button', { name: 'Search' }).click();
   await page.waitForTimeout(1000);
   await page.reload();
   await page.waitForTimeout(1000);
-  await page.locator('.mat-checkbox-inner-container').first().click();
+  await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
   await page.getByRole('button', { name: 'Receipts' }).first().click();
   await page.getByRole('button', { name: 'Go to Downloads' }).click();
   await page.waitForTimeout(1000);
@@ -1273,7 +1276,7 @@ test('TC11 Download Receipts ', async ({ page }) => {
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Refresh' }).click();
   const downloadPromiseA = page.waitForEvent('download');
-  await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('button').nth(1).click();
+  await page.getByRole('row', { name: 'test.gamekittisak2@gmail.com' }).getByRole('button').nth(1).click();
   const downloadA = await downloadPromiseA;
   // Save downloaded file somewhere
   await downloadA.saveAs('Output/TS02-Batch View/TC11 Download/03.Receipts.rar');
@@ -1513,9 +1516,6 @@ test('TC14 Sorting Tools Uploader ', async ({ page }) => {
 
 
 
-
-
-
 test('TC15 Files Support CSV  ', async ({ page }) => {
   await page.waitForURL('/batch');
   await page.getByRole('button', { name: 'Upload' }).click();
@@ -1573,9 +1573,11 @@ test('TC15 Files Support CSV  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.locator('a').filter({ hasText: 'Batch' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_FileSupportCSV ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportCSV  ' })).toBeHidden();
+  await page.waitForTimeout(1500);
 
 });
 
@@ -1639,9 +1641,11 @@ test('TC15 Files Support JSON  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.locator('a').filter({ hasText: 'Batch' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_FileSupportJSON ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportJSON  ' })).toBeHidden();
+  await page.waitForTimeout(1500);
 
 });
 
@@ -1706,9 +1710,11 @@ test('TC15 Files Support XLSX  ', async ({ page }) => {
   await page.waitForTimeout(1500);
   await page.locator('a').filter({ hasText: 'Batch' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
+  await page.waitForTimeout(1500);
   await page.getByRole('row', { name: 'Auto_FileSupportXLSX ' }).first().getByText('delete').click();
   await page.getByRole('button', { name: 'Confirm' }).click();
   await expect.soft(page.getByRole('row', { name: 'Auto_FileSupportXLSX  ' })).toBeHidden();
+  await page.waitForTimeout(1500);
 
 });
 

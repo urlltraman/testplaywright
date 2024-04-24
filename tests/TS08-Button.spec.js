@@ -1,29 +1,29 @@
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//     // Runs Uat
-
-
-//     await page.goto('/login');
-//     await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//     await page.locator('input[name="password"]').fill('P@ssw0rd');
-//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//     // await page.getByRole('button', { name: 'Accept' }).click();
-
-//   });
-
-
-
 test.beforeEach(async ({ page }) => {
-    // Runs Dev
+    // Runs Uat
+
 
     await page.goto('/login');
-    await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+    await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
     await page.locator('input[name="password"]').fill('P@ssw0rd');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     // await page.getByRole('button', { name: 'Accept' }).click();
 
 });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//     // Runs Dev
+
+//     await page.goto('/login');
+//     await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//     await page.locator('input[name="password"]').fill('P@ssw0rd');
+//     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//     // await page.getByRole('button', { name: 'Accept' }).click();
+
+// });
 
 
 
@@ -80,12 +80,12 @@ test('TC02 Monthly Usage 6 Months ', async ({ page }) => {
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     // await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (Demo) (บริษัท กิงโกะ ซอฟต์ จำกัด (Demo))' }).click();
     await page.waitForTimeout(3000);
-    await page.screenshot({ path: 'Output/TS08-Button/TC02 Monthly Usage/04.Last 6 Months.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS08-Button/TC02 Monthly Usage/03.Last 6 Months.png', fullPage: true });
     const downloadPromise1 = page.waitForEvent('download');
     await page.getByLabel('Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)').getByRole('button', { name: 'Export' }).click();
     const download1 = await downloadPromise1;
     // Save downloaded file somewhere
-    await download1.saveAs('Output/TS08-Button/TC02 Monthly Usage/05.Report GGS Last 6 Months.xlsx');
+    await download1.saveAs('Output/TS08-Button/TC02 Monthly Usage/04.Report GGS Last 6 Months.xlsx');
     await page.waitForTimeout(1000);
     // const downloadPromise2 = page.waitForEvent('download');
     // await page.getByLabel('Ginkgo Soft Co., Ltd. (Demo) (บริษัท กิงโกะ ซอฟต์ จำกัด (Demo))').getByRole('button', { name: 'Export' }).click();
@@ -110,12 +110,12 @@ test('TC02 Monthly Usage 12 Months ', async ({ page }) => {
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     // await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (Demo) (บริษัท กิงโกะ ซอฟต์ จำกัด (Demo))' }).click();
     await page.waitForTimeout(3000);
-    await page.screenshot({ path: 'Output/TS08-Button/TC02 Monthly Usage/07.Last 12 Months.png', fullPage: true });
+    await page.screenshot({ path: 'Output/TS08-Button/TC02 Monthly Usage/05.Last 12 Months.png', fullPage: true });
     const downloadPromise1 = page.waitForEvent('download');
     await page.getByLabel('Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)').getByRole('button', { name: 'Export' }).click();
     const download1 = await downloadPromise1;
     // Save downloaded file somewhere
-    await download1.saveAs('Output/TS08-Button/TC02 Monthly Usage/08.Report GDM Last 12 Months.xlsx');
+    await download1.saveAs('Output/TS08-Button/TC02 Monthly Usage/06.Report GDM Last 12 Months.xlsx');
     await page.waitForTimeout(1000);
     // const downloadPromise2 = page.waitForEvent('download');
     // await page.getByLabel('Ginkgo Soft Co., Ltd. (Demo) (บริษัท กิงโกะ ซอฟต์ จำกัด (Demo))').getByRole('button', { name: 'Export' }).click();
@@ -369,39 +369,38 @@ test('TC05 Click Next And Previous Page ', async ({ page }) => {
 
 
 test('TC06 Refresh ', async ({ page }) => {
-    await page.getByRole('link', { name: 'Batch ' }).click();
-    await page.waitForURL('https://gestamp.ddns.net/batch');
+
+    await page.waitForTimeout(3000);
+    await page.getByText('logout').click();
+    await page.waitForTimeout(3000);
+    await page.goto('/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.waitForTimeout(3000);
     await page.getByRole('button', { name: 'Filter' }).click();
     await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
     await page.getByRole('menuitem', { name: 'Completed' }).click();
-    await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-    await page.getByLabel('Choose month and year').first().click();
-    await page.getByLabel('2023').click();
-    await page.getByLabel('December 2023').click();
-    await page.getByLabel('26 December 2023').click();
-    await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date To' }).getByLabel('Open calendar').click();
-    await page.getByLabel('Choose month and year').first().click();
-    await page.getByLabel('2024').click();
-    await page.getByLabel('December 2024').click();
-    await page.getByLabel('26 December 2024').click();
+    await page.waitForTimeout(1000);
+    await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+    await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
     await page.getByRole('button', { name: 'Search' }).click();
     await page.waitForTimeout(1000);
     await page.reload();
     await page.waitForTimeout(1000);
-    await page.locator('.mat-checkbox-inner-container').first().click();
-    await page.waitForTimeout(1500);
+    await page.locator('#mat-checkbox-2 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
     await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/01.Select Download.png' });
+    await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Receipts' }).first().click();
     await page.getByRole('button', { name: 'Go to Downloads' }).click();
     await page.waitForTimeout(5000);
     await page.reload();
     await page.waitForTimeout(1500);
-    let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).getByRole('cell').nth(2);
+    let mask_locator = await page.getByRole('row', { name: 'test.gamekittisak2@gmail.com' }).getByRole('cell').nth(2);
     await page.screenshot({ path: 'Output/TS08-Button/TC06 Refresh/02.Before Refresh.png', mask: [mask_locator], maskColor: '#00FF00' });
     await page.getByRole('button', { name: 'Refresh' }).click();
     const downloadPromiseA = page.waitForEvent('download');
-    await page.getByRole('row', { name: 'test.gamekittisak@gmail.com' }).first().getByRole('button').nth(1).click();
+    await page.getByRole('row', { name: 'test.gamekittisak2@gmail.com' }).first().getByRole('button').nth(1).click();
     const downloadA = await downloadPromiseA;
     // Save downloaded file somewhere
     await downloadA.saveAs('Output/TS08-Button/TC06 Refresh/04.Download Receipts.rar');
@@ -417,18 +416,18 @@ test('TC07 User ', async ({ page }) => {
     // getByText('personkittisak.pGinkgo Soft Co., Ltd.') dev
     // getByText('personkittisak.pGinkgo Soft Co., Ltd.') uat
     await page.waitForTimeout(1000);
-    await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+    await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
     await page.waitForTimeout(3000);
     await page.screenshot({ path: 'Output/TS08-Button/TC07 User/01.User Details.png' });
-    await page.goto('/batch/42133');
-    await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+    await page.goto('/batch/4314');
+    await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC07 User/02.Enable Masking Sensitive Data.png', fullPage: true });
     await page.waitForTimeout(1000);
     await page.getByText('Masking Sensitive Data').click();
     await page.waitForTimeout(1000);
     await page.reload()
-    await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+    await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC07 User/03.Disable Masking Sensitive Data.png', fullPage: true });
     await page.getByText('Masking Sensitive Data').click();
@@ -531,10 +530,10 @@ test('TC09 Logout ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByText('logout').click();
     await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/02.After Click Logout.png' });
-    await page.locator('input[name="email"]').fill('test.gamekittisak3@gmail.com');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
     await page.locator('input[name="password"]').fill('ZXcv.!234');
     await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-    await page.getByText('persontest.gamekittisak3@gmail.comGinkgoTest').click();
+    await page.getByText('persontest.gamekittisak2@gmail.comGinkgo Soft Co., Ltd. (Demo)').click();
     await page.screenshot({ path: 'Output/TS08-Button/TC09 Logout/03.Before Click Logout User Details.png' });
     await page.locator('#kt_header').getByText('Log Out').click();
     await page.waitForTimeout(1000);
@@ -555,7 +554,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/01. 1st Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -564,7 +563,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/02. 2nd Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -573,7 +572,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/03. 3rd Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -582,7 +581,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/04. 4th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -591,7 +590,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/05. 5th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -600,7 +599,7 @@ test('TC10 Monthly E-Stamp 1 - 6  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/06. 6th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -619,7 +618,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/07. 7th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -628,7 +627,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/08. 8th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -637,7 +636,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/09. 9th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -646,7 +645,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/10. 10th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -655,7 +654,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/11. 11th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -664,7 +663,7 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Ginkgo Soft Co., Ltd. (บริษัท กิงโกะ ซอฟต์ จำกัด)' }).click();
     await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
+    //await page.getByRole('button', { name: 'GinkgoTest (กิงโกะเทส)' }).click();
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC10 Monthly E-Stamp/12. 12th Months.png', fullPage: true });
     await page.waitForTimeout(2000);
@@ -675,7 +674,13 @@ test('TC10 Monthly E-Stamp 7 - 12  ', async ({ page }) => {
 
 
 test('TC11 Dashboard  ', async ({ page }) => {
-
+    await page.waitForTimeout(3000);
+    await page.getByText('logout').click();
+    await page.waitForTimeout(3000);
+    await page.goto('/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
     await page.getByRole('link', { name: 'Dashboard' }).click();
@@ -697,15 +702,15 @@ test('TC11 Dashboard  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/03. Monthly e-Stamp duty amount.png' });
     await page.waitForTimeout(1000);
-    await page.locator('foreignobject').filter({ hasText: '1627.(ก)2' }).hover();
-    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/04. Paid transaction by Type Code.png' });
+    await page.getByText('451').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/04. Completed duty amount by Type Code.png' });
     await page.waitForTimeout(1000);
     await page.getByText('New EntryAdditionalIncrease Limit').hover();
-    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/05. Paid transaction by Send form type.png' });
+    await page.screenshot({ path: 'Output/TS08-Button/TC11 Dashboard/05. Completed duty amount by Send form type.png' });
     await page.waitForTimeout(1000);
 
 
-    
+
 
 });
 
@@ -714,6 +719,13 @@ test('TC11 Dashboard  ', async ({ page }) => {
 
 test('TC12 Click Dashboard YTD  ', async ({ page }) => {
 
+    await page.waitForTimeout(3000);
+    await page.getByText('logout').click();
+    await page.waitForTimeout(3000);
+    await page.goto('/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
     await page.getByRole('link', { name: 'Dashboard' }).click();
@@ -731,21 +743,28 @@ test('TC12 Click Dashboard YTD  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/03. Monthly e-Stamp duty amount.png' });
     await page.waitForTimeout(1000);
-    await page.locator('foreignobject').filter({ hasText: '1627.(ก)2' }).hover();
-    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/04. Paid transaction by Type Code.png' });
+    await page.getByText('451').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/04. Completed duty amount by Type Code.png' });
     await page.waitForTimeout(1000);
     await page.getByText('New EntryAdditionalIncrease Limit').hover();
-    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/05. Paid transaction by Send form type.png' });
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/01. YTD/05. Completed duty amount by Send form type.png' });
     await page.waitForTimeout(1000);
 
 
-    
+
 
 });
 
 
 test('TC12 Click Dashboard LM  ', async ({ page }) => {
 
+    await page.waitForTimeout(3000);
+    await page.getByText('logout').click();
+    await page.waitForTimeout(3000);
+    await page.goto('/login');
+    await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    await page.locator('input[name="password"]').fill('ZXcv.!234');
+    await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
     await page.getByRole('link', { name: 'Dashboard' }).click();
@@ -763,45 +782,15 @@ test('TC12 Click Dashboard LM  ', async ({ page }) => {
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/03. Monthly e-Stamp duty amount.png' });
     await page.waitForTimeout(1000);
-    await page.getByText('Completed duty amount by Type Code').hover();
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/04. Paid transaction by Type Code.png' });
+    await page.getByText('451').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/04. Completed duty amount by Type Code.png' });
     await page.waitForTimeout(1000);
-    await page.getByText('Completed duty amount by Send form type').hover();
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.locator('#kt_body').press('ArrowDown');
-    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/05. Paid transaction by Send form type.png' });
+    await page.getByText('New EntryAdditionalIncrease Limit').hover();
+    await page.screenshot({ path: 'Output/TS08-Button/TC12 Click Dashboard/02. LM/05. Completed duty amount by Send form type.png' });
     await page.waitForTimeout(1000);
 
 
-    
+
 
 });
 
@@ -809,6 +798,13 @@ test('TC12 Click Dashboard LM  ', async ({ page }) => {
 
 test('TC12 Click Dashboard MTD  ', async ({ page }) => {
 
+    // await page.waitForTimeout(3000);
+    // await page.getByText('logout').click();
+    // await page.waitForTimeout(3000);
+    // await page.goto('/login');
+    // await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+    // await page.locator('input[name="password"]').fill('ZXcv.!234');
+    // await page.getByRole('button', { name: 'Sign In', exact: true }).click();
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'dashboard' }).click();
     await page.getByRole('link', { name: 'Dashboard' }).click();
@@ -866,9 +862,5 @@ test('TC12 Click Dashboard MTD  ', async ({ page }) => {
 
 
 
-    
 
 });
-
-
-

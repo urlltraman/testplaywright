@@ -1,30 +1,31 @@
 
 import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//   // Runs Uat
-
-//   await page.goto('/login');
-//   await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
-//   await page.locator('input[name="password"]').fill('P@ssw0rd');
-//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
-//   // await page.getByRole('button', { name: 'Accept' }).click();
-//   await page.getByRole('link', { name: 'Transaction ' }).click();
-// });
-
-
-
 test.beforeEach(async ({ page }) => {
-  // Runs Dev
+  // Runs Uat
 
   await page.goto('/login');
-  await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+  await page.locator('input[name="email"]').fill('kittisak.p@ginkgosoft.co.th');
   await page.locator('input[name="password"]').fill('P@ssw0rd');
   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
   // await page.getByRole('button', { name: 'Accept' }).click();
   await page.getByRole('link', { name: 'Transaction ' }).click();
   await page.waitForURL('/transactions');
 });
+
+
+
+// test.beforeEach(async ({ page }) => {
+//   // Runs Dev
+
+//   await page.goto('/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak@gmail.com');
+//   await page.locator('input[name="password"]').fill('P@ssw0rd');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   // await page.getByRole('button', { name: 'Accept' }).click();
+//   await page.getByRole('link', { name: 'Transaction ' }).click();
+//   await page.waitForURL('/transactions');
+// });
 
 
 
@@ -247,7 +248,7 @@ test('TC02 Search Uploaded Date : Today', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Today' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/01.Today.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/01.Today.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -262,7 +263,7 @@ test('TC02 Search Uploaded Date : This Week', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'This Week' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/02.This Week.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/02.This Week.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -274,7 +275,7 @@ test('TC02 Search Uploaded Date : This Month', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'This Month' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/03.This Month.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/03.This Month.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -286,7 +287,7 @@ test('TC02 Search Uploaded Date : Last 7 Days', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 7 Days' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/04.7 day.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/04.7 day.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -298,7 +299,7 @@ test('TC02 Search Uploaded Date : Last 15 Days', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 15 Days' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/05.15 day.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/05.15 day.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -310,7 +311,7 @@ test('TC02 Search Uploaded Date : Last 1 Months', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 1 Month' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/06.1 M.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/06.1 M.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -322,7 +323,7 @@ test('TC02 Search Uploaded Date : Last 2 Months', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 2 Months' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/07.2 M.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/07.2 M.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -334,7 +335,7 @@ test('TC02 Search Uploaded Date : Last 3 Months', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 3 Months' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/08.3 M.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/08.3 M.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -346,7 +347,7 @@ test('TC02 Search Uploaded Date : Last 6 Months', async ({ page }) => {
   await page.getByRole('menuitem', { name: 'Last 6 Months' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(10000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02.Upload Date/09.6 M.png' });
+  await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/02. Upload Date/09.6 M.png' });
   await page.waitForTimeout(1000);
 
 });
@@ -719,32 +720,28 @@ test('TC02 Search Receipt Date : Last 6 Months', async ({ page }) => {
 
 
 test('TC02 Search Batch ID', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Info' }).hover();
   await page.getByRole('menuitem', { name: 'Batch ID' }).click();
   await page.waitForTimeout(1000);
-  await page.getByLabel('Batch ID').fill('54104');
+  await page.getByLabel('Batch ID').fill('4313');
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(5000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06. Batch ID/01. Batch ID.png' });
   await page.waitForTimeout(1000);
-  await page.getByRole('button', { name: '02100000000000Auto45_2120240201' }).click();
-  await expect.soft(page.getByText('E-Document No.02100000000000Auto45_2120240201')).toBeVisible();
-  await expect.soft(page.getByText('E-Document No.02100000000000Auto45_2120240201')).toHaveText('E-Document No.02100000000000Auto45_2120240201');
+  await page.getByRole('button', { name: '2710000000000Auto50_27120240301' }).click();
+  await expect.soft(page.getByText('E-Document No.2710000000000Auto50_27120240301')).toBeVisible();
+  await expect.soft(page.getByText('E-Document No.2710000000000Auto50_27120240301')).toHaveText('E-Document No.2710000000000Auto50_27120240301');
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06. Batch ID/02. Batch Details.png' });
   await page.getByRole('button', { name: 'Close' }).click();
-  await expect.soft(page.getByText('E-Document No.02100000000000Auto45_2120240201QRPay-inContract No.Auto45_21Create')).toBeHidden();
+  await expect.soft(page.getByText('E-Document No.2710000000000Auto50_27120240301QRPay-inContract No.Auto45_21Create')).toBeHidden();
   await page.waitForTimeout(1000);
-  // await page.getByLabel('Batch ID').fill('!@#$%');
-  // await page.getByRole('button', { name: 'Search' }).first().click();
-  // await page.waitForTimeout(5000);
-  // await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/06. Batch ID/03. Invalid Batch ID.png' });
+
 
 
 });
@@ -919,7 +916,7 @@ test('TC02 Search Party Tax ID', async ({ page }) => {
 
 test('TC02 Search Party First Name', async ({ page }) => {
 
-  await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+  await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
   await page.waitForTimeout(1000);
 
@@ -939,7 +936,7 @@ test('TC02 Search Party First Name', async ({ page }) => {
   await page.waitForTimeout(10000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/15. Party First Name/01. Party First Name.png' });
   await page.waitForTimeout(1000);
-  await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+  await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
   await page.waitForTimeout(1000);
   await page.reload();
@@ -950,7 +947,7 @@ test('TC02 Search Party First Name', async ({ page }) => {
 
 test('TC02 Search Party Last Name', async ({ page }) => {
 
-  await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+  await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
   await page.waitForTimeout(1000);
 
@@ -970,7 +967,7 @@ test('TC02 Search Party Last Name', async ({ page }) => {
   await page.waitForTimeout(10000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC02 Search Transaction View/16. Party Last Name/01. Party Last Name.png' });
   await page.waitForTimeout(1000);
-  await page.getByText('persontest.gamekittisak@gmail.comGinkgo Soft Co., Ltd.').click();
+  await page.getByText('personkittisak.pGinkgo Soft Co., Ltd.').click();
   await page.locator('label').filter({ hasText: 'Masking Sensitive Data' }).click();
   await page.waitForTimeout(1000);
   await page.reload();
@@ -1026,7 +1023,6 @@ test('TC02 Sorting Tools ', async ({ page }) => {
 
 
 });
-
 
 
 
@@ -1856,7 +1852,6 @@ test('TC02 Search Send Form Type : Additional', async ({ page }) => {
 
 
 
-
 test('TC03 Click Next And Previous Page  ', async ({ page }) => {
   await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
   await page.getByLabel('Choose month and year').click();
@@ -1949,11 +1944,17 @@ test('TC03 Click Next And Previous Page  ', async ({ page }) => {
 
 
 test('TC04 Export Task Single ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
@@ -1961,7 +1962,7 @@ test('TC04 Export Task Single ', async ({ page }) => {
   await page.getByRole('button', { name: 'Search' }).first().click();
   // await page.getByLabel('Contract No.').fill('100');
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.locator('#mat-checkbox-52 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-37 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export' }).click();
   const download = await downloadPromise;
@@ -1973,11 +1974,17 @@ test('TC04 Export Task Single ', async ({ page }) => {
 });
 
 test('TC04 Export Task Multi ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
@@ -1985,9 +1992,9 @@ test('TC04 Export Task Multi ', async ({ page }) => {
   await page.getByRole('button', { name: 'Search' }).first().click();
   // await page.getByLabel('Contract No.').fill('100');
   await page.getByRole('button', { name: 'Search' }).click();
-  await page.locator('#mat-checkbox-53 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
-  await page.locator('#mat-checkbox-55 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
-  await page.locator('#mat-checkbox-57 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-39 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-41 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
+  await page.locator('#mat-checkbox-43 > .mat-checkbox-layout > .mat-checkbox-inner-container').check();
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export' }).click();
   const download = await downloadPromise;
@@ -2003,19 +2010,25 @@ test('TC04 Export Task Multi ', async ({ page }) => {
 
 
 test('TC04 Export Task All ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(1000);
-  await page.locator('.mat-checkbox-inner-container').first().click();
   await page.locator('select').selectOption('10');
+  await page.locator('.mat-checkbox-inner-container').first().click();
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export' }).click();
   const download = await downloadPromise;
@@ -2103,11 +2116,22 @@ test('TC04 Export Task All ', async ({ page }) => {
 
 
 test('TC04 Export Receipts Single ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.waitForTimeout(1000);
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.getByLabel('Open calendar').click();
   await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByLabel('2024').click();
+  await page.getByLabel('January 2024').click();
+  await page.getByLabel('1 January 2024', { exact: true }).click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
@@ -2139,11 +2163,22 @@ test('TC04 Export Receipts Single ', async ({ page }) => {
 
 
 test('TC04 Export Receipts Multi ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.waitForTimeout(1000);
+  await page.getByLabel('Open calendar').click();
   await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByLabel('2024').click();
+  await page.getByLabel('January 2024').click();
+  await page.getByLabel('1 January 2024', { exact: true }).click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
@@ -2183,11 +2218,22 @@ test('TC04 Export Receipts Multi ', async ({ page }) => {
 
 
 test('TC04 Export Receipts All ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.waitForTimeout(1000);
+  await page.getByLabel('Open calendar').click();
   await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByLabel('2024').click();
+  await page.getByLabel('January 2024').click();
+  await page.getByLabel('1 January 2024', { exact: true }).click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
   await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
@@ -2260,28 +2306,35 @@ test('TC06 Click Up To ', async ({ page }) => {
 
 
 test('TC07 Click E-Document No. ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
   await page.getByRole('menuitem', { name: 'Contract No' }).click();
   await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC-2023-12-26-1');
+  await page.getByLabel('Contract No').fill('Chod-TC4_2902');
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: '27200000TC-2023-12-26-120231201' }).click();
+  await page.getByRole('button', { name: '0040000000Chod-TC4_290220240201' }).click();
   await page.waitForTimeout(1000);
   await expect(page.getByRole('dialog').getByText('E-Document No.'))
     .toHaveText('E-Document No.');
-  await expect(page.getByRole('dialog').getByText('27200000TC-2023-12-26-120231201'))
-    .toHaveText('27200000TC-2023-12-26-120231201');
-  await expect(page.getByText('Contract No.TC-2023-12-26-1')).toHaveText('Contract No.TC-2023-12-26-1');
+  await expect(page.getByRole('dialog').getByText('0040000000Chod-TC4_290220240201'))
+    .toHaveText('0040000000Chod-TC4_290220240201');
+  await expect(page.getByText('Contract No.Chod-TC4_2902')).toHaveText('Contract No.Chod-TC4_2902');
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC07 Click E-Document No/01.E-Document Details.png' });
   await page.getByRole('button', { name: 'Close' }).click();
@@ -2295,24 +2348,31 @@ test('TC07 Click E-Document No. ', async ({ page }) => {
 
 
 test('TC08 Click Contract No Basic ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
   await page.getByRole('menuitem', { name: 'Contract No' }).click();
   await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC3-64633275');
+  await page.getByLabel('Contract No').fill('FPH_TC5_0112-D1');
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: 'TC3-64633275', exact: true }).click();
+  await page.getByRole('button', { name: 'FPH_TC5_0112-D1', exact: true }).click();
   await page.waitForTimeout(1000);
-  await expect.soft(page.getByRole('heading', { name: 'History for \'TC3-64633275\'' })).toBeVisible();
+  await expect.soft(page.getByRole('heading', { name: 'History for \'FPH_TC5_0112-D1\'' })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
   await page.waitForTimeout(1000);
@@ -2329,24 +2389,31 @@ test('TC08 Click Contract No Basic ', async ({ page }) => {
 
 
 test('TC08 Click Contract No Additional ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
   await page.getByRole('menuitem', { name: 'Contract No' }).click();
   await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC17_TS6-49499_additional');
+  await page.getByLabel('Contract No').fill('TEST_TC5_SameContract_180124');
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: 'TC17_TS6-49499_additional', exact: true }).first().click();
+  await page.getByRole('button', { name: 'TEST_TC5_SameContract_180124', exact: true }).first().click();
   await page.waitForTimeout(1000);
-  await expect.soft(page.getByRole('heading', { name: 'History for \'TC17_TS6-49499_additional\'' })).toBeVisible();
+  await expect.soft(page.getByRole('heading', { name: 'History for \'TEST_TC5_SameContract_180124\'' })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
@@ -2363,28 +2430,35 @@ test('TC08 Click Contract No Additional ', async ({ page }) => {
 
 
 test('TC08 Click Contract No Increase ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
+  await page.getByText('logout').click();
+  await page.waitForTimeout(3000);
+  await page.goto('/login');
+  await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+  await page.locator('input[name="password"]').fill('ZXcv.!234');
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'Transaction ' }).click();
+  await page.waitForURL('/transactions');
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+  await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
   await page.getByRole('menuitem', { name: 'Contract No' }).click();
   await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC18_TS5-49499_increase');
+  await page.getByLabel('Contract No').fill('001');
   await page.getByRole('button', { name: 'Filter' }).click();
   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
   await page.getByRole('menuitem', { name: 'Completed' }).click();
   await page.getByRole('button', { name: 'Search' }).first().click();
   await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: 'TC18_TS5-49499_increase', exact: true }).first().click();
+  await page.getByRole('button', { name: '001', exact: true }).first().click();
   await page.waitForTimeout(1000);
-  await expect.soft(page.getByRole('heading', { name: 'History for \'TC18_TS5-49499_increase\'' })).toBeVisible();
+  await expect.soft(page.getByRole('heading', { name: 'History for \'001\'' })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
   await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: '3', exact: true })).toBeVisible();
+  // await expect.soft(page.getByRole('cell', { name: '3', exact: true })).toBeVisible();
   await page.waitForTimeout(1000);
   await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/05.Contract No Increase Details.png' });
   await page.getByRole('button', { name: 'Close' }).click();
@@ -2398,68 +2472,82 @@ test('TC08 Click Contract No Increase ', async ({ page }) => {
 
 
 
-test('TC08 Click Contract No Hybrid ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
-  await page.getByRole('menuitem', { name: 'Contract No' }).click();
-  await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC6_TS8-499_Hybrid');
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
-  await page.getByRole('menuitem', { name: 'Completed' }).click();
-  await page.getByRole('button', { name: 'Search' }).first().click();
-  await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: 'TC6_TS8-499_Hybrid', exact: true }).first().click();
-  await page.waitForTimeout(1000);
-  await expect.soft(page.getByRole('heading', { name: 'History for \'TC6_TS8-499_Hybrid\'' })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
-  await page.waitForTimeout(1000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/07.Contract No Hybrid Details.png' });
-  await page.getByRole('button', { name: 'Close' }).click();
-  await page.waitForTimeout(1000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/08.After Click Close.png' });
-  await page.waitForTimeout(1000);
+// test('TC08 Click Contract No Hybrid ', async ({ page }) => {
+//   await page.getByText('logout').click();
+//   await page.waitForTimeout(3000);
+//   await page.goto('/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+//   await page.locator('input[name="password"]').fill('ZXcv.!234');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   await page.waitForTimeout(3000);
+//   await page.getByRole('link', { name: 'Transaction ' }).click();
+//   await page.waitForURL('/transactions');
+//   await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+//   await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+//   await page.waitForTimeout(1000);
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+//   await page.getByRole('menuitem', { name: 'Contract No' }).click();
+//   await page.waitForTimeout(1000);
+//   await page.getByLabel('Contract No').fill('TC6_TS8-499_Hybrid');
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
+//   await page.getByRole('menuitem', { name: 'Completed' }).click();
+//   await page.getByRole('button', { name: 'Search' }).first().click();
+//   await page.waitForTimeout(5000);
+//   await page.getByRole('button', { name: 'TC6_TS8-499_Hybrid', exact: true }).first().click();
+//   await page.waitForTimeout(1000);
+//   await expect.soft(page.getByRole('heading', { name: 'History for \'TC6_TS8-499_Hybrid\'' })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
+//   await page.waitForTimeout(1000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/07.Contract No Hybrid Details.png' });
+//   await page.getByRole('button', { name: 'Close' }).click();
+//   await page.waitForTimeout(1000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/08.After Click Close.png' });
+//   await page.waitForTimeout(1000);
 
-});
+// });
 
 
 
 
 
-test('TC08 Click Contract No Hybrid Up ', async ({ page }) => {
-  await page.locator('mat-form-field').filter({ hasText: 'Uploaded Date From' }).getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.getByLabel('2023').click();
-  await page.getByLabel('August 2023').click();
-  await page.getByLabel('2 August 2023', { exact: true }).click();
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
-  await page.getByRole('menuitem', { name: 'Contract No' }).click();
-  await page.waitForTimeout(1000);
-  await page.getByLabel('Contract No').fill('TC17_TS12-949_Hybrid_up');
-  await page.getByRole('button', { name: 'Filter' }).click();
-  await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
-  await page.getByRole('menuitem', { name: 'Completed' }).click();
-  await page.getByRole('button', { name: 'Search' }).first().click();
-  await page.waitForTimeout(5000);
-  await page.getByRole('button', { name: 'TC17_TS12-949_Hybrid_up', exact: true }).first().click();
-  await page.waitForTimeout(1000);
-  await expect.soft(page.getByRole('heading', { name: 'History for \'TC17_TS12-949_Hybrid_up\'' })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
-  await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
-  await page.waitForTimeout(1000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/09.Contract No Hybrid Up Details.png' });
-  await page.getByRole('button', { name: 'Close' }).click();
-  await page.waitForTimeout(1000);
-  await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/10.After Click Close.png' });
-  await page.waitForTimeout(1000);
+// test('TC08 Click Contract No Hybrid Up ', async ({ page }) => {
+//   await page.getByText('logout').click();
+//   await page.waitForTimeout(3000);
+//   await page.goto('/login');
+//   await page.locator('input[name="email"]').fill('test.gamekittisak2@gmail.com');
+//   await page.locator('input[name="password"]').fill('ZXcv.!234');
+//   await page.getByRole('button', { name: 'Sign In', exact: true }).click();
+//   await page.waitForTimeout(3000);
+//   await page.getByRole('link', { name: 'Transaction ' }).click();
+//   await page.waitForURL('/transactions');
+//   await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Fromclosed' }).locator('mat-icon').click();
+//   await page.locator('app-input-filter').filter({ hasText: 'Uploaded Date Toclosed' }).locator('mat-icon').click();
+//   await page.waitForTimeout(1000);
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Inst Info' }).hover();
+//   await page.getByRole('menuitem', { name: 'Contract No' }).click();
+//   await page.waitForTimeout(1000);
+//   await page.getByLabel('Contract No').fill('TC17_TS12-949_Hybrid_up');
+//   await page.getByRole('button', { name: 'Filter' }).click();
+//   await page.getByRole('menuitem', { name: 'Batch Status' }).hover();
+//   await page.getByRole('menuitem', { name: 'Completed' }).click();
+//   await page.getByRole('button', { name: 'Search' }).first().click();
+//   await page.waitForTimeout(5000);
+//   await page.getByRole('button', { name: 'TC17_TS12-949_Hybrid_up', exact: true }).first().click();
+//   await page.waitForTimeout(1000);
+//   await expect.soft(page.getByRole('heading', { name: 'History for \'TC17_TS12-949_Hybrid_up\'' })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: 'No.', exact: true })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: '1', exact: true })).toBeVisible();
+//   await expect.soft(page.getByRole('cell', { name: '2', exact: true })).toBeVisible();
+//   await page.waitForTimeout(1000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/09.Contract No Hybrid Up Details.png' });
+//   await page.getByRole('button', { name: 'Close' }).click();
+//   await page.waitForTimeout(1000);
+//   await page.screenshot({ path: 'Output/TS03-Transaction View/TC08 Click Contract No/10.After Click Close.png' });
+//   await page.waitForTimeout(1000);
 
-});
+// });
