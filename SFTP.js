@@ -12,7 +12,7 @@ const config = {
 let sftp = new Client();
 
 sftp.connect(config)
-        .then(() => sftp.fastPut('/var/lib/jenkins/Gestamp Duty/workspace/Data Files/SFTP/Auto_SFTP_C2.xlsx', '/batch_tic_th/UAT/outbound/stamp/0105556078229/Default Ginkgo/Auto_SFTP_C2.xlsx'))
+        .then(() => sftp.fastPut('/var/lib/jenkins/workspace/Gestamp Duty/Data Files/SFTP/Auto_SFTP_C2.xlsx', '/batch_tic_th/UAT/outbound/stamp/0105556078229/Default Ginkgo/Auto_SFTP_C2.xlsx'))
         .then((res) => { console.log(res);})
         .finally(() => sftp.end())
         
