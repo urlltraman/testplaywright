@@ -1,0 +1,12 @@
+                        Dim allrow As Integer
+                        Dim i As Integer
+                        allrow = Cells(Rows.Count, "A").End(xlUp).Row
+                        Range("C:C").Insert
+                        Range("C4").EntireColumn.Insert
+                        Range("C1").Value = "SUM"
+                        For i = 2 To allrow
+                            Cells(i, "C").FormulaR1C1 = "=SUM(D2,00000)"
+
+
+
+[|Limited|Test|Automation|0|O]
